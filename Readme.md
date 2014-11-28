@@ -9,7 +9,7 @@ el = document.createElement('div');
 addClass(el, 'active');
 ```
 
-----
+<br>
 
 ## Why?
 
@@ -28,7 +28,7 @@ file ([example]) stands on their own and can be easily pasted into your project.
 
 mindom follows the conventions of [101].
 
-----
+<br>
 
 ## Reference
 
@@ -69,7 +69,7 @@ Some aren't implemented, because they're easy enough to do with plain DOM:
 | `$('...')`                          | `document.querySelectorAll('...')` |
 | `$el.find('...')`                   | `el.querySelectorAll('...')`       |
 
-----
+<br>
 
 ## API Reference
 
@@ -153,7 +153,7 @@ text(el, 'Hello world');
 
 <!-- end api -->
 
-----
+<br>
 
 ## Similar projects
 
@@ -161,7 +161,7 @@ text(el, 'Hello world');
  * [youmightnotneedjquery.com] — actually takes a bunch of code from here
  * [101]
 
-## Acknowledgement
+<br>
 
 ## Thanks
 

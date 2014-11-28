@@ -40,4 +40,8 @@ remove(el);
 
 <!-- end api -->
 
-:)
+----
+
+## Thanks
+
+(c) 2014 Rico Sta. Cruz MIT

@@ -14,6 +14,13 @@ Mini dom.
 | `$(fn)`                    | `ready(fn)`              |
 | `$(document).ready(fn)`    | `ready(fn)`              |
 
+To do:
+
+| jQuery                   | mindom                 |
+| --------                 | --------               |
+| `$(el).off('click', fn)` | `off(el, 'click', fn)` |
+| `$(el).trigger('click')` | `trigger(el, 'click')` |
+
 Some aren't implemented, because they're easy enough:
 
 | jQuery                              | DOM                              |

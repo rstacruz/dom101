@@ -26,6 +26,8 @@ jQuery.
 - **Copy-pastable**: if you don't want to include mindom as a dependency, each
 file ([example]) stands on their own and can be easily pasted into your project.
 
+- **Semi-legacy support**: Minimum browser supported is IE8.
+
 mindom follows the conventions of [101].
 
 <br>

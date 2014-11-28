@@ -43,3 +43,22 @@ describe('hasClass', function () {
     expect(hasClass(div, 'hel')).eq(false);
   });
 });
+
+describe('remove', function () {
+  var remove = require('../remove');
+  var sub;
+
+  beforeEach(function () {
+    sub = document.createElement('span');
+    div.appendChild(sub);
+  });
+
+  it('appending works', function () {
+    expect(sub.parentNode).eql(div);
+  });
+
+  it('works', function () {
+    remove(sub);
+    expect(sub.parentNode).be.null;
+  });
+});

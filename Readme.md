@@ -10,15 +10,20 @@ Mini dom.
 | `$(el).remove()`           | `remove(el)`             |
 | `$(el).text()`             | `text(el)`               |
 | `$(el).text('...')`        | `text(el, '...')`        |
+| `$(el).on('click', fn)`    | `on(el, 'click', fn)`    |
+| `$(fn)`                    | `ready(fn)`              |
+| `$(document).ready(fn)`    | `ready(fn)`              |
 
 Some aren't implemented, because they're easy enough:
 
-| jQuery                           | DOM                           |
-| --------                         | --------                      |
-| `$(el).getAttribute('tabindex')` | `el.getAttribute('tabindex')` |
-| `$(el).html()`                   | `el.innerHTML`                |
-| `$(el).html('...')`              | `el.innerHTML = '...'`        |
-| `$(el).parent()`                 | `el.parentNode`               |
+| jQuery                              | DOM                              |
+| --------                            | --------                         |
+| `$(el).attr('tabindex')`            | `el.getAttribute('tabindex')`    |
+| `$(el).attr('tabindex', 3)`         | `el.setAttribute('tabindex', 3)` |
+| `$(el).css('border-radius', '3px')` | `el.style.borderRadius = '3px'`  |
+| `$(el).html()`                      | `el.innerHTML`                   |
+| `$(el).html('...')`                 | `el.innerHTML = '...'`           |
+| `$(el).parent()`                    | `el.parentNode`                  |
 
 ----
 
@@ -46,6 +51,26 @@ var hasClass = require('mindom/has-class');
 
 el.className = 'selected active';
 hasClass(el, 'active') //=> true
+```
+
+### on
+> `on(el, event, fn)`
+
+Adds an event handler.
+
+```js
+var on = require('mindom/on');
+on(el, 'click', function () { ... });
+```
+
+### ready
+> `ready(fn)`
+
+On DOM ready.
+
+```js
+var ready = require('mindom/ready');
+ready(function () { ... });
 ```
 
 ### removeClass

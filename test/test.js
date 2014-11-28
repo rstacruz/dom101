@@ -61,6 +61,10 @@ describe('remove', function () {
     remove(sub);
     expect(sub.parentNode).be.null;
   });
+
+  it('works with null', function () {
+    remove(null);
+  });
 });
 
 describe('text', function () {

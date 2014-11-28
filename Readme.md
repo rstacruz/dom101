@@ -16,11 +16,15 @@ addClass(el, 'active');
 If you're writing a frontend library, it's best to avoid a dependency on
 [jQuery]. This means having to write your own DOM manipulation code, though.
 
-I've packaged all that typical DOM manipulation code into many single-use JS
-files.
+To speed you along, I've packaged all that typical DOM manipulation code into
+many single-use JS files.
 
-This way, you can use [browserify] to make your final bundle and it will only
-bundle the functions it needs, instead of bundling a monolithic jQuery.
+- **Slim builds**: you can use [browserify] to make your final bundle and it
+will only bundle the functions it needs, instead of bundling a monolithic
+jQuery.
+
+- **Copy-pastable**: if you don't want to include mindom as a dependency, each
+file ([example]) stands on their own and can be easily pasted into your project.
 
 mindom follows the conventions of [101].
 
@@ -167,3 +171,4 @@ text(el, 'Hello world');
 [browserify]: http://browserify.org
 [101]: https://www.npmjs.org/package/101
 [youmightnotneedjquery.com]: http://youmightnotneedjquery.com/
+[example]: add-class.js

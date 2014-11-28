@@ -6,7 +6,7 @@
  *     ready(function () { ... });
  */
 
-module.exports = function (fn) {
+function ready (fn) {
   if (document.addEventListener) {
     document.addEventListener('DOMContentLoaded', fn);
   } else {
@@ -14,4 +14,6 @@ module.exports = function (fn) {
       if (document.readyState === 'interactive') fn();
     });
   }
-};
+}
+
+module.exports = ready;

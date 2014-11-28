@@ -6,7 +6,7 @@
  *     text(el, 'Hello world');
  */
 
-module.exports = function (el, value) {
+function text (el, value) {
   if (arguments.length === 1) {
     if ('textContent' in el)
       return el.textContent;
@@ -18,4 +18,6 @@ module.exports = function (el, value) {
     else
       el.innerText = value;
   }
-};
+}
+
+module.exports = text;

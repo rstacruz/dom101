@@ -6,7 +6,7 @@
  *     on(el, 'click', function () { ... });
  */
 
-module.exports = function (el, event, handler) {
+function on (el, event, handler) {
   if (el.addEventListener) {
     el.addEventListener(event, handler);
   } else {
@@ -14,4 +14,6 @@ module.exports = function (el, event, handler) {
       handler.call(el);
     });
   }
-};
+}
+
+module.exports = on;

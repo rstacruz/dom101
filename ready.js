@@ -1,9 +1,12 @@
 /**
  * ready : ready(fn)
- * On DOM ready.
+ * Executes `fn` when the DOM is ready.
  *
  *     var ready = require('mindom/ready');
- *     ready(function () { ... });
+ *
+ *     ready(function () {
+ *       ...
+ *     });
  */
 
 function ready (fn) {

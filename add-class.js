@@ -3,6 +3,7 @@
  * Adds a class name to an element. Compare with `$.fn.addClass`.
  *
  *     var addClass = require('mindom/add-class');
+ *
  *     addClass(el, 'active');
  */
 

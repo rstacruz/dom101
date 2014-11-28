@@ -2,7 +2,8 @@
  * prepend : prepend(el, child)
  * Prepends a `child` into a parent `el`. Compare with `$.fn.prepend`.
  *
- *     var prepend = require('mindom/prepend);
+ *     var prepend = require('mindom/prepend');
+ *
  *     prepend(el, child);
  */
 

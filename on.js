@@ -3,7 +3,10 @@
  * Adds an event handler.
  *
  *     var on = require('mindom/on');
- *     on(el, 'click', function () { ... });
+ *
+ *     on(el, 'click', function () {
+ *       ...
+ *     });
  */
 
 function on (el, event, handler) {

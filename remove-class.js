@@ -6,7 +6,9 @@
  *
  *     el.className = 'selected active';
  *     removeClass(el, 'active');
- *     el.className; //=> "selected"
+ *
+ *     el.className
+ *     => "selected"
  */
 
 function removeClass (el, className) {

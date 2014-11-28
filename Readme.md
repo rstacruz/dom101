@@ -87,6 +87,7 @@ Adds a class name to an element. Compare with `$.fn.addClass`.
 
 ```js
 var addClass = require('mindom/add-class');
+
 addClass(el, 'active');
 ```
 
@@ -109,7 +110,10 @@ Adds an event handler.
 
 ```js
 var on = require('mindom/on');
-on(el, 'click', function () { ... });
+
+on(el, 'click', function () {
+  ...
+});
 ```
 
 ### prepend
@@ -118,18 +122,22 @@ on(el, 'click', function () { ... });
 Prepends a `child` into a parent `el`. Compare with `$.fn.prepend`.
 
 ```js
-var prepend = require('mindom/prepend);
+var prepend = require('mindom/prepend');
+
 prepend(el, child);
 ```
 
 ### ready
 > `ready(fn)`
 
-On DOM ready.
+Executes `fn` when the DOM is ready.
 
 ```js
 var ready = require('mindom/ready');
-ready(function () { ... });
+
+ready(function () {
+  ...
+});
 ```
 
 ### removeClass
@@ -142,7 +150,9 @@ var removeClass = require('mindom/remove-class');
 
 el.className = 'selected active';
 removeClass(el, 'active');
-el.className; //=> "selected"
+
+el.className
+=> "selected"
 ```
 
 ### remove
@@ -163,7 +173,11 @@ Sets or gets text. Compare with `$.fn.text`.
 
 ```js
 var text = require('mindom/text');
-text(el, 'Hello world');
+
+text(el, 'Hello');
+
+text(el)
+=> "Hello"
 ```
 
 <!-- end api -->

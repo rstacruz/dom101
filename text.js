@@ -3,7 +3,11 @@
  * Sets or gets text. Compare with `$.fn.text`.
  *
  *     var text = require('mindom/text');
- *     text(el, 'Hello world');
+ *
+ *     text(el, 'Hello');
+ *
+ *     text(el)
+ *     => "Hello"
  */
 
 function text (el, value) {

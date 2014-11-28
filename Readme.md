@@ -34,31 +34,30 @@ mindom follows the conventions of [101].
 
 ## Reference
 
-| jQuery                     | mindom                   |
-| --------                   | --------                 |
-| `$(el).addClass('...')`    | `addClass(el, '...')`    |
-| `$(el).removeClass('...')` | `removeClass(el, '...')` |
-| `$(el).hasClass('...')`    | `hasClass(el, '...')`    |
-| `$(el).remove()`           | `remove(el)`             |
-| `$(el).text()`             | `text(el)`               |
-| `$(el).text('...')`        | `text(el, '...')`        |
-| `$(el).on('click', fn)`    | `on(el, 'click', fn)`    |
-| `$(fn)`                    | `ready(fn)`              |
-| `$(document).ready(fn)`    | `ready(fn)`              |
-| `$(el).prepend(child)`     | `prepend(el, child)`     |
+| jQuery                     | mindom                                 |
+| --------                   | --------                               |
+| `$(el).addClass('...')`    | [addClass](#addclass)(el, '...')       |
+| `$(el).removeClass('...')` | [removeClass](#removeclass)(el, '...') |
+| `$(el).hasClass('...')`    | [hasClass](#hasclass)(el, '...')       |
+| `$(el).remove()`           | [remove](#remove)(el)                  |
+| `$(el).text()`             | [text](#text)(el)                      |
+| `$(el).text('...')`        | [text](#text)(el, '...')               |
+| `$(el).on('click', fn)`    | [on](#on)(el, 'click', fn)             |
+| `$(fn)`                    | [ready](#ready)(fn)                    |
+| `$(document).ready(fn)`    | [ready](#ready)(fn)                    |
+| `$(el).prepend(child)`     | [prepend](#prepend)(el, child)         |
+| `$(el).off('click', fn)`   | off(el, 'click', fn) *                 |
+| `$(el).trigger('click')`   | trigger(el, 'click') *                 |
+| `$(el).before(html)`       | before(el, 'html') *                   |
+| `$(el).after(html)`        | after(el, 'html') *                    |
+| `$(el).children()`         | children(el) *                         |
+| `$(el).filter('...')`      | filter(el, '...') *                    |
 
-These are to be implemented soon (contributions welcome):
+(`*` = to be implemented soon. contributions welcome)
 
-| jQuery                   | mindom                 |
-| --------                 | --------               |
-| `$(el).off('click', fn)` | `off(el, 'click', fn)` |
-| `$(el).trigger('click')` | `trigger(el, 'click')` |
-| `$(el).before(html)`     | `before(el, 'html')`   |
-| `$(el).after(html)`      | `after(el, 'html')`    |
-| `$(el).children()`       | `children(el)`         |
-| `$(el).filter('...')`    | `filter(el, '...')`    |
+### Not implemented
 
-Some aren't implemented, because they're easy enough to do with plain DOM:
+Some DOM helpers aren't implemented, because they're easy enough to do with plain DOM API:
 
 | jQuery                              | DOM                                |
 | --------                            | --------                           |

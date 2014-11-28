@@ -62,3 +62,17 @@ describe('remove', function () {
     expect(sub.parentNode).be.null;
   });
 });
+
+describe('text', function () {
+  var text = require('../text');
+
+  it('sets', function () {
+    text(div, 'hello');
+    expect(div.outerHTML).eql('<div>hello</div>');
+  });
+
+  it('sets and gets', function () {
+    text(div, 'hello');
+    expect(text(div)).eql('hello');
+  });
+});

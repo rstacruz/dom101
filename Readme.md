@@ -2,6 +2,25 @@
 
 Mini dom.
 
+| jQuery                   | mindom                 |
+| --------                 | --------               |
+| `$(el).addClass('x')`    | `addClass(el, 'x')`    |
+| `$(el).removeClass('x')` | `removeClass(el, 'x')` |
+| `$(el).remove()`         | `remove(el)`           |
+| `$(el).text()`           | `text(el)`             |
+
+Some aren't implemented, because they're easy enough:
+
+| jQuery                           | DOM                           |
+| --------                         | --------                      |
+| `$(el).getAttribute('tabindex')` | `el.getAttribute('tabindex')` |
+| `$(el).html()`                   | `el.innerHTML`                |
+| `$(el).html('...')`              | `el.innerHTML = '...'`        |
+
+----
+
+## API Reference
+
 <!-- begin api -->
 
 ### addClass
@@ -41,6 +60,14 @@ remove(el);
 <!-- end api -->
 
 ----
+
+## Similar projects
+
+ * jQuery (of course)
+ * [youmightnotneedjquery.com](http://youmightnotneedjquery.com/) — actually takes a bunch of code from here
+ * [101](https://www.npmjs.org/package/101)
+
+## Acknowledgement
 
 ## Thanks
 

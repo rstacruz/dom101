@@ -2,12 +2,14 @@
 
 Mini dom.
 
-| jQuery                   | mindom                 |
-| --------                 | --------               |
-| `$(el).addClass('x')`    | `addClass(el, 'x')`    |
-| `$(el).removeClass('x')` | `removeClass(el, 'x')` |
-| `$(el).remove()`         | `remove(el)`           |
-| `$(el).text()`           | `text(el)`             |
+| jQuery                     | mindom                   |
+| --------                   | --------                 |
+| `$(el).addClass('...')`    | `addClass(el, '...')`    |
+| `$(el).removeClass('...')` | `removeClass(el, '...')` |
+| `$(el).hasClass('...')`    | `hasClass(el, '...')`    |
+| `$(el).remove()`           | `remove(el)`             |
+| `$(el).text()`             | `text(el)`               |
+| `$(el).text('...')`        | `text(el, '...')`        |
 
 Some aren't implemented, because they're easy enough:
 
@@ -16,6 +18,7 @@ Some aren't implemented, because they're easy enough:
 | `$(el).getAttribute('tabindex')` | `el.getAttribute('tabindex')` |
 | `$(el).html()`                   | `el.innerHTML`                |
 | `$(el).html('...')`              | `el.innerHTML = '...'`        |
+| `$(el).parent()`                 | `el.parentNode`               |
 
 ----
 

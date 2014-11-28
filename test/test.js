@@ -76,3 +76,31 @@ describe('text', function () {
     expect(text(div)).eql('hello');
   });
 });
+
+describe('removeClass', function () {
+  var removeClass = require('../remove-class');
+
+  it('works at the end', function () {
+    div.className = 'hello world';
+    removeClass(div, 'world');
+    expect(div.className).eql('hello  ');
+  });
+
+  it('works at the start', function () {
+    div.className = 'hello world';
+    removeClass(div, 'hello');
+    expect(div.className).eql('  world');
+  });
+
+  it('works at the middle', function () {
+    div.className = 'hello world';
+    removeClass(div, 'there');
+    expect(div.className).eql('hello world');
+  });
+
+  it('works for single classes', function () {
+    div.className = 'abc';
+    removeClass(div, 'abc');
+    expect(div.className).eql(' ');
+  });
+});

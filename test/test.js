@@ -108,3 +108,23 @@ describe('removeClass', function () {
     expect(div.className).eql(' ');
   });
 });
+
+describe('prepend', function () {
+  var prepend = require('../prepend');
+
+  beforeEach(function () {
+    global.child = document.createElement('div');
+  });
+
+  it('works for empty divs', function () {
+    prepend(div, child);
+    expect(div.firstChild).eql(child);
+  });
+
+  it('works for non-empty divs', function () {
+    var first = document.createElement('div');
+    div.appendChild(first);
+    prepend(div, child);
+    expect(div.firstChild).eql(child);
+  });
+});

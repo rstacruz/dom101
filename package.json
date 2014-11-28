@@ -1,8 +1,17 @@
 {
   "name": "mindom",
-  "version": "0.0.1",
-  "description": "Mini dom.",
+  "version": "0.0.0",
+  "description": "DOM manipulation functions.",
   "main": "index.js",
+  "keywords": [
+    "utils",
+    "helpers",
+    "jquery",
+    "dom",
+    "addclass",
+    "removeclass",
+    "html"
+  ],
   "directories": {
     "test": "test"
   },

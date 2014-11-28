@@ -43,6 +43,7 @@ mindom follows the conventions of [101].
 | `$(el).on('click', fn)`    | `on(el, 'click', fn)`    |
 | `$(fn)`                    | `ready(fn)`              |
 | `$(document).ready(fn)`    | `ready(fn)`              |
+| `$(el).prepend(child)`     | `prepend(el, child)`     |
 
 These are to be implemented soon (contributions welcome):
 
@@ -68,6 +69,9 @@ Some aren't implemented, because they're easy enough to do with plain DOM:
 | `$(el).clone()`                     | `el.cloneNode(true)`               |
 | `$('...')`                          | `document.querySelectorAll('...')` |
 | `$el.find('...')`                   | `el.querySelectorAll('...')`       |
+| `$el.blur()`                        | `el.blur()`                        |
+| `$el.focus()`                       | `el.focus()`                       |
+| `$el.append(child)`                 | `el.appendChild(child)`            |
 
 <br>
 
@@ -160,6 +164,7 @@ text(el, 'Hello world');
  * [jQuery] (of course)
  * [youmightnotneedjquery.com] — actually takes a bunch of code from here
  * [101]
+ * [bonzo]
 
 <br>
 
@@ -172,3 +177,4 @@ text(el, 'Hello world');
 [101]: https://www.npmjs.org/package/101
 [youmightnotneedjquery.com]: http://youmightnotneedjquery.com/
 [example]: add-class.js
+[bonzo]: https://github.com/ded/bonzo

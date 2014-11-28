@@ -1,0 +1,21 @@
+{
+  "name": "mindom",
+  "version": "0.0.1",
+  "description": "Mini dom.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Rico Sta. Cruz <hi@ricostacruz.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^1.10.0",
+    "jsdom": "^1.3.1",
+    "mocha": "^2.0.1",
+    "mocha-clean": "^0.4.0",
+    "mocha-jsdom": "^0.2.0"
+  }
+}

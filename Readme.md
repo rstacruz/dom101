@@ -1,6 +1,32 @@
 # mindom
 
-Mini dom.
+DOM manipulation utilities as single-files. **(Work in progress)**
+
+```js
+var addClass = require('mindom/add-class');
+
+el = document.createElement('div');
+addClass(el, 'active');
+```
+
+----
+
+## Why?
+
+If you're writing a frontend library, it's best to avoid a dependency on
+[jQuery]. This means having to write your own DOM manipulation code, though.
+
+I've packaged all that typical DOM manipulation code into many single-use JS
+files.
+
+This way, you can use [browserify] to make your final bundle and it will only
+bundle the functions it needs, instead of bundling a monolithic jQuery.
+
+mindom follows the conventions of [101].
+
+----
+
+## Reference
 
 | jQuery                     | mindom                   |
 | --------                   | --------                 |
@@ -14,23 +40,30 @@ Mini dom.
 | `$(fn)`                    | `ready(fn)`              |
 | `$(document).ready(fn)`    | `ready(fn)`              |
 
-To do:
+These are to be implemented soon (contributions welcome):
 
 | jQuery                   | mindom                 |
 | --------                 | --------               |
 | `$(el).off('click', fn)` | `off(el, 'click', fn)` |
 | `$(el).trigger('click')` | `trigger(el, 'click')` |
+| `$(el).before(html)`     | `before(el, 'html')`   |
+| `$(el).after(html)`      | `after(el, 'html')`    |
+| `$(el).children()`       | `children(el)`         |
+| `$(el).filter('...')`    | `filter(el, '...')`    |
 
-Some aren't implemented, because they're easy enough:
+Some aren't implemented, because they're easy enough to do with plain DOM:
 
-| jQuery                              | DOM                              |
-| --------                            | --------                         |
-| `$(el).attr('tabindex')`            | `el.getAttribute('tabindex')`    |
-| `$(el).attr('tabindex', 3)`         | `el.setAttribute('tabindex', 3)` |
-| `$(el).css('border-radius', '3px')` | `el.style.borderRadius = '3px'`  |
-| `$(el).html()`                      | `el.innerHTML`                   |
-| `$(el).html('...')`                 | `el.innerHTML = '...'`           |
-| `$(el).parent()`                    | `el.parentNode`                  |
+| jQuery                              | DOM                                |
+| --------                            | --------                           |
+| `$(el).attr('tabindex')`            | `el.getAttribute('tabindex')`      |
+| `$(el).attr('tabindex', 3)`         | `el.setAttribute('tabindex', 3)`   |
+| `$(el).css('border-radius', '3px')` | `el.style.borderRadius = '3px'`    |
+| `$(el).html()`                      | `el.innerHTML`                     |
+| `$(el).html('...')`                 | `el.innerHTML = '...'`             |
+| `$(el).parent()`                    | `el.parentNode`                    |
+| `$(el).clone()`                     | `el.cloneNode(true)`               |
+| `$('...')`                          | `document.querySelectorAll('...')` |
+| `$el.find('...')`                   | `el.querySelectorAll('...')`       |
 
 ----
 
@@ -120,12 +153,17 @@ text(el, 'Hello world');
 
 ## Similar projects
 
- * jQuery (of course)
- * [youmightnotneedjquery.com](http://youmightnotneedjquery.com/) — actually takes a bunch of code from here
- * [101](https://www.npmjs.org/package/101)
+ * [jQuery] (of course)
+ * [youmightnotneedjquery.com] — actually takes a bunch of code from here
+ * [101]
 
 ## Acknowledgement
 
 ## Thanks
 
 (c) 2014 Rico Sta. Cruz MIT
+
+[jQuery]: http://jquery.com
+[browserify]: http://browserify.org
+[101]: https://www.npmjs.org/package/101
+[youmightnotneedjquery.com]: http://youmightnotneedjquery.com/

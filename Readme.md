@@ -112,6 +112,16 @@ var on = require('mindom/on');
 on(el, 'click', function () { ... });
 ```
 
+### prepend
+> `prepend(el, child)`
+
+Prepends a `child` into a parent `el`. Compare with `$.fn.prepend`.
+
+```js
+var prepend = require('mindom/prepend);
+prepend(el, child);
+```
+
 ### ready
 > `ready(fn)`
 

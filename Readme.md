@@ -48,6 +48,19 @@ el.className = 'selected active';
 hasClass(el, 'active') //=> true
 ```
 
+### removeClass
+> `removeClass(el, className)`
+
+Removes a classname.
+
+```js
+var removeClass = require('mindom/remove-class');
+
+el.className = 'selected active';
+removeClass(el, 'active');
+el.className; //=> "selected"
+```
+
 ### remove
 > `remove(el)`
 
@@ -59,6 +72,15 @@ var remove = require('mindom/remove');
 remove(el);
 ```
 
+### text
+> `text(el, [value])`
+
+Sets or gets text. Compare with `$.fn.text`.
+
+```js
+var text = require('mindom/text');
+text(el, 'Hello world');
+```
 
 <!-- end api -->
 

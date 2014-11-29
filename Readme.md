@@ -180,7 +180,7 @@ text(el)
 ```
 
 ### trigger
-> `trigger(el, event, [options])`
+> `trigger(el, event)`
 
 Triggers an event `event`. Only works for native events.
 

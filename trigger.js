@@ -1,5 +1,5 @@
 /**
- * trigger : trigger(el, event, [options])
+ * trigger : trigger(el, event)
  * Triggers an event `event`. Only works for native events.
  *
  *     var trigger = require('mindom/trigger');

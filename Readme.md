@@ -50,7 +50,6 @@ mindom follows the conventions of [101].
 | `$(el).off('click', fn)`   | off(el, 'click', fn) *                 |
 | `$(el).before(html)`       | before(el, 'html') *                   |
 | `$(el).after(html)`        | after(el, 'html') *                    |
-| `$(el).children()`         | children(el) *                         |
 
 (`*` = to be implemented soon. contributions welcome)
 
@@ -60,6 +59,7 @@ Some DOM helpers aren't implemented, because they're easy enough to do with plai
 
 | jQuery                              | DOM                                |
 | --------                            | --------                           |
+| `$('...')`                          | `document.querySelectorAll('...')` |
 | `$(el).attr('tabindex')`            | `el.getAttribute('tabindex')`      |
 | `$(el).attr('tabindex', 3)`         | `el.setAttribute('tabindex', 3)`   |
 | `$(el).css('border-radius', '3px')` | `el.style.borderRadius = '3px'`    |
@@ -67,7 +67,7 @@ Some DOM helpers aren't implemented, because they're easy enough to do with plai
 | `$(el).html('...')`                 | `el.innerHTML = '...'`             |
 | `$(el).parent()`                    | `el.parentNode`                    |
 | `$(el).clone()`                     | `el.cloneNode(true)`               |
-| `$('...')`                          | `document.querySelectorAll('...')` |
+| `$(el).children()`                  | `el.children`                      |
 | `$el.find('...')`                   | `el.querySelectorAll('...')`       |
 | `$el.blur()`                        | `el.blur()`                        |
 | `$el.focus()`                       | `el.focus()`                       |

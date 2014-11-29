@@ -6,6 +6,9 @@ if (typeof require === 'function') {
   global.expect = require('chai').expect;
 } else {
   window.expect = chai.expect;
+  if (typeof window.mdom === 'undefined') {
+    alert('build file not working.\ntry running "make test/build.js" first.');
+  }
 }
 
 /*

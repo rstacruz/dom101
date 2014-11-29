@@ -46,12 +46,11 @@ mindom follows the conventions of [101].
 | `$(fn)`                    | [ready](#ready)(fn)                    |
 | `$(document).ready(fn)`    | [ready](#ready)(fn)                    |
 | `$(el).prepend(child)`     | [prepend](#prepend)(el, child)         |
+| `$(el).trigger('click')`   | [trigger][#trigger](el, 'click')       |
 | `$(el).off('click', fn)`   | off(el, 'click', fn) *                 |
-| `$(el).trigger('click')`   | trigger(el, 'click') *                 |
 | `$(el).before(html)`       | before(el, 'html') *                   |
 | `$(el).after(html)`        | after(el, 'html') *                    |
 | `$(el).children()`         | children(el) *                         |
-| `$(el).filter('...')`      | filter(el, '...') *                    |
 
 (`*` = to be implemented soon. contributions welcome)
 
@@ -178,6 +177,18 @@ text(el, 'Hello');
 
 text(el)
 => "Hello"
+```
+
+### trigger
+> `trigger(el, event, [options])`
+
+Triggers an event `event`. Only works for native events.
+
+```js
+var trigger = require('mindom/trigger');
+
+el = document.querySelector('#button');
+trigger(el, 'click');
 ```
 
 <!-- end api -->

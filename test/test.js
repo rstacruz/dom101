@@ -128,3 +128,26 @@ describe('prepend', function () {
     expect(div.firstChild).eql(child);
   });
 });
+
+describe('on, trigger', function () {
+  var on = require('../on');
+  var trigger = require('../trigger');
+
+  it('works with input onchange', function (next) {
+    var input = document.createElement('input');
+
+    on(input, 'change', function () {
+      next();
+    });
+
+    trigger(input, 'change');
+  });
+
+  it('works with div onclick', function (next) {
+    on(div, 'click', function () {
+      next();
+    });
+
+    trigger(div, 'click');
+  });
+});

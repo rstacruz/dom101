@@ -46,7 +46,7 @@ mindom follows the conventions of [101].
 | `$(fn)`                    | [ready](#ready)(fn)                    |
 | `$(document).ready(fn)`    | [ready](#ready)(fn)                    |
 | `$(el).prepend(child)`     | [prepend](#prepend)(el, child)         |
-| `$(el).trigger('click')`   | [trigger][#trigger](el, 'click')       |
+| `$(el).trigger('click')`   | [trigger](#trigger)(el, 'click')       |
 | `$(el).off('click', fn)`   | off(el, 'click', fn) *                 |
 | `$(el).before(html)`       | before(el, 'html') *                   |
 | `$(el).after(html)`        | after(el, 'html') *                    |

@@ -9,6 +9,8 @@ el = document.createElement('div');
 addClass(el, 'active');
 ```
 
+[![Status](https://travis-ci.org/rstacruz/mindom.svg?branch=master)](https://travis-ci.org/rstacruz/mindom)  
+
 <br>
 
 ## Why?

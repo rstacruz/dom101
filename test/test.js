@@ -1,22 +1,50 @@
-require('./setup');
+var global = (function(){ return this; })();
+
+if (typeof require === 'function') {
+  require('mocha-jsdom')();
+  global.mdom = require('../index');
+  global.expect = require('chai').expect;
+} else {
+  window.expect = chai.expect;
+}
+
+/*
+ * helpers
+ */
+
+function n(string) {
+  return string.replace(/  +/g, ' ').trim();
+}
+
+/*
+ * beforeeach
+ */
+
+beforeEach(function () {
+  global.div = document.createElement('div');
+});
+
+/*
+ * tests
+ */
 
 describe('addClass', function () {
-  var addClass = require('../add-class');
+  var addClass = mdom.addClass;
 
   it('works', function () {
     addClass(div, 'hello');
-    expect(div.className).eql(' hello');
+    expect(n(div.className)).eql('hello');
   });
 
   it('compounds', function () {
     addClass(div, 'hello');
     addClass(div, 'world');
-    expect(div.className).eql(' hello world');
+    expect(n(div.className)).eql('hello world');
   });
 });
 
 describe('hasClass', function () {
-  var hasClass = require('../has-class');
+  var hasClass = mdom.hasClass;
 
   it('works', function () {
     div.className = 'hello';
@@ -45,7 +73,7 @@ describe('hasClass', function () {
 });
 
 describe('remove', function () {
-  var remove = require('../remove');
+  var remove = mdom.remove;
   var sub;
 
   beforeEach(function () {
@@ -68,7 +96,7 @@ describe('remove', function () {
 });
 
 describe('text', function () {
-  var text = require('../text');
+  var text = mdom.text;
 
   it('sets', function () {
     text(div, 'hello');
@@ -82,35 +110,35 @@ describe('text', function () {
 });
 
 describe('removeClass', function () {
-  var removeClass = require('../remove-class');
+  var removeClass = mdom.removeClass;
 
   it('works at the end', function () {
     div.className = 'hello world';
     removeClass(div, 'world');
-    expect(div.className).eql('hello  ');
+    expect(n(div.className)).eql('hello');
   });
 
   it('works at the start', function () {
     div.className = 'hello world';
     removeClass(div, 'hello');
-    expect(div.className).eql('  world');
+    expect(n(div.className)).eql('world');
   });
 
   it('works at the middle', function () {
     div.className = 'hello world';
     removeClass(div, 'there');
-    expect(div.className).eql('hello world');
+    expect(n(div.className)).eql('hello world');
   });
 
   it('works for single classes', function () {
     div.className = 'abc';
     removeClass(div, 'abc');
-    expect(div.className).eql(' ');
+    expect(n(div.className)).eql('');
   });
 });
 
 describe('prepend', function () {
-  var prepend = require('../prepend');
+  var prepend = mdom.prepend;
 
   beforeEach(function () {
     global.child = document.createElement('div');
@@ -130,8 +158,8 @@ describe('prepend', function () {
 });
 
 describe('on, trigger', function () {
-  var on = require('../on');
-  var trigger = require('../trigger');
+  var on = mdom.on;
+  var trigger = mdom.trigger;
 
   it('works with input onchange', function (next) {
     var input = document.createElement('input');

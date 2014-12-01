@@ -1,15 +1,15 @@
-# mindom
+# dom101
 
 DOM manipulation utilities as single-files. **(Work in progress)**
 
 ```js
-var addClass = require('mindom/add-class');
+var addClass = require('dom101/add-class');
 
 el = document.createElement('div');
 addClass(el, 'active');
 ```
 
-[![Status](https://travis-ci.org/rstacruz/mindom.svg?branch=master)](https://travis-ci.org/rstacruz/mindom)  
+[![Status](https://travis-ci.org/rstacruz/dom101.svg?branch=master)](https://travis-ci.org/rstacruz/dom101)  
 
 <br>
 
@@ -25,18 +25,18 @@ many single-use JS files.
 will only bundle the functions it needs, instead of bundling a monolithic
 jQuery.
 
-- **Copy-pastable**: if you don't want to include mindom as a dependency, each
+- **Copy-pastable**: if you don't want to include dom101 as a dependency, each
 file ([example]) stands on their own and can be easily pasted into your project.
 
 - **Semi-legacy support**: Minimum browser supported is IE8.
 
-mindom follows the conventions of [101].
+dom101 follows the conventions of [101].
 
 <br>
 
 ## Reference
 
-| jQuery                     | mindom                                 |
+| jQuery                     | dom101                                 |
 | --------                   | --------                               |
 | `$(el).addClass('...')`    | [addClass](#addclass)(el, '...')       |
 | `$(el).removeClass('...')` | [removeClass](#removeclass)(el, '...') |
@@ -87,7 +87,7 @@ Some DOM helpers aren't implemented, because they're easy enough to do with plai
 Adds a class name to an element. Compare with `$.fn.addClass`.
 
 ```js
-var addClass = require('mindom/add-class');
+var addClass = require('dom101/add-class');
 
 addClass(el, 'active');
 ```
@@ -98,7 +98,7 @@ addClass(el, 'active');
 Checks if an element has a given class name.
 
 ```js
-var hasClass = require('mindom/has-class');
+var hasClass = require('dom101/has-class');
 
 el.className = 'selected active';
 hasClass(el, 'active') //=> true
@@ -110,7 +110,7 @@ hasClass(el, 'active') //=> true
 Adds an event handler.
 
 ```js
-var on = require('mindom/on');
+var on = require('dom101/on');
 
 on(el, 'click', function () {
   ...
@@ -123,7 +123,7 @@ on(el, 'click', function () {
 Prepends a `child` into a parent `el`. Compare with `$.fn.prepend`.
 
 ```js
-var prepend = require('mindom/prepend');
+var prepend = require('dom101/prepend');
 
 prepend(el, child);
 ```
@@ -134,7 +134,7 @@ prepend(el, child);
 Executes `fn` when the DOM is ready.
 
 ```js
-var ready = require('mindom/ready');
+var ready = require('dom101/ready');
 
 ready(function () {
   ...
@@ -147,7 +147,7 @@ ready(function () {
 Removes a classname.
 
 ```js
-var removeClass = require('mindom/remove-class');
+var removeClass = require('dom101/remove-class');
 
 el.className = 'selected active';
 removeClass(el, 'active');
@@ -162,7 +162,7 @@ el.className
 Removes an element from the DOM.
 
 ```js
-var remove = require('mindom/remove');
+var remove = require('dom101/remove');
 
 remove(el);
 ```
@@ -173,7 +173,7 @@ remove(el);
 Sets or gets text. Compare with `$.fn.text`.
 
 ```js
-var text = require('mindom/text');
+var text = require('dom101/text');
 
 text(el, 'Hello');
 
@@ -187,7 +187,7 @@ text(el)
 Triggers an event `event`. Only works for native events.
 
 ```js
-var trigger = require('mindom/trigger');
+var trigger = require('dom101/trigger');
 
 el = document.querySelector('#button');
 trigger(el, 'click');

@@ -2,7 +2,7 @@
  * trigger : trigger(el, event)
  * Triggers an event `event`. Only works for native events.
  *
- *     var trigger = require('mindom/trigger');
+ *     var trigger = require('dom101/trigger');
  *
  *     el = document.querySelector('#button');
  *     trigger(el, 'click');

@@ -2,7 +2,7 @@
  * text : text(el, [value])
  * Sets or gets text. Compare with `$.fn.text`.
  *
- *     var text = require('mindom/text');
+ *     var text = require('dom101/text');
  *
  *     text(el, 'Hello');
  *

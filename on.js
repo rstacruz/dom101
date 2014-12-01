@@ -2,7 +2,7 @@
  * on : on(el, event, fn)
  * Adds an event handler.
  *
- *     var on = require('mindom/on');
+ *     var on = require('dom101/on');
  *
  *     on(el, 'click', function () {
  *       ...

@@ -2,7 +2,7 @@
  * removeClass : removeClass(el, className)
  * Removes a classname.
  *
- *     var removeClass = require('mindom/remove-class');
+ *     var removeClass = require('dom101/remove-class');
  *
  *     el.className = 'selected active';
  *     removeClass(el, 'active');

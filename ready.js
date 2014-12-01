@@ -2,7 +2,7 @@
  * ready : ready(fn)
  * Executes `fn` when the DOM is ready.
  *
- *     var ready = require('mindom/ready');
+ *     var ready = require('dom101/ready');
  *
  *     ready(function () {
  *       ...

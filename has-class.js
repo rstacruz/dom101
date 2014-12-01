@@ -2,7 +2,7 @@
  * hasClass : hasClass(el, className)
  * Checks if an element has a given class name.
  *
- *     var hasClass = require('mindom/has-class');
+ *     var hasClass = require('dom101/has-class');
  *
  *     el.className = 'selected active';
  *     hasClass(el, 'active') //=> true

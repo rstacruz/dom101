@@ -250,11 +250,12 @@ trigger(el, 'click');
 
 ## Thanks
 
-(c) 2014 Rico Sta. Cruz MIT
+**dom101** © 2014+, Rico Sta. Cruz. Released under the [MIT] License.<br>
+Authored and maintained by Rico Sta. Cruz with help from contributors ([list][contributors]).
 
-[jQuery]: http://jquery.com
-[browserify]: http://browserify.org
-[101]: https://www.npmjs.org/package/101
-[youmightnotneedjquery.com]: http://youmightnotneedjquery.com/
-[example]: add-class.js
-[bonzo]: https://github.com/ded/bonzo
+> [ricostacruz.com](http://ricostacruz.com) &nbsp;&middot;&nbsp;
+> GitHub [@rstacruz](https://github.com/rstacruz) &nbsp;&middot;&nbsp;
+> Twitter [@rstacruz](https://twitter.com/rstacruz)
+
+[MIT]: http://mit-license.org/
+[contributors]: http://github.com/rstacruz/dom101/contributors

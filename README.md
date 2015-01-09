@@ -1,6 +1,6 @@
 # dom101
 
-DOM manipulation utilities as single-files. **(Work in progress)**
+DOM manipulation utilities as single-files.
 
 ```js
 var addClass = require('dom101/add-class');

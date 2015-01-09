@@ -1,8 +1,8 @@
 /**
  * querySelector : querySelector(query)
- * Convenience function to rename `document.querySelector`.
+ * Convenience function to access `document.querySelector`.
  *
- *     var q = require('dom101/queryselector');
+ *     var q = require('dom101/query-selector');
  *     addClass(q('#instructions'), 'hidden');
  */
 

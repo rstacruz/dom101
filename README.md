@@ -55,6 +55,15 @@ dom101 follows the conventions of [101].
 
 (`*` = to be implemented soon. contributions welcome)
 
+### Aliases
+
+Some aliases for DOM functions are also added for convenience.
+
+| DOM                              | dom101                                     |
+| ---                              | ------                                     |
+| `document.querySelector(...)`    | [querySelector](#queryselector)(...)       |
+| `document.querySelectorAll(...)` | [querySelectorAll](#queryselectorAll)(...) |
+
 ### Not implemented
 
 Some DOM helpers aren't implemented, because they're easy enough to do with plain DOM API:
@@ -128,26 +137,27 @@ var prepend = require('dom101/prepend');
 prepend(el, child);
 ```
 
-### querySelector
-> `querySelector(query)`
-
-Convenience function to rename `document.querySelector`.
-
-```js
-var q = require('dom101/queryselector');
-addClass(q('#instructions'), 'hidden');
-```
-
 ### querySelectorAll
 > `querySelectorAll(query)`
 
-Convenience function to rename `document.querySelectorAll`.
+Convenience function to access `document.querySelectorAll`.
 
 ```js
-var qa = require('dom101/queryselectorall');
+var qa = require('dom101/query-selector-all');
+
 qa('.button').forEach(function (el) {
   addClass('el', 'selected');
 });
+```
+
+### querySelector
+> `querySelector(query)`
+
+Convenience function to access `document.querySelector`.
+
+```js
+var q = require('dom101/query-selector');
+addClass(q('#instructions'), 'hidden');
 ```
 
 ### ready

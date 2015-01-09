@@ -1,5 +1,9 @@
 ## Tests
 
+Update the README file (auto-built from inline comments)
+
+    make
+
 Console tests (jsdom)
 
     npm test

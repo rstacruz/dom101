@@ -128,6 +128,28 @@ var prepend = require('dom101/prepend');
 prepend(el, child);
 ```
 
+### querySelector
+> `querySelector(query)`
+
+Convenience function to rename `document.querySelector`.
+
+```js
+var q = require('dom101/queryselector');
+addClass(q('#instructions'), 'hidden');
+```
+
+### querySelectorAll
+> `querySelectorAll(query)`
+
+Convenience function to rename `document.querySelectorAll`.
+
+```js
+var qa = require('dom101/queryselectorall');
+qa('.button').forEach(function (el) {
+  addClass('el', 'selected');
+});
+```
+
 ### ready
 > `ready(fn)`
 

@@ -182,3 +182,21 @@ describe('on, trigger', function () {
     trigger(div, 'click');
   });
 });
+
+describe('querySelector', function () {
+  var div;
+
+  beforeEach(function () {
+    div = document.createElement('div');
+    div.className = 'hello';
+    document.body.appendChild(div);
+  });
+
+  afterEach(function () {
+    document.body.removeChild(div);
+  });
+
+  it('works', function () {
+    expect(mdom.querySelector('.hello')).to.eql(div);
+  });
+});

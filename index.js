@@ -8,9 +8,11 @@ module.exports = {
   hasClass: require('./has-class'),
   on: require('./on'),
   prepend: require('./prepend'),
+  querySelector: require('./queryselector'),
+  querySelectorAll: require('./queryselectorall'),
   ready: require('./ready'),
-  removeClass: require('./remove-class'),
   remove: require('./remove'),
+  removeClass: require('./remove-class'),
   text: require('./text'),
   trigger: require('./trigger'),
 };

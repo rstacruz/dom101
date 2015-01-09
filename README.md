@@ -272,3 +272,10 @@ Authored and maintained by Rico Sta. Cruz with help from contributors ([list][co
 
 [MIT]: http://mit-license.org/
 [contributors]: http://github.com/rstacruz/dom101/contributors
+
+[jQuery]: http://jquery.com
+[browserify]: http://browserify.org
+[101]: https://www.npmjs.org/package/101
+[youmightnotneedjquery.com]: http://youmightnotneedjquery.com/
+[example]: add-class.js
+[bonzo]: https://github.com/ded/bonzo

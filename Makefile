@@ -3,7 +3,7 @@ browserify = ./node_modules/.bin/browserify
 files = $(wildcard *.js)
 
 update: README.md
-	@echo 'updating readme.md'
+	@echo 'updating $<'
 	@(sed '/begin api/q' $<; echo; cat *.js | ${mdextract}; echo; sed -n '/end api/,$$p' $<) > $<~
 	@mv $<~ $<
 

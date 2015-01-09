@@ -62,7 +62,7 @@ Some aliases for DOM functions are also added for convenience.
 | DOM                              | dom101                                     |
 | ---                              | ------                                     |
 | `document.querySelector(...)`    | [querySelector](#queryselector)(...)       |
-| `document.querySelectorAll(...)` | [querySelectorAll](#queryselectorAll)(...) |
+| `document.querySelectorAll(...)` | [querySelectorAll](#queryselectorall)(...) |
 
 ### Not implemented
 

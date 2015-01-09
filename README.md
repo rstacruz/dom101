@@ -86,6 +86,19 @@ Some DOM helpers aren't implemented, because they're easy enough to do with plai
 
 <br>
 
+## Install
+
+dom101 is available via [npm]. Perfect for use with [browserify].
+
+    $ npm install --save dom101
+
+[npm]: https://www.npmjs.org/package/dom101
+[browserify]: https://browserify.org
+
+[![npm version](http://img.shields.io/npm/v/dom101.svg?style=flat)](https://npmjs.org/package/dom101 "View this project on npm")
+
+<br>
+
 ## API Reference
 
 <!-- begin api -->

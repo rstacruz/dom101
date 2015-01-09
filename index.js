@@ -13,6 +13,7 @@ module.exports = {
   ready: require('./ready'),
   remove: require('./remove'),
   removeClass: require('./remove-class'),
+  scrollTop: require('./scroll-top'),
   text: require('./text'),
   trigger: require('./trigger'),
 };

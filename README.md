@@ -199,6 +199,16 @@ var remove = require('dom101/remove');
 remove(el);
 ```
 
+### scrollTop
+> `scrollTop()`
+
+Returns the scroll top value.
+
+```js
+var scrollTop = require('dom101/scroll-top');
+alert(scrollTop());
+```
+
 ### text
 > `text(el, [value])`
 

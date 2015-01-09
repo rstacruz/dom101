@@ -7,12 +7,12 @@
  *     alert(scrollTop());
  */
 
-var scrollTop =
-  (typeof window.pageYOffset !== 'undefined') ?
-    function () { return window.pageYOffset; } :
-  (typeof document.documentElement.clientHeight !== 'undefined') ?
-    function () { return document.documentElement.scrollTop; } :
-    function () { return document.body.scrollTop; };
+function scrollTop () {
+  if (window.pageYOffset) return window.pageYOffset;
+  return document.documentElement.clientHeight
+    ? document.documentElement.scrollTop
+    : document.body.scrollTop;
+}
 
-// Also see https://github.com/yields/scrolltop/blob/master/index.js
+// Taken from https://github.com/yields/scrolltop/blob/master/index.js
 module.exports = scrollTop;

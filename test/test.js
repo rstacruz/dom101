@@ -15,8 +15,24 @@ if (typeof require === 'function') {
  * helpers
  */
 
-function n(string) {
-  return string.replace(/  +/g, ' ').trim();
+function n (string) {
+  var klass = string.replace(/  +/g, ' ').trim().split(" ");
+  klass = uniq(klass);
+  return klass.join(" ");
+}
+
+function uniq (arr) {
+  var obj = {};
+  var list = [];
+
+  for (var i = 0, len = arr.length; i < len; i++) {
+    var item = arr[i];
+    if (obj[item]) continue;
+    obj[item] = true;
+    list.push(item);
+  }
+
+  return list;
 }
 
 /*
@@ -68,7 +84,7 @@ describe('toggleClass', function () {
   it('works with value = true even if it already exists', function () {
     div.className = 'hello';
     toggleClass(div, 'hello', true);
-    expect(n(div.className)).eql('hello hello');
+    expect(n(div.className)).eql('hello');
   });
 
   it('works with value = false if it already exists', function () {

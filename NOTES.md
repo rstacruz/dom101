@@ -19,3 +19,11 @@ Browser tests
     bump *.json
     npm publish
     git release
+
+## Adding new methods
+
+ * Create it as `method-name.js` (dasherized)
+ * Document it with `/** ... */`
+ * Be sure to update README.md inline docs via `make`
+ * Update the "Reference" table in README.md
+

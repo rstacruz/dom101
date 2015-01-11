@@ -39,8 +39,9 @@ dom101 follows the conventions of [101].
 | jQuery                     | dom101                                 |
 | --------                   | --------                               |
 | `$(el).addClass('...')`    | [addClass](#addclass)(el, '...')       |
-| `$(el).removeClass('...')` | [removeClass](#removeclass)(el, '...') |
 | `$(el).hasClass('...')`    | [hasClass](#hasclass)(el, '...')       |
+| `$(el).removeClass('...')` | [removeClass](#removeclass)(el, '...') |
+| `$(el).toggleClass('...')` | [toggleClass](#toggleclass)(el, '...') |
 | `$(el).remove()`           | [remove](#remove)(el)                  |
 | `$(el).text()`             | [text](#text)(el)                      |
 | `$(el).text('...')`        | [text](#text)(el, '...')               |

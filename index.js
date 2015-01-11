@@ -15,5 +15,6 @@ module.exports = {
   removeClass: require('./remove-class'),
   scrollTop: require('./scroll-top'),
   text: require('./text'),
-  trigger: require('./trigger'),
+  toggleClass: require('./toggle-class'),
+  trigger: require('./trigger')
 };

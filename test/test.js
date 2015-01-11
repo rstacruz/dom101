@@ -46,6 +46,21 @@ describe('addClass', function () {
   });
 });
 
+describe('toggleClass', function () {
+  var toggleClass = mdom.toggleClass;
+
+  it('works', function () {
+    toggleClass(div, 'hello');
+    expect(n(div.className)).eql('hello');
+  });
+
+  it('compounds', function () {
+    toggleClass(div, 'hello');
+    toggleClass(div, 'hello');
+    expect(n(div.className)).eql('');
+  });
+});
+
 describe('hasClass', function () {
   var hasClass = mdom.hasClass;
 

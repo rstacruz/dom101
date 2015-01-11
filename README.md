@@ -236,6 +236,17 @@ text(el)
 => "Hello"
 ```
 
+### toggleClass
+> `toggleClass(el, className)`
+
+Adds a class name to an element. Compare with `$.fn.toggleClass`.
+
+```js
+var toggleClass = require('dom101/toggle-class');
+
+toggleClass(el, 'active');
+```
+
 ### trigger
 > `trigger(el, event)`
 

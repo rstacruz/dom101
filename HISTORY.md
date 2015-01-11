@@ -1,3 +1,7 @@
+## v0.4.0 - Jan 11, 2015
+
+* Add `dom101/toggle-class`
+
 ## v0.3.0 - Jan 9, 2015
 
 * Add `dom101/scroll-top`

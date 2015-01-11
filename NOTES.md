@@ -12,3 +12,10 @@ Browser tests
 
     make browser-tests
 
+## Releasing new versions
+
+    make
+    npm test
+    bump *.json
+    npm publish
+    git release

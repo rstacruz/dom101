@@ -237,14 +237,21 @@ text(el)
 ```
 
 ### toggleClass
-> `toggleClass(el, className)`
+> `toggleClass(el, className, [value])`
 
-Adds a class name to an element. Compare with `$.fn.toggleClass`.
+Adds or removes a class name to an element. If `value` is provided,
+this will add the class if it's `true` or remove if it's `false`.
+Compare with `$.fn.toggleClass`.
 
 ```js
 var toggleClass = require('dom101/toggle-class');
 
+// toggles on or off:
 toggleClass(el, 'active');
+
+// with a value:
+var isSelected = true;
+toggleClass(el, 'selected', isSelected);
 ```
 
 ### trigger

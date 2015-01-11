@@ -59,6 +59,28 @@ describe('toggleClass', function () {
     toggleClass(div, 'hello');
     expect(n(div.className)).eql('');
   });
+
+  it('works with value = true', function () {
+    toggleClass(div, 'hello', true);
+    expect(n(div.className)).eql('hello');
+  });
+
+  it('works with value = true even if it already exists', function () {
+    div.className = 'hello';
+    toggleClass(div, 'hello', true);
+    expect(n(div.className)).eql('hello hello');
+  });
+
+  it('works with value = false if it already exists', function () {
+    div.className = 'hello';
+    toggleClass(div, 'hello', false);
+    expect(n(div.className)).eql('');
+  });
+
+  it('works with value = false even if it doesn\'t exist', function () {
+    toggleClass(div, 'hello', false);
+    expect(n(div.className)).eql('');
+  });
 });
 
 describe('hasClass', function () {

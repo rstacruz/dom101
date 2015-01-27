@@ -84,6 +84,10 @@ Some DOM helpers aren't implemented, because they're easy enough to do with plai
 | `$el.blur()`                        | `el.blur()`                        |
 | `$el.focus()`                       | `el.focus()`                       |
 | `$el.append(child)`                 | `el.appendChild(child)`            |
+| `$el.prop('checked')`               | `el.checked`                       |
+| `$el.prop('checked', true)`         | `el.checked = true`                |
+| `$el.prop('disabled')`              | `el.disabled`                      |
+| `$el.prop('disabled', true)`        | `el.disabled = true`               |
 
 <br>
 

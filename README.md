@@ -56,6 +56,12 @@ dom101 follows the conventions of [101].
 
 (`*` = to be implemented soon. contributions welcome)
 
+### Non-DOM utilities
+
+| jQuery             | dom101                  |
+| --------           | --------                |
+| `$.each(list, fn)` | [each](#each)(list, fn) |
+
 ### Aliases
 
 Some aliases for DOM functions are also added for convenience.

@@ -253,3 +253,29 @@ describe('querySelector', function () {
     expect(mdom.querySelector('.hello')).to.eql(div);
   });
 });
+
+describe('each', function () {
+  it('works with arrays', function () {
+    var values = '';
+    mdom.each([7,8,9], function (val) { values += '.' + val; });
+    expect(values).eql('.7.8.9');
+  });
+
+  it('works with array keys', function () {
+    var keys = '';
+    mdom.each([9,9,9], function (_, key) { keys += '.' + key; });
+    expect(keys).eql('.0.1.2');
+  });
+
+  it('works with objects', function () {
+    var values = '';
+    mdom.each({a:8, b:9}, function (val) { values += '.' + val; });
+    expect(values).eql('.8.9');
+  });
+
+  it('works with object keys', function () {
+    var keys = '';
+    mdom.each({a:1, b:2}, function (_, key) { keys += '.' + key; });
+    expect(keys).eql('.a.b');
+  });
+});

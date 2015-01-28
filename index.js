@@ -5,6 +5,7 @@
 
 module.exports = {
   addClass: require('./add-class'),
+  each: require('./each'),
   hasClass: require('./has-class'),
   on: require('./on'),
   prepend: require('./prepend'),

@@ -119,6 +119,21 @@ var addClass = require('dom101/add-class');
 addClass(el, 'active');
 ```
 
+### each
+> `each(list, fn)`
+
+Iterates through `list` (an array or an object). This is useful when dealing
+with NodeLists like `document.querySelectorAll`.
+
+```js
+var each = require('dom101/each');
+var qa = require('dom101/query-selector-all');
+
+each(qa('.button'), function (el) {
+  addClass('el', 'selected');
+});
+```
+
 ### hasClass
 > `hasClass(el, className)`
 
@@ -161,9 +176,10 @@ prepend(el, child);
 Convenience function to access `document.querySelectorAll`.
 
 ```js
+var each = require('dom101/each');
 var qa = require('dom101/query-selector-all');
 
-qa('.button').forEach(function (el) {
+each(qa('.button'), function (el) {
   addClass('el', 'selected');
 });
 ```

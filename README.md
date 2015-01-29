@@ -1,6 +1,7 @@
 # dom101
 
-DOM manipulation utilities as single-files.
+DOM manipulation utilities as single-files.<br>
+*aka: Stop using jQuery.*
 
 ```js
 var addClass = require('dom101/add-class');

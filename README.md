@@ -38,7 +38,7 @@ dom101 follows the conventions of [101].
 ## Reference
 
 | jQuery                     | dom101                                 |
-| --------                   | --------                               |
+| ------                     | ------                                 |
 | `$(el).addClass('...')`    | [addClass](#addclass)(el, '...')       |
 | `$(el).hasClass('...')`    | [hasClass](#hasclass)(el, '...')       |
 | `$(el).removeClass('...')` | [removeClass](#removeclass)(el, '...') |
@@ -59,9 +59,12 @@ dom101 follows the conventions of [101].
 
 ### Non-DOM utilities
 
-| jQuery             | dom101                  |
-| --------           | --------                |
-| `$.each(list, fn)` | [each](#each)(list, fn) |
+| jQuery                 | dom101                               |
+| ------                 | ------                               |
+| `$.each(list, fn)`     | [each](#each)(list, fn)              |
+| `$.extend(...)`        | [extend](#extend)(...)               |
+| `$.extend(true, ...)`  | [deepExtend](#deepextend)(...)       |
+| `$.isPlainObject(obj)` | [isPlainObject](#isplainobject)(obj) |
 
 ### Aliases
 
@@ -77,7 +80,7 @@ Some aliases for DOM functions are also added for convenience.
 Some DOM helpers aren't implemented, because they're easy enough to do with plain DOM API:
 
 | jQuery                              | DOM                                |
-| --------                            | --------                           |
+| ------                              | ---                                |
 | `$('...')`                          | `document.querySelectorAll('...')` |
 | `$(el).attr('tabindex')`            | `el.getAttribute('tabindex')`      |
 | `$(el).attr('tabindex', 3)`         | `el.setAttribute('tabindex', 3)`   |
@@ -126,6 +129,20 @@ var addClass = require('dom101/add-class');
 addClass(el, 'active');
 ```
 
+### deepExtend()
+> `deepExtend(dest, src1, [src2 ...])`
+
+Extends object `dest` with properties from sources `src`.
+Compare with [$.extend(true)](http://api.jquery.com/jquery.extend/).
+
+Also consider [node-extend] for more complicated cases.
+[node-extend]: http://npmjs.com/node-extend
+
+```js
+var deepExtend = require('dom101/deep-extend');
+deepExtend({}, defaults, options);
+```
+
 ### each
 > `each(list, fn)`
 
@@ -141,6 +158,20 @@ each(qa('.button'), function (el) {
 });
 ```
 
+### extend()
+> `extend(dest, src1, [src2 ...])`
+
+Extends object `dest` with properties from sources `src`.
+Compare with [$.extend](http://api.jquery.com/jquery.extend/).
+
+Also consider [node-extend] for more complicated cases.
+[node-extend]: http://npmjs.com/node-extend
+
+```js
+var extend = require('dom101/extend');
+extend({}, defaults, options);
+```
+
 ### hasClass
 > `hasClass(el, className)`
 
@@ -151,6 +182,19 @@ var hasClass = require('dom101/has-class');
 
 el.className = 'selected active';
 hasClass(el, 'active') //=> true
+```
+
+### isPlainObject()
+> `isPlainObject(obj)`
+
+Checks if `obj` is an object created with `{}` or `new Object`.
+Compare with [$.isPlainObject](http://api.jquery.com/jquery.isplainobject/).
+
+```js
+var isPlainObject = require('dom101/is-plain-object');
+
+isPlainObject({}) //=> true
+isPlainObject([]) //=> false
 ```
 
 ### on

@@ -279,3 +279,70 @@ describe('each', function () {
     expect(keys).eql('.a.b');
   });
 });
+
+describe('extend', function () {
+  var extend = mdom.extend;
+
+  it('works', function () {
+    var out = extend({ a: 2 }, { b: 3 });
+    expect(out.a).eql(2);
+    expect(out.b).eql(3);
+  });
+
+  it('works with 3 args', function () {
+    var out = extend({ a: 2 }, { b: 3 }, { c: 4 });
+    expect(out.a).eql(2);
+    expect(out.b).eql(3);
+    expect(out.c).eql(4);
+  });
+
+  it('works in place', function () {
+    var obj = { a: 2 };
+    extend(obj, { b: 3 }, { c: 4 });
+    expect(obj.a).eql(2);
+    expect(obj.b).eql(3);
+    expect(obj.c).eql(4);
+  });
+});
+
+describe('deep extend', function () {
+  var extend = mdom.deepExtend;
+
+  it('works', function () {
+    var out = extend({ a: 2 }, { b: 3 });
+    expect(out.a).eql(2);
+    expect(out.b).eql(3);
+  });
+
+  it('works with 3 args', function () {
+    var out = extend({ a: 2 }, { b: 3 }, { c: 4 });
+    expect(out.a).eql(2);
+    expect(out.b).eql(3);
+    expect(out.c).eql(4);
+  });
+
+  it('works in place', function () {
+    var obj = { a: 2 };
+    extend(obj, { b: 3 }, { c: 4 });
+    expect(obj.a).eql(2);
+    expect(obj.b).eql(3);
+    expect(obj.c).eql(4);
+  });
+
+  it('works in place', function () {
+    var obj = {};
+    extend(obj,
+     { name: { first: 'john' } },
+     { name: { last: 'doe' } });
+    expect(obj.name.first).eql('john');
+    expect(obj.name.last).eql('doe');
+  });
+
+  it('works with arrays', function () {
+    var obj = {};
+    extend(obj,
+     { names: ['moe'] },
+     { names: ['larry'] });
+    expect(obj.names).eql(['larry']);
+  });
+});

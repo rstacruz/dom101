@@ -1,5 +1,5 @@
 /**
- * isPlainObject() : isPlainObject(obj)
+ * isPlainObject : isPlainObject(obj)
  * Checks if `obj` is an object created with `{}` or `new Object`.
  * Compare with [$.isPlainObject](http://api.jquery.com/jquery.isplainobject/).
  *

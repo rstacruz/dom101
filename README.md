@@ -129,7 +129,7 @@ var addClass = require('dom101/add-class');
 addClass(el, 'active');
 ```
 
-### deepExtend()
+### deepExtend
 > `deepExtend(dest, src1, [src2 ...])`
 
 Extends object `dest` with properties from sources `src`.
@@ -158,7 +158,7 @@ each(qa('.button'), function (el) {
 });
 ```
 
-### extend()
+### extend
 > `extend(dest, src1, [src2 ...])`
 
 Extends object `dest` with properties from sources `src`.
@@ -184,7 +184,7 @@ el.className = 'selected active';
 hasClass(el, 'active') //=> true
 ```
 
-### isPlainObject()
+### isPlainObject
 > `isPlainObject(obj)`
 
 Checks if `obj` is an object created with `{}` or `new Object`.

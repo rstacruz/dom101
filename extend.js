@@ -1,5 +1,5 @@
 /**
- * extend() : extend(dest, src1, [src2 ...])
+ * extend : extend(dest, src1, [src2 ...])
  * Extends object `dest` with properties from sources `src`.
  * Compare with [$.extend](http://api.jquery.com/jquery.extend/).
  *

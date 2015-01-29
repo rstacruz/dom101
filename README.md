@@ -27,7 +27,7 @@ will only bundle the functions it needs, instead of bundling a monolithic
 jQuery.
 
 - **Copy-pastable**: if you don't want to include dom101 as a dependency, each
-file ([example]) stands on their own and can be easily pasted into your project.
+file ([example]) stand on their own and can be easily pasted into your project.
 
 - **Semi-legacy support**: Minimum browser supported is IE8.
 

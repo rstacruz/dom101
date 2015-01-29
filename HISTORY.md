@@ -1,3 +1,9 @@
+## v0.6.0 - Jan 29, 2015
+
+* Add `dom101/extend`
+* Add `dom101/deep-extend`
+* Add `dom101/is-plain-object`
+
 ## v0.5.0 - Jan 28, 2015
 
 * Add `dom101/each`

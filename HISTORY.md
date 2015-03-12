@@ -1,3 +1,8 @@
+## v0.7.0 - Mar 12, 2015
+
+* Add `dom101/matches`
+* Add `dom101/closest`
+
 ## v0.6.0 - Jan 29, 2015
 
 * Add `dom101/extend`

@@ -2,7 +2,7 @@
   "name": "dom101",
   "main": "index.js",
   "description": "DOM manipulation functions.",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "homepage": "https://github.com/rstacruz/dom101",
   "authors": [
     "Rico Sta. Cruz <hi@ricostacruz.com>"

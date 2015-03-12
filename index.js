@@ -5,11 +5,13 @@
 
 module.exports = {
   addClass: require('./add-class'),
+  closest: require('./closest'),
   deepExtend: require('./deep-extend'),
   each: require('./each'),
   extend: require('./extend'),
   hasClass: require('./has-class'),
   isPlainObject: require('./is-plain-object'),
+  matches: require('./matches'),
   on: require('./on'),
   prepend: require('./prepend'),
   querySelector: require('./query-selector'),

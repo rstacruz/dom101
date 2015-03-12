@@ -346,3 +346,53 @@ describe('deep extend', function () {
     expect(obj.names).eql(['larry']);
   });
 });
+
+describe('matches', function () {
+  var matches = mdom.matches;
+
+  it('works', function () {
+    div.className = 'hello';
+    expect(matches(div, '.hello')).eql(true);
+  });
+
+  it('works by returning false', function () {
+    expect(matches(div, '.xyzxyz')).eql(false);
+  });
+});
+
+describe('closest', function () {
+  var closest = mdom.closest;
+  var div1, div2;
+
+  beforeEach(function () {
+    // > .div > div1 > .div2 > .div3
+    div1 = document.createElement('DIV');
+    div1.className = 'div1';
+
+    div2 = document.createElement('DIV');
+    div2.className = 'div2';
+
+    div3 = document.createElement('DIV');
+    div3.className = 'div3';
+
+    div.appendChild(div1);
+    div1.appendChild(div2);
+    div2.appendChild(div3);
+  });
+
+  it('returns self', function () {
+    expect(closest(div3, '.div3')).eql(div3);
+  });
+
+  it('returns immediate parent', function () {
+    expect(closest(div3, '.div2')).eql(div2);
+  });
+
+  it('returns far parent', function () {
+    expect(closest(div3, '.div1')).eql(div1);
+  });
+
+  it('returns nothing when nothing matches', function () {
+    expect(closest(div3, '.xyzxyz')).eql(undefined);
+  });
+});

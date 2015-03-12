@@ -51,6 +51,8 @@ dom101 follows the conventions of [101].
 | `$(document).ready(fn)`    | [ready](#ready)(fn)                    |
 | `$(el).prepend(child)`     | [prepend](#prepend)(el, child)         |
 | `$(el).trigger('click')`   | [trigger](#trigger)(el, 'click')       |
+| `$(el).closest('...')`     | [closest](#closest)(el, '...')         |
+| `$(el).matches('...')`     | [matches](#matches)(el, '...')         |
 | `$(el).off('click', fn)`   | off(el, 'click', fn) *                 |
 | `$(el).before(html)`       | before(el, 'html') *                   |
 | `$(el).after(html)`        | after(el, 'html') *                    |
@@ -129,6 +131,17 @@ var addClass = require('dom101/add-class');
 addClass(el, 'active');
 ```
 
+### closest
+> `closest(el, selector)`
+
+Looks for the closest ancestor of element `el` that matches `selector`.
+
+```js
+var closest = require('dom101/closest');
+
+closest(input, 'label');
+```
+
 ### deepExtend
 > `deepExtend(dest, src1, [src2 ...])`
 
@@ -195,6 +208,17 @@ var isPlainObject = require('dom101/is-plain-object');
 
 isPlainObject({}) //=> true
 isPlainObject([]) //=> false
+```
+
+### matches
+> `matches(el, selector)`
+
+Checks if a given element `el` matches `selector`.
+
+```js
+var matches = require('dom101/matches');
+
+matches(button, ':focus');
 ```
 
 ### on

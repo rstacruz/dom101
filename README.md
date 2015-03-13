@@ -37,27 +37,22 @@ dom101 follows the conventions of [101].
 
 ## Reference
 
-| jQuery                     | dom101                                 |
-| ------                     | ------                                 |
-| `$(el).addClass('...')`    | [addClass](#addclass)(el, '...')       |
-| `$(el).hasClass('...')`    | [hasClass](#hasclass)(el, '...')       |
-| `$(el).removeClass('...')` | [removeClass](#removeclass)(el, '...') |
-| `$(el).toggleClass('...')` | [toggleClass](#toggleclass)(el, '...') |
-| `$(el).remove()`           | [remove](#remove)(el)                  |
-| `$(el).text()`             | [text](#text)(el)                      |
-| `$(el).text('...')`        | [text](#text)(el, '...')               |
-| `$(el).on('click', fn)`    | [on](#on)(el, 'click', fn)             |
-| `$(fn)`                    | [ready](#ready)(fn)                    |
-| `$(document).ready(fn)`    | [ready](#ready)(fn)                    |
-| `$(el).prepend(child)`     | [prepend](#prepend)(el, child)         |
-| `$(el).trigger('click')`   | [trigger](#trigger)(el, 'click')       |
-| `$(el).closest('...')`     | [closest](#closest)(el, '...')         |
-| `$(el).matches('...')`     | [matches](#matches)(el, '...')         |
-| `$(el).off('click', fn)`   | off(el, 'click', fn) *                 |
-| `$(el).before(html)`       | before(el, 'html') *                   |
-| `$(el).after(html)`        | after(el, 'html') *                    |
-
-(`*` = to be implemented soon. contributions welcome)
+| jQuery                      | dom101                                 |
+| ------                      | ------                                 |
+| `$(el).addClass('...')`     | [addClass](#addclass)(el, '...')       |
+| `$(el).hasClass('...')`     | [hasClass](#hasclass)(el, '...')       |
+| `$(el).removeClass('...')`  | [removeClass](#removeclass)(el, '...') |
+| `$(el).toggleClass('...')`  | [toggleClass](#toggleclass)(el, '...') |
+| `$(el).remove()`            | [remove](#remove)(el)                  |
+| `$(el).text()`              | [text](#text)(el)                      |
+| `$(el).text('...')`         | [text](#text)(el, '...')               |
+| `$(el).on('click', fn)`     | [on](#on)(el, 'click', fn)             |
+| `$(fn)`                     | [ready](#ready)(fn)                    |
+| `$(document).ready(fn)`     | [ready](#ready)(fn)                    |
+| `$(el).prepend(child)`      | [prepend](#prepend)(el, child)         |
+| `$(el).trigger('click')`    | [trigger](#trigger)(el, 'click')       |
+| `$(el).closest('selector')` | [closest](#closest)(el, 'selector')    |
+| `$(el).is('selector')`      | [matches](#matches)(el, 'selector')    |
 
 ### Non-DOM utilities
 

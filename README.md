@@ -130,6 +130,7 @@ addClass(el, 'active');
 > `closest(el, selector)`
 
 Looks for the closest ancestor of element `el` that matches `selector`.
+Compare with [$.fn.closest](http://api.jquery.com/closest/).
 
 ```js
 var closest = require('dom101/closest');
@@ -209,6 +210,7 @@ isPlainObject([]) //=> false
 > `matches(el, selector)`
 
 Checks if a given element `el` matches `selector`.
+Compare with [$.fn.is](http://api.jquery.com/is/).
 
 ```js
 var matches = require('dom101/matches');

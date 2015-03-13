@@ -3,6 +3,7 @@ var matches = require('./matches');
 /**
  * closest : closest(el, selector)
  * Looks for the closest ancestor of element `el` that matches `selector`.
+ * Compare with [$.fn.closest](http://api.jquery.com/closest/).
  *
  *     var closest = require('dom101/closest');
  *

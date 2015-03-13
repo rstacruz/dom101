@@ -1,6 +1,7 @@
 /**
  * matches : matches(el, selector)
  * Checks if a given element `el` matches `selector`.
+ * Compare with [$.fn.is](http://api.jquery.com/is/).
  *
  *     var matches = require('dom101/matches');
  *

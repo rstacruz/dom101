@@ -18,15 +18,15 @@ function deepExtend (out) {
   for (var i = 1; i < arguments.length; i++) {
     var obj = arguments[i];
 
-    if (!obj)
-      continue;
+    if (!obj) continue;
 
     for (var key in obj) {
       if (obj.hasOwnProperty(key)) {
-        if (isPlainObject(obj[key]))
+        if (isPlainObject(obj[key])) {
           out[key] = deepExtend(out[key], obj[key]);
-        else
+        } else {
           out[key] = obj[key];
+        }
       }
     }
   }

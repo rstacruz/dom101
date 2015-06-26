@@ -13,7 +13,7 @@ function on (el, event, handler) {
   if (el.addEventListener) {
     el.addEventListener(event, handler);
   } else {
-    el.attachEvent('on' + event, function(){
+    el.attachEvent('on' + event, function () {
       handler.call(el);
     });
   }

@@ -1,13 +1,15 @@
-var global = (function(){ return this; })();
+/* global it, describe, mdom, div, beforeEach, afterEach, expect */
+
+var global = (function () { return this; })();
 
 if (typeof require === 'function') {
   require('mocha-jsdom')();
   global.mdom = require('../index');
   global.expect = require('chai').expect;
 } else {
-  window.expect = chai.expect;
+  window.expect = window.chai.expect;
   if (typeof window.mdom === 'undefined') {
-    alert('build file not working.\ntry running "make test/build.js" first.');
+    window.alert('build file not working.\ntry running "make test/build.js" first.');
   }
 }
 
@@ -16,9 +18,9 @@ if (typeof require === 'function') {
  */
 
 function n (string) {
-  var klass = string.replace(/  +/g, ' ').trim().split(" ");
+  var klass = string.replace(/ {2,}/g, ' ').trim().split(' ');
   klass = uniq(klass);
-  return klass.join(" ");
+  return klass.join(' ');
 }
 
 function uniq (arr) {
@@ -195,9 +197,10 @@ describe('removeClass', function () {
 
 describe('prepend', function () {
   var prepend = mdom.prepend;
+  var child;
 
   beforeEach(function () {
-    global.child = document.createElement('div');
+    child = document.createElement('div');
   });
 
   it('works for empty divs', function () {
@@ -257,25 +260,25 @@ describe('querySelector', function () {
 describe('each', function () {
   it('works with arrays', function () {
     var values = '';
-    mdom.each([7,8,9], function (val) { values += '.' + val; });
+    mdom.each([7, 8, 9], function (val) { values += '.' + val; });
     expect(values).eql('.7.8.9');
   });
 
   it('works with array keys', function () {
     var keys = '';
-    mdom.each([9,9,9], function (_, key) { keys += '.' + key; });
+    mdom.each([9, 9, 9], function (_, key) { keys += '.' + key; });
     expect(keys).eql('.0.1.2');
   });
 
   it('works with objects', function () {
     var values = '';
-    mdom.each({a:8, b:9}, function (val) { values += '.' + val; });
+    mdom.each({a: 8, b: 9 }, function (val) { values += '.' + val; });
     expect(values).eql('.8.9');
   });
 
   it('works with object keys', function () {
     var keys = '';
-    mdom.each({a:1, b:2}, function (_, key) { keys += '.' + key; });
+    mdom.each({a: 1, b: 2 }, function (_, key) { keys += '.' + key; });
     expect(keys).eql('.a.b');
   });
 });
@@ -362,7 +365,7 @@ describe('matches', function () {
 
 describe('closest', function () {
   var closest = mdom.closest;
-  var div1, div2;
+  var div1, div2, div3;
 
   beforeEach(function () {
     // > .div > div1 > .div2 > .div3

@@ -9,10 +9,11 @@
  */
 
 function hasClass (el, className) {
-  if (el.classList)
+  if (el.classList) {
     return el.classList.contains(className);
-  else
+  } else {
     return new RegExp('(^| )' + className + '( |$)', 'gi').test(el.className);
+  }
 }
 
 module.exports = hasClass;

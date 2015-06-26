@@ -14,7 +14,7 @@ function trigger (el, event) {
     ev.initEvent(event, true, false);
     el.dispatchEvent(ev);
   } else {
-    el.fireEvent('on'+event);
+    el.fireEvent('on' + event);
   }
 }
 

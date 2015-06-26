@@ -20,8 +20,9 @@ function each (list, fn) {
     }
   } else {
     for (i in list) {
-      if (list.hasOwnProperty(i))
+      if (list.hasOwnProperty(i)) {
         fn(list[i], i);
+      }
     }
   }
 

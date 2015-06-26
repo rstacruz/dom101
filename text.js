@@ -12,15 +12,17 @@
 
 function text (el, value) {
   if (arguments.length === 1) {
-    if ('textContent' in el)
+    if ('textContent' in el) {
       return el.textContent;
-    else
+    } else {
       return el.innerText;
+    }
   } else {
-    if ('textContent' in el)
+    if ('textContent' in el) {
       el.textContent = value;
-    else
+    } else {
       el.innerText = value;
+    }
   }
 }
 

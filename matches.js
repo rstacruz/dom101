@@ -21,9 +21,8 @@ function matches (el, selector) {
   } else if (el.parentNode) {
     // IE8 and below
     var nodes = el.parentNode.querySelectorAll(selector);
-    for (var i = nodes.length; i--;) {
-      if (nodes[i] === el)
-        return true;
+    for (var i = nodes.length; i--; 0) {
+      if (nodes[i] === el) return true;
     }
     return false;
   }

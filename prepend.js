@@ -8,10 +8,11 @@
  */
 
 function prepend (el, child) {
-  if (el.firstChild)
+  if (el.firstChild) {
     el.insertBefore(child, el.firstChild);
-  else
+  } else {
     el.appendChild(child);
+  }
 }
 
 module.exports = prepend;

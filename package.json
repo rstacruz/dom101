@@ -30,6 +30,8 @@
     "mdextract": "^1.0.0",
     "mocha": "^2.0.1",
     "mocha-clean": "^0.4.0",
-    "mocha-jsdom": "^0.2.0"
+    "mocha-jsdom": "^0.2.0",
+    "mocha-standard": "^0.1.0",
+    "semistandard": "^6.1.1"
   }
 }

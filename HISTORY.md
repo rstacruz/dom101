@@ -1,4 +1,11 @@
-## v0.7.1
+## v0.7.2 - Jul  1, 2015
+
+* Conform to [semistandard].
+* Update test tools.
+
+[semistandard]: https://www.npmjs.com/package/semistandard
+
+## v0.7.1 (unpublished)
 
 * Update package.json with metadata
 * No functional changes

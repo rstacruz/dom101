@@ -12,9 +12,10 @@
  */
 
 function each (list, fn) {
-  var i, len = list.length;
+  var i;
+  var len = list.length;
 
-  if (len === +len) {
+  if (typeof len === 'number') {
     for (i = 0; i < len; i++) {
       fn(list[i], i);
     }

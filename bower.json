@@ -1,7 +1,6 @@
 {
   "name": "dom101",
   "description": "DOM manipulation functions.",
-  "version": "0.7.0",
   "authors": [
     "Rico Sta. Cruz <rico@ricostacruz.com>"
   ],

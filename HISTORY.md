@@ -1,3 +1,8 @@
+## v0.7.1
+
+* Update package.json with metadata
+* No functional changes
+
 ## v0.7.0 - Mar 12, 2015
 
 * Add `dom101/matches`

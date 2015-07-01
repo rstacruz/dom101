@@ -1,28 +1,19 @@
 {
   "name": "dom101",
-  "version": "0.7.0",
   "description": "DOM manipulation functions.",
-  "main": "index.js",
-  "repository": {
-    "git": "https://github.com/rstacruz/dom101"
+  "version": "0.7.0",
+  "author": "Rico Sta. Cruz <rico@ricostacruz.com>",
+  "bugs": {
+    "url": "https://github.com/rstacruz/dom101/issues"
   },
-  "keywords": [
-    "utils",
-    "helpers",
-    "jquery",
-    "dom",
-    "addclass",
-    "removeclass",
-    "html"
-  ],
-  "directories": {
-    "test": "test"
+  "dependencies": {
+    "browserify": "^6.3.4",
+    "chai": "^1.10.0",
+    "jsdom": "^1.5.0",
+    "mdextract": "^1.0.0",
+    "mocha-clean": "^0.4.0",
+    "mocha-jsdom": "^0.2.1"
   },
-  "scripts": {
-    "test": "mocha"
-  },
-  "author": "Rico Sta. Cruz <hi@ricostacruz.com>",
-  "license": "MIT",
   "devDependencies": {
     "browserify": "^6.3.3",
     "chai": "^1.10.0",
@@ -31,5 +22,27 @@
     "mocha": "^2.0.1",
     "mocha-clean": "^0.4.0",
     "mocha-jsdom": "^0.2.0"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "homepage": "https://github.com/rstacruz/dom101#readme",
+  "keywords": [
+    "addclass",
+    "dom",
+    "helpers",
+    "html",
+    "jquery",
+    "removeclass",
+    "utils"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rstacruz/dom101.git"
+  },
+  "scripts": {
+    "test": "mocha"
   }
 }

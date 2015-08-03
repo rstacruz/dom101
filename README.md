@@ -59,6 +59,7 @@ dom101 follows the conventions of [101].
 | jQuery                 | dom101                               |
 | ------                 | ------                               |
 | `$.each(list, fn)`     | [each](#each)(list, fn)              |
+| `$.map(list, fn)`      | [map](#map)(list, fn)              |
 | `$.extend(...)`        | [extend](#extend)(...)               |
 | `$.extend(true, ...)`  | [deepExtend](#deepextend)(...)       |
 | `$.isPlainObject(obj)` | [isPlainObject](#isplainobject)(obj) |

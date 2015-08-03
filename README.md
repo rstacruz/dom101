@@ -206,6 +206,20 @@ isPlainObject({}) //=> true
 isPlainObject([]) //=> false
 ```
 
+### map
+> `map(list, fn)`
+
+Iterates through `list` (an array or an object).
+
+```js
+var map = require('dom101/map');
+var text = require('dom101/text');
+
+map(qa('.button'), function (el) {
+  return text(el);
+});
+```
+
 ### matches
 > `matches(el, selector)`
 

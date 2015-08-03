@@ -14,15 +14,17 @@
 function each (list, fn) {
   var i;
   var len = list.length;
+  var idx;
 
   if (typeof len === 'number') {
     for (i = 0; i < len; i++) {
       fn(list[i], i);
     }
   } else {
+    idx = 0;
     for (i in list) {
       if (list.hasOwnProperty(i)) {
-        fn(list[i], i);
+        fn(list[i], i, idx++);
       }
     }
   }

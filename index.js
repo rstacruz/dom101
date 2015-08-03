@@ -11,6 +11,7 @@ module.exports = {
   extend: require('./extend'),
   hasClass: require('./has-class'),
   isPlainObject: require('./is-plain-object'),
+  map: require('./map'),
   matches: require('./matches'),
   on: require('./on'),
   prepend: require('./prepend'),

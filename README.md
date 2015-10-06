@@ -49,6 +49,8 @@ dom101 follows the conventions of [101].
 | `$(el).on('click', fn)`     | [on](#on)(el, 'click', fn)             |
 | `$(fn)`                     | [ready](#ready)(fn)                    |
 | `$(document).ready(fn)`     | [ready](#ready)(fn)                    |
+| `$(document).height()`      | [documentHeight](#documentheight)()    |
+| `$(document).width()`       | [documentWidth](#documentwith)()       |
 | `$(el).prepend(child)`      | [prepend](#prepend)(el, child)         |
 | `$(el).trigger('click')`    | [trigger](#trigger)(el, 'click')       |
 | `$(el).closest('selector')` | [closest](#closest)(el, 'selector')    |
@@ -59,7 +61,7 @@ dom101 follows the conventions of [101].
 | jQuery                 | dom101                               |
 | ------                 | ------                               |
 | `$.each(list, fn)`     | [each](#each)(list, fn)              |
-| `$.map(list, fn)`      | [map](#map)(list, fn)              |
+| `$.map(list, fn)`      | [map](#map)(list, fn)                |
 | `$.extend(...)`        | [extend](#extend)(...)               |
 | `$.extend(true, ...)`  | [deepExtend](#deepextend)(...)       |
 | `$.isPlainObject(obj)` | [isPlainObject](#isplainobject)(obj) |

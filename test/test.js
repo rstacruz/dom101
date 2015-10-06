@@ -421,3 +421,21 @@ describe('closest', function () {
     expect(closest(div3, '.xyzxyz')).eql(undefined);
   });
 });
+
+describe('documentHeight', function () {
+  var documentHeight = mdom.documentHeight;
+
+  it('works', function () {
+    // returns 0 in jsdom
+    expect(typeof documentHeight()).eq('number');
+  });
+});
+
+describe('documentWidth', function () {
+  var documentWidth = mdom.documentWidth;
+
+  it('works', function () {
+    // returns 0 in jsdom
+    expect(typeof documentWidth()).eq('number');
+  });
+});

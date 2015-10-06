@@ -7,6 +7,8 @@ module.exports = {
   addClass: require('./add-class'),
   closest: require('./closest'),
   deepExtend: require('./deep-extend'),
+  documentHeight: require('./document-height'),
+  documentWidth: require('./document-width'),
   each: require('./each'),
   extend: require('./extend'),
   hasClass: require('./has-class'),

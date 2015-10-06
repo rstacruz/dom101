@@ -1,3 +1,11 @@
+## [v1.1.0]
+> Oct 7, 2015
+
+* Add `dom101/document-height`
+* Add `dom101/document-width`
+
+[v1.1.0]: https://github.com/rstacruz/dom101/compare/v1.0.2...v1.1.0
+
 ## [v1.0.0]
 > Aug  4, 2015
 

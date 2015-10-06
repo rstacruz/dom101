@@ -2,9 +2,9 @@
  * extend : extend(dest, src1, [src2 ...])
  * Extends object `dest` with properties from sources `src`.
  * Compare with [$.extend](http://api.jquery.com/jquery.extend/).
+ * Also consider [object-assign] and the built-in `Object.assign`.
  *
- * Also consider [node-extend] for more complicated cases.
- * [node-extend]: http://npmjs.com/node-extend
+ * [object-assign]: http://npmjs.com/object-assign
  *
  *     var extend = require('dom101/extend');
  *     extend({}, defaults, options);

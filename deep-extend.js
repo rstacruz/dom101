@@ -4,9 +4,8 @@ var isPlainObject = require('./is-plain-object');
  * deepExtend : deepExtend(dest, src1, [src2 ...])
  * Extends object `dest` with properties from sources `src`.
  * Compare with [$.extend(true)](http://api.jquery.com/jquery.extend/).
- *
- * Also consider [node-extend] for more complicated cases.
- * [node-extend]: http://npmjs.com/node-extend
+ * Also consider [deep-extend].
+ * [deep-extend]: http://npmjs.com/deep-extend
  *
  *     var deepExtend = require('dom101/deep-extend');
  *     deepExtend({}, defaults, options);

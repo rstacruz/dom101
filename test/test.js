@@ -272,13 +272,13 @@ describe('each', function () {
 
   it('works with objects', function () {
     var values = '';
-    mdom.each({a: 8, b: 9 }, function (val) { values += '.' + val; });
+    mdom.each({ a: 8, b: 9 }, function (val) { values += '.' + val; });
     expect(values).eql('.8.9');
   });
 
   it('works with object keys', function () {
     var keys = '';
-    mdom.each({a: 1, b: 2 }, function (_, key) { keys += '.' + key; });
+    mdom.each({ a: 1, b: 2 }, function (_, key) { keys += '.' + key; });
     expect(keys).eql('.a.b');
   });
 });
@@ -290,7 +290,7 @@ describe('map', function () {
   });
 
   it('works with array keys', function () {
-    var keys = mdom.map([9, 9, 9], function (_, key) {return '.' + key; });
+    var keys = mdom.map([9, 9, 9], function (_, key) { return '.' + key; });
     expect(keys).eql(['.0', '.1', '.2']);
   });
 

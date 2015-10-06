@@ -7,14 +7,14 @@
     "url": "https://github.com/rstacruz/dom101/issues"
   },
   "devDependencies": {
-    "browserify": "^6.3.3",
-    "chai": "^3.0.0",
-    "jsdom": "^5.5.0",
-    "mdextract": "^1.0.0",
-    "mocha": "^2.2.5",
-    "mocha-jsdom": "^0.5.0",
-    "mocha-standard": "^0.1.0",
-    "semistandard": "^6.1.1"
+    "browserify": "11.2.0",
+    "chai": "3.3.0",
+    "jsdom": "6.5.1",
+    "mdextract": "1.0.0",
+    "mocha": "2.3.3",
+    "mocha-jsdom": "1.0.0",
+    "mocha-standard": "1.0.0",
+    "semistandard": "7.0.2"
   },
   "directories": {
     "test": "test"
@@ -36,6 +36,7 @@
     "url": "git+https://github.com/rstacruz/dom101.git"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "prepublish": "mdextract -u README.md"
   }
 }

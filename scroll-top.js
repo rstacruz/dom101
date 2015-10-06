@@ -9,9 +9,9 @@
 
 function scrollTop () {
   if (window.pageYOffset) return window.pageYOffset;
-  return document.documentElement.clientHeight ?
-    document.documentElement.scrollTop :
-    document.body.scrollTop;
+  return document.documentElement.clientHeight
+    ? document.documentElement.scrollTop
+    : document.body.scrollTop;
 }
 
 // Taken from https://github.com/yields/scrolltop/blob/master/index.js

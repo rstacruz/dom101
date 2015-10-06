@@ -23,9 +23,9 @@ function toggleClass (el, className, value) {
     value = !hasClass(el, className);
   }
 
-  return value ?
-    addClass(el, className) :
-    removeClass(el, className);
+  return value
+    ? addClass(el, className)
+    : removeClass(el, className);
 }
 
 module.exports = toggleClass;

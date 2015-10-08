@@ -39,6 +39,6 @@
   },
   "scripts": {
     "test": "mocha",
-    "prepublish": "mdextract -u README.md"
+    "prepublish": "make update"
   }
 }

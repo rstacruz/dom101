@@ -147,13 +147,38 @@ closest(input, 'label');
 ### deepExtend
 > `deepExtend(dest, src1, [src2 ...])`
 
-Extends object `dest` with properties from sources `src`. Compare with [$.extend(true)](http://api.jquery.com/jquery.extend/). Also consider [deep-extend].
-
+Extends object `dest` with properties from sources `src`.
+Compare with [$.extend(true)](http://api.jquery.com/jquery.extend/).
+Also consider [deep-extend].
 [deep-extend]: http://npmjs.com/deep-extend
 
 ```js
 var deepExtend = require('dom101/deep-extend');
 deepExtend({}, defaults, options);
+```
+
+### documentHeight
+> `documentHeight()`
+
+Returns the height of the document.
+Compare with jQuery's `$(document).height()`.
+
+```js
+var documentHeight = require('dom101/document-height');
+
+var height = documentHeight();
+```
+
+### documentWidth
+> `documentWidth()`
+
+Returns the width of the document.
+Compare with jQuery's `$(document).width()`.
+
+```js
+var documentWidth = require('dom101/document-width');
+
+var width = documentWidth();
 ```
 
 ### each
@@ -176,7 +201,7 @@ each(qa('.button'), function (el) {
 
 Extends object `dest` with properties from sources `src`.
 Compare with [$.extend](http://api.jquery.com/jquery.extend/).
-Also consider [object-assign].
+Also consider [object-assign] and the built-in `Object.assign`.
 
 [object-assign]: http://npmjs.com/object-assign
 

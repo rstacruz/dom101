@@ -17,21 +17,24 @@ addClass(el, 'active');
 ## Why?
 
 If you're writing a frontend library, it's best to avoid a dependency on
-[jQuery]. This means having to write your own DOM manipulation code, though.
+[jQuery]. This means having to write your own DOM manipulation code,
+though. To speed you along, I've packaged all that typical DOM
+manipulation code into many single-use JS files.
 
-To speed you along, I've packaged all that typical DOM manipulation code into
-many single-use JS files.
+> #### Slim builds
+> You can use [browserify] to make your final bundle and it
+> will only bundle the functions it needs, instead of bundling a monolithic
+> jQuery.
+> 
+> #### Copy-pastable
+> If you don't want to include dom101 as a dependency, each
+> file ([example]) stand on their own and can be easily pasted into your project.
+> 
+> #### Semi-legacy support
+> Minimum browser fully-supported is IE8, with most of the utilities
+> working with even older IE versions.
 
-- **Slim builds**: you can use [browserify] to make your final bundle and it
-will only bundle the functions it needs, instead of bundling a monolithic
-jQuery.
-
-- **Copy-pastable**: if you don't want to include dom101 as a dependency, each
-file ([example]) stand on their own and can be easily pasted into your project.
-
-- **Semi-legacy support**: Minimum browser supported is IE8.
-
-dom101 follows the conventions of [101].
+dom101 loosely follows the conventions of [101].
 
 <br>
 

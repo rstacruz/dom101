@@ -10,7 +10,7 @@
     "browserify": "11.2.0",
     "chai": "3.3.0",
     "docpress": "git://github.com/docpress/docpress.git#757a0b77524ca5ca16b64c92f165238d39c7eec2",
-    "git-update-ghpages": "1.0.0",
+    "git-update-ghpages": "1.0.1",
     "jsdom": "6.5.1",
     "mdextract": "1.0.0",
     "mocha": "2.3.3",

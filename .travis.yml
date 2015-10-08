@@ -6,8 +6,7 @@ script:
 - ./node_modules/.bin/docpress build
 - git config --global user.email "nobody@nobody.org"
 - git config --global user.name "Travis CI"
-- if [[ "$TRAVIS_BRANCH" == "master" ]]; then ./node_modules/.bin/git-update-ghpages $GITHUB_REPO _docpress; fi
+- if [[ "$TRAVIS_BRANCH" == "master" ]]; then ./node_modules/.bin/git-update-ghpages rstacruz/dom101 _docpress; fi
 env:
   global:
-    GITHUB_REPO: rstacruz/dom101
     secure: Ku2W/TEGwo1OXUAvbVBl0mQEqBeC1jsv+2VbJh8b4hefgpI+wpBuWEVHJT8vf6F4T0j5ujAGUax3u91FBmCxKGEkWVMB7HjAiwxP0p/hXAogEoCNAAjs9JxkqwuKAw+uviN56XcCFHsOzWHh/12w7cwDYGWsQ4lIb+yxi54NUgM=

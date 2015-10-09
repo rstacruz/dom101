@@ -1,17 +1,17 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><link rel="stylesheet" href="assets/style.css?t=4f164436"><title>dom101</title></head><body class="-menu-visible"><div class="doc-layout"><div class="toggle menu-toggle js-menu-toggle"></div><div class="body page-index"><div class="header-nav"><div class="right"><a href="https://github.com/rstacruz/dom101" data-title="rstacruz/dom101" class="iconlink"><span class="title">Open in GitHub</span><span class="icon -github"></span></a></div></div><div class="markdown-body"><h1 id="dom101">dom101</h1>
+<!DOCTYPE html><html><head><meta charset="utf-8"><link rel="stylesheet" href="assets/style.css?t=e19072f1"><title>dom101</title></head><body class="-menu-visible"><div class="doc-layout"><div class="toggle menu-toggle js-menu-toggle"></div><div class="body page-index"><div class="header-nav"><div class="right"><a href="https://github.com/rstacruz/dom101" data-title="rstacruz/dom101" class="iconlink"><!-- span.title Open in GitHub--><span class="icon -github"></span></a></div></div><div class="markdown-body"><h1 id="dom101">dom101</h1>
 <p>DOM manipulation utilities as single-files.<br>
 <em>aka: Stop using jQuery.</em></p>
-<pre><code class="lang-js">var addClass = require(&#39;dom101/add-class&#39;);
+<pre><code class="lang-js"><span class="pl-k">var</span> addClass = <span class="pl-c1">require</span>(<span class="pl-s">&apos;dom101/add-class&apos;</span>);
 
-el = document.createElement(&#39;div&#39;);
-addClass(el, &#39;active&#39;);
+el = <span class="pl-c1">document</span>.createElement(<span class="pl-s">&apos;div&apos;</span>);
+addClass(el, <span class="pl-s">&apos;active&apos;</span>);
 </code></pre>
 <p><a href="https://travis-ci.org/rstacruz/dom101"><img src="https://travis-ci.org/rstacruz/dom101.svg?branch=master" alt="Status"></a>  </p>
 <p><br></p>
 <h2 id="why-">Why?</h2>
-<p>If you&#39;re writing a frontend library, it&#39;s best to avoid a dependency on
+<p>If you&apos;re writing a frontend library, it&apos;s best to avoid a dependency on
 <a href="http://jquery.com">jQuery</a>. This means having to write your own DOM manipulation code,
-though. To speed you along, I&#39;ve packaged all that typical DOM
+though. To speed you along, I&apos;ve packaged all that typical DOM
 manipulation code into many single-use JS files.</p>
 <blockquote>
 <h4 id="slim-builds">Slim builds</h4>
@@ -19,7 +19,7 @@ manipulation code into many single-use JS files.</p>
 will only bundle the functions it needs, instead of bundling a monolithic
 jQuery.</p>
 <h4 id="copy-pastable">Copy-pastable</h4>
-<p>If you don&#39;t want to include dom101 as a dependency, each
+<p>If you don&apos;t want to include dom101 as a dependency, each
 file (<a href="add-class.js">example</a>) stand on their own and can be easily pasted into your project.</p>
 <h4 id="semi-legacy-support">Semi-legacy support</h4>
 <p>Minimum browser fully-supported is IE8, with most of the utilities
@@ -37,20 +37,20 @@ working with even older IE versions.</p>
 </thead>
 <tbody>
 <tr>
-<td><code>$(el).addClass(&#39;...&#39;)</code></td>
-<td><a href="#addclass">addClass</a>(el, &#39;...&#39;)</td>
+<td><code>$(el).addClass(&apos;...&apos;)</code></td>
+<td><a href="#addclass">addClass</a>(el, &apos;...&apos;)</td>
 </tr>
 <tr>
-<td><code>$(el).hasClass(&#39;...&#39;)</code></td>
-<td><a href="#hasclass">hasClass</a>(el, &#39;...&#39;)</td>
+<td><code>$(el).hasClass(&apos;...&apos;)</code></td>
+<td><a href="#hasclass">hasClass</a>(el, &apos;...&apos;)</td>
 </tr>
 <tr>
-<td><code>$(el).removeClass(&#39;...&#39;)</code></td>
-<td><a href="#removeclass">removeClass</a>(el, &#39;...&#39;)</td>
+<td><code>$(el).removeClass(&apos;...&apos;)</code></td>
+<td><a href="#removeclass">removeClass</a>(el, &apos;...&apos;)</td>
 </tr>
 <tr>
-<td><code>$(el).toggleClass(&#39;...&#39;)</code></td>
-<td><a href="#toggleclass">toggleClass</a>(el, &#39;...&#39;)</td>
+<td><code>$(el).toggleClass(&apos;...&apos;)</code></td>
+<td><a href="#toggleclass">toggleClass</a>(el, &apos;...&apos;)</td>
 </tr>
 <tr>
 <td><code>$(el).remove()</code></td>
@@ -61,12 +61,12 @@ working with even older IE versions.</p>
 <td><a href="#text">text</a>(el)</td>
 </tr>
 <tr>
-<td><code>$(el).text(&#39;...&#39;)</code></td>
-<td><a href="#text">text</a>(el, &#39;...&#39;)</td>
+<td><code>$(el).text(&apos;...&apos;)</code></td>
+<td><a href="#text">text</a>(el, &apos;...&apos;)</td>
 </tr>
 <tr>
-<td><code>$(el).on(&#39;click&#39;, fn)</code></td>
-<td><a href="#on">on</a>(el, &#39;click&#39;, fn)</td>
+<td><code>$(el).on(&apos;click&apos;, fn)</code></td>
+<td><a href="#on">on</a>(el, &apos;click&apos;, fn)</td>
 </tr>
 <tr>
 <td><code>$(fn)</code></td>
@@ -89,16 +89,16 @@ working with even older IE versions.</p>
 <td><a href="#prepend">prepend</a>(el, child)</td>
 </tr>
 <tr>
-<td><code>$(el).trigger(&#39;click&#39;)</code></td>
-<td><a href="#trigger">trigger</a>(el, &#39;click&#39;)</td>
+<td><code>$(el).trigger(&apos;click&apos;)</code></td>
+<td><a href="#trigger">trigger</a>(el, &apos;click&apos;)</td>
 </tr>
 <tr>
-<td><code>$(el).closest(&#39;selector&#39;)</code></td>
-<td><a href="#closest">closest</a>(el, &#39;selector&#39;)</td>
+<td><code>$(el).closest(&apos;selector&apos;)</code></td>
+<td><a href="#closest">closest</a>(el, &apos;selector&apos;)</td>
 </tr>
 <tr>
-<td><code>$(el).is(&#39;selector&#39;)</code></td>
-<td><a href="#matches">matches</a>(el, &#39;selector&#39;)</td>
+<td><code>$(el).is(&apos;selector&apos;)</code></td>
+<td><a href="#matches">matches</a>(el, &apos;selector&apos;)</td>
 </tr>
 </tbody>
 </table>
@@ -154,7 +154,7 @@ working with even older IE versions.</p>
 </tbody>
 </table>
 <h3 id="not-implemented">Not implemented</h3>
-<p>Some DOM helpers aren&#39;t implemented, because they&#39;re easy enough to do with plain DOM API:</p>
+<p>Some DOM helpers aren&apos;t implemented, because they&apos;re easy enough to do with plain DOM API:</p>
 <table>
 <thead>
 <tr>
@@ -164,28 +164,28 @@ working with even older IE versions.</p>
 </thead>
 <tbody>
 <tr>
-<td><code>$(&#39;...&#39;)</code></td>
-<td><code>document.querySelectorAll(&#39;...&#39;)</code></td>
+<td><code>$(&apos;...&apos;)</code></td>
+<td><code>document.querySelectorAll(&apos;...&apos;)</code></td>
 </tr>
 <tr>
-<td><code>$(el).attr(&#39;tabindex&#39;)</code></td>
-<td><code>el.getAttribute(&#39;tabindex&#39;)</code></td>
+<td><code>$(el).attr(&apos;tabindex&apos;)</code></td>
+<td><code>el.getAttribute(&apos;tabindex&apos;)</code></td>
 </tr>
 <tr>
-<td><code>$(el).attr(&#39;tabindex&#39;, 3)</code></td>
-<td><code>el.setAttribute(&#39;tabindex&#39;, 3)</code></td>
+<td><code>$(el).attr(&apos;tabindex&apos;, 3)</code></td>
+<td><code>el.setAttribute(&apos;tabindex&apos;, 3)</code></td>
 </tr>
 <tr>
-<td><code>$(el).css(&#39;border-radius&#39;, &#39;3px&#39;)</code></td>
-<td><code>el.style.borderRadius = &#39;3px&#39;</code></td>
+<td><code>$(el).css(&apos;border-radius&apos;, &apos;3px&apos;)</code></td>
+<td><code>el.style.borderRadius = &apos;3px&apos;</code></td>
 </tr>
 <tr>
 <td><code>$(el).html()</code></td>
 <td><code>el.innerHTML</code></td>
 </tr>
 <tr>
-<td><code>$(el).html(&#39;...&#39;)</code></td>
-<td><code>el.innerHTML = &#39;...&#39;</code></td>
+<td><code>$(el).html(&apos;...&apos;)</code></td>
+<td><code>el.innerHTML = &apos;...&apos;</code></td>
 </tr>
 <tr>
 <td><code>$(el).parent()</code></td>
@@ -200,8 +200,8 @@ working with even older IE versions.</p>
 <td><code>el.children</code></td>
 </tr>
 <tr>
-<td><code>$el.find(&#39;...&#39;)</code></td>
-<td><code>el.querySelectorAll(&#39;...&#39;)</code></td>
+<td><code>$el.find(&apos;...&apos;)</code></td>
+<td><code>el.querySelectorAll(&apos;...&apos;)</code></td>
 </tr>
 <tr>
 <td><code>$el.blur()</code></td>
@@ -216,19 +216,19 @@ working with even older IE versions.</p>
 <td><code>el.appendChild(child)</code></td>
 </tr>
 <tr>
-<td><code>$el.prop(&#39;checked&#39;)</code></td>
+<td><code>$el.prop(&apos;checked&apos;)</code></td>
 <td><code>el.checked</code></td>
 </tr>
 <tr>
-<td><code>$el.prop(&#39;checked&#39;, true)</code></td>
+<td><code>$el.prop(&apos;checked&apos;, true)</code></td>
 <td><code>el.checked = true</code></td>
 </tr>
 <tr>
-<td><code>$el.prop(&#39;disabled&#39;)</code></td>
+<td><code>$el.prop(&apos;disabled&apos;)</code></td>
 <td><code>el.disabled</code></td>
 </tr>
 <tr>
-<td><code>$el.prop(&#39;disabled&#39;, true)</code></td>
+<td><code>$el.prop(&apos;disabled&apos;, true)</code></td>
 <td><code>el.disabled = true</code></td>
 </tr>
 </tbody>
@@ -246,9 +246,9 @@ working with even older IE versions.</p>
 <p><code>addClass(el, className)</code></p>
 </blockquote>
 <p>Adds a class name to an element. Compare with <code>$.fn.addClass</code>.</p>
-<pre><code class="lang-js">var addClass = require(&#39;dom101/add-class&#39;);
+<pre><code class="lang-js"><span class="pl-k">var</span> addClass = <span class="pl-c1">require</span>(<span class="pl-s">&apos;dom101/add-class&apos;</span>);
 
-addClass(el, &#39;active&#39;);
+addClass(el, <span class="pl-s">&apos;active&apos;</span>);
 </code></pre>
 <h3 id="closest">closest</h3>
 <blockquote>
@@ -256,9 +256,9 @@ addClass(el, &#39;active&#39;);
 </blockquote>
 <p>Looks for the closest ancestor of element <code>el</code> that matches <code>selector</code>.
 Compare with <a href="http://api.jquery.com/closest/">$.fn.closest</a>.</p>
-<pre><code class="lang-js">var closest = require(&#39;dom101/closest&#39;);
+<pre><code class="lang-js"><span class="pl-k">var</span> closest = <span class="pl-c1">require</span>(<span class="pl-s">&apos;dom101/closest&apos;</span>);
 
-closest(input, &#39;label&#39;);
+closest(input, <span class="pl-s">&apos;label&apos;</span>);
 </code></pre>
 <h3 id="deepextend">deepExtend</h3>
 <blockquote>
@@ -267,7 +267,7 @@ closest(input, &#39;label&#39;);
 <p>Extends object <code>dest</code> with properties from sources <code>src</code>.
 Compare with <a href="http://api.jquery.com/jquery.extend/">$.extend(true)</a>.
 Also consider <a href="http://npmjs.com/deep-extend">deep-extend</a>.</p>
-<pre><code class="lang-js">var deepExtend = require(&#39;dom101/deep-extend&#39;);
+<pre><code class="lang-js"><span class="pl-k">var</span> deepExtend = <span class="pl-c1">require</span>(<span class="pl-s">&apos;dom101/deep-extend&apos;</span>);
 deepExtend({}, defaults, options);
 </code></pre>
 <h3 id="documentheight">documentHeight</h3>
@@ -275,20 +275,20 @@ deepExtend({}, defaults, options);
 <p><code>documentHeight()</code></p>
 </blockquote>
 <p>Returns the height of the document.
-Compare with jQuery&#39;s <code>$(document).height()</code>.</p>
-<pre><code class="lang-js">var documentHeight = require(&#39;dom101/document-height&#39;);
+Compare with jQuery&apos;s <code>$(document).height()</code>.</p>
+<pre><code class="lang-js"><span class="pl-k">var</span> documentHeight = <span class="pl-c1">require</span>(<span class="pl-s">&apos;dom101/document-height&apos;</span>);
 
-var height = documentHeight();
+<span class="pl-k">var</span> height = documentHeight();
 </code></pre>
 <h3 id="documentwidth">documentWidth</h3>
 <blockquote>
 <p><code>documentWidth()</code></p>
 </blockquote>
 <p>Returns the width of the document.
-Compare with jQuery&#39;s <code>$(document).width()</code>.</p>
-<pre><code class="lang-js">var documentWidth = require(&#39;dom101/document-width&#39;);
+Compare with jQuery&apos;s <code>$(document).width()</code>.</p>
+<pre><code class="lang-js"><span class="pl-k">var</span> documentWidth = <span class="pl-c1">require</span>(<span class="pl-s">&apos;dom101/document-width&apos;</span>);
 
-var width = documentWidth();
+<span class="pl-k">var</span> width = documentWidth();
 </code></pre>
 <h3 id="each">each</h3>
 <blockquote>
@@ -296,11 +296,11 @@ var width = documentWidth();
 </blockquote>
 <p>Iterates through <code>list</code> (an array or an object). This is useful when dealing
 with NodeLists like <code>document.querySelectorAll</code>.</p>
-<pre><code class="lang-js">var each = require(&#39;dom101/each&#39;);
-var qa = require(&#39;dom101/query-selector-all&#39;);
+<pre><code class="lang-js"><span class="pl-k">var</span> each = <span class="pl-c1">require</span>(<span class="pl-s">&apos;dom101/each&apos;</span>);
+<span class="pl-k">var</span> qa = <span class="pl-c1">require</span>(<span class="pl-s">&apos;dom101/query-selector-all&apos;</span>);
 
-each(qa(&#39;.button&#39;), function (el) {
-  addClass(&#39;el&#39;, &#39;selected&#39;);
+each(qa(<span class="pl-s">&apos;.button&apos;</span>), <span class="hljs-function"><span class="pl-k">function</span> (<span class="hljs-params">el</span>) </span>{
+  addClass(<span class="pl-s">&apos;el&apos;</span>, <span class="pl-s">&apos;selected&apos;</span>);
 });
 </code></pre>
 <h3 id="extend">extend</h3>
@@ -310,7 +310,7 @@ each(qa(&#39;.button&#39;), function (el) {
 <p>Extends object <code>dest</code> with properties from sources <code>src</code>.
 Compare with <a href="http://api.jquery.com/jquery.extend/">$.extend</a>.
 Also consider <a href="http://npmjs.com/object-assign">object-assign</a> and the built-in <code>Object.assign</code>.</p>
-<pre><code class="lang-js">var extend = require(&#39;dom101/extend&#39;);
+<pre><code class="lang-js"><span class="pl-k">var</span> extend = <span class="pl-c1">require</span>(<span class="pl-s">&apos;dom101/extend&apos;</span>);
 extend({}, defaults, options);
 </code></pre>
 <h3 id="hasclass">hasClass</h3>
@@ -318,10 +318,10 @@ extend({}, defaults, options);
 <p><code>hasClass(el, className)</code></p>
 </blockquote>
 <p>Checks if an element has a given class name.</p>
-<pre><code class="lang-js">var hasClass = require(&#39;dom101/has-class&#39;);
+<pre><code class="lang-js"><span class="pl-k">var</span> hasClass = <span class="pl-c1">require</span>(<span class="pl-s">&apos;dom101/has-class&apos;</span>);
 
-el.className = &#39;selected active&#39;;
-hasClass(el, &#39;active&#39;) //=&gt; true
+el.className = <span class="pl-s">&apos;selected active&apos;</span>;
+hasClass(el, <span class="pl-s">&apos;active&apos;</span>) <span class="pl-c">//=&gt; true</span>
 </code></pre>
 <h3 id="isplainobject">isPlainObject</h3>
 <blockquote>
@@ -329,21 +329,21 @@ hasClass(el, &#39;active&#39;) //=&gt; true
 </blockquote>
 <p>Checks if <code>obj</code> is an object created with <code>{}</code> or <code>new Object</code>.
 Compare with <a href="http://api.jquery.com/jquery.isplainobject/">$.isPlainObject</a>.</p>
-<pre><code class="lang-js">var isPlainObject = require(&#39;dom101/is-plain-object&#39;);
+<pre><code class="lang-js"><span class="pl-k">var</span> isPlainObject = <span class="pl-c1">require</span>(<span class="pl-s">&apos;dom101/is-plain-object&apos;</span>);
 
-isPlainObject({}) //=&gt; true
-isPlainObject([]) //=&gt; false
+isPlainObject({}) <span class="pl-c">//=&gt; true</span>
+isPlainObject([]) <span class="pl-c">//=&gt; false</span>
 </code></pre>
 <h3 id="map">map</h3>
 <blockquote>
 <p><code>map(list, fn)</code></p>
 </blockquote>
 <p>Iterates through <code>list</code> (an array or an object).</p>
-<pre><code class="lang-js">var map = require(&#39;dom101/map&#39;);
-var text = require(&#39;dom101/text&#39;);
+<pre><code class="lang-js"><span class="pl-k">var</span> map = <span class="pl-c1">require</span>(<span class="pl-s">&apos;dom101/map&apos;</span>);
+<span class="pl-k">var</span> text = <span class="pl-c1">require</span>(<span class="pl-s">&apos;dom101/text&apos;</span>);
 
-map(qa(&#39;.button&#39;), function (el) {
-  return text(el);
+map(qa(<span class="pl-s">&apos;.button&apos;</span>), <span class="hljs-function"><span class="pl-k">function</span> (<span class="hljs-params">el</span>) </span>{
+  <span class="pl-k">return</span> text(el);
 });
 </code></pre>
 <h3 id="matches">matches</h3>
@@ -352,18 +352,18 @@ map(qa(&#39;.button&#39;), function (el) {
 </blockquote>
 <p>Checks if a given element <code>el</code> matches <code>selector</code>.
 Compare with <a href="http://api.jquery.com/is/">$.fn.is</a>.</p>
-<pre><code class="lang-js">var matches = require(&#39;dom101/matches&#39;);
+<pre><code class="lang-js"><span class="pl-k">var</span> matches = <span class="pl-c1">require</span>(<span class="pl-s">&apos;dom101/matches&apos;</span>);
 
-matches(button, &#39;:focus&#39;);
+matches(button, <span class="pl-s">&apos;:focus&apos;</span>);
 </code></pre>
 <h3 id="on">on</h3>
 <blockquote>
 <p><code>on(el, event, fn)</code></p>
 </blockquote>
 <p>Adds an event handler.</p>
-<pre><code class="lang-js">var on = require(&#39;dom101/on&#39;);
+<pre><code class="lang-js"><span class="pl-k">var</span> on = <span class="pl-c1">require</span>(<span class="pl-s">&apos;dom101/on&apos;</span>);
 
-on(el, &#39;click&#39;, function () {
+on(el, <span class="pl-s">&apos;click&apos;</span>, <span class="hljs-function"><span class="pl-k">function</span> (<span class="hljs-params"></span>) </span>{
   ...
 });
 </code></pre>
@@ -372,7 +372,7 @@ on(el, &#39;click&#39;, function () {
 <p><code>prepend(el, child)</code></p>
 </blockquote>
 <p>Prepends a <code>child</code> into a parent <code>el</code>. Compare with <code>$.fn.prepend</code>.</p>
-<pre><code class="lang-js">var prepend = require(&#39;dom101/prepend&#39;);
+<pre><code class="lang-js"><span class="pl-k">var</span> prepend = <span class="pl-c1">require</span>(<span class="pl-s">&apos;dom101/prepend&apos;</span>);
 
 prepend(el, child);
 </code></pre>
@@ -381,11 +381,11 @@ prepend(el, child);
 <p><code>querySelectorAll(query)</code></p>
 </blockquote>
 <p>Convenience function to access <code>document.querySelectorAll</code>.</p>
-<pre><code class="lang-js">var each = require(&#39;dom101/each&#39;);
-var qa = require(&#39;dom101/query-selector-all&#39;);
+<pre><code class="lang-js"><span class="pl-k">var</span> each = <span class="pl-c1">require</span>(<span class="pl-s">&apos;dom101/each&apos;</span>);
+<span class="pl-k">var</span> qa = <span class="pl-c1">require</span>(<span class="pl-s">&apos;dom101/query-selector-all&apos;</span>);
 
-each(qa(&#39;.button&#39;), function (el) {
-  addClass(&#39;el&#39;, &#39;selected&#39;);
+each(qa(<span class="pl-s">&apos;.button&apos;</span>), <span class="hljs-function"><span class="pl-k">function</span> (<span class="hljs-params">el</span>) </span>{
+  addClass(<span class="pl-s">&apos;el&apos;</span>, <span class="pl-s">&apos;selected&apos;</span>);
 });
 </code></pre>
 <h3 id="queryselector">querySelector</h3>
@@ -393,17 +393,17 @@ each(qa(&#39;.button&#39;), function (el) {
 <p><code>querySelector(query)</code></p>
 </blockquote>
 <p>Convenience function to access <code>document.querySelector</code>.</p>
-<pre><code class="lang-js">var q = require(&#39;dom101/query-selector&#39;);
-addClass(q(&#39;#instructions&#39;), &#39;hidden&#39;);
+<pre><code class="lang-js"><span class="pl-k">var</span> q = <span class="pl-c1">require</span>(<span class="pl-s">&apos;dom101/query-selector&apos;</span>);
+addClass(q(<span class="pl-s">&apos;#instructions&apos;</span>), <span class="pl-s">&apos;hidden&apos;</span>);
 </code></pre>
 <h3 id="ready">ready</h3>
 <blockquote>
 <p><code>ready(fn)</code></p>
 </blockquote>
 <p>Executes <code>fn</code> when the DOM is ready.</p>
-<pre><code class="lang-js">var ready = require(&#39;dom101/ready&#39;);
+<pre><code class="lang-js"><span class="pl-k">var</span> ready = <span class="pl-c1">require</span>(<span class="pl-s">&apos;dom101/ready&apos;</span>);
 
-ready(function () {
+ready(<span class="hljs-function"><span class="pl-k">function</span> (<span class="hljs-params"></span>) </span>{
   ...
 });
 </code></pre>
@@ -412,20 +412,20 @@ ready(function () {
 <p><code>removeClass(el, className)</code></p>
 </blockquote>
 <p>Removes a classname.</p>
-<pre><code class="lang-js">var removeClass = require(&#39;dom101/remove-class&#39;);
+<pre><code class="lang-js"><span class="pl-k">var</span> removeClass = <span class="pl-c1">require</span>(<span class="pl-s">&apos;dom101/remove-class&apos;</span>);
 
-el.className = &#39;selected active&#39;;
-removeClass(el, &#39;active&#39;);
+el.className = <span class="pl-s">&apos;selected active&apos;</span>;
+removeClass(el, <span class="pl-s">&apos;active&apos;</span>);
 
 el.className
-=&gt; &quot;selected&quot;
+=&gt; <span class="pl-s">&quot;selected&quot;</span>
 </code></pre>
 <h3 id="remove">remove</h3>
 <blockquote>
 <p><code>remove(el)</code></p>
 </blockquote>
 <p>Removes an element from the DOM.</p>
-<pre><code class="lang-js">var remove = require(&#39;dom101/remove&#39;);
+<pre><code class="lang-js"><span class="pl-k">var</span> remove = <span class="pl-c1">require</span>(<span class="pl-s">&apos;dom101/remove&apos;</span>);
 
 remove(el);
 </code></pre>
@@ -434,7 +434,7 @@ remove(el);
 <p><code>scrollTop()</code></p>
 </blockquote>
 <p>Returns the scroll top value.</p>
-<pre><code class="lang-js">var scrollTop = require(&#39;dom101/scroll-top&#39;);
+<pre><code class="lang-js"><span class="pl-k">var</span> scrollTop = <span class="pl-c1">require</span>(<span class="pl-s">&apos;dom101/scroll-top&apos;</span>);
 alert(scrollTop());
 </code></pre>
 <h3 id="text">text</h3>
@@ -442,55 +442,55 @@ alert(scrollTop());
 <p><code>text(el, [value])</code></p>
 </blockquote>
 <p>Sets or gets text. Compare with <code>$.fn.text</code>.</p>
-<pre><code class="lang-js">var text = require(&#39;dom101/text&#39;);
+<pre><code class="lang-js"><span class="pl-k">var</span> text = <span class="pl-c1">require</span>(<span class="pl-s">&apos;dom101/text&apos;</span>);
 
-text(el, &#39;Hello&#39;);
+text(el, <span class="pl-s">&apos;Hello&apos;</span>);
 
 text(el)
-=&gt; &quot;Hello&quot;
+=&gt; <span class="pl-s">&quot;Hello&quot;</span>
 </code></pre>
 <h3 id="toggleclass">toggleClass</h3>
 <blockquote>
 <p><code>toggleClass(el, className, [value])</code></p>
 </blockquote>
 <p>Adds or removes a class name to an element. If <code>value</code> is provided,
-this will add the class if it&#39;s <code>true</code> or remove if it&#39;s <code>false</code>.
+this will add the class if it&apos;s <code>true</code> or remove if it&apos;s <code>false</code>.
 Compare with <code>$.fn.toggleClass</code>.</p>
-<pre><code class="lang-js">var toggleClass = require(&#39;dom101/toggle-class&#39;);
+<pre><code class="lang-js"><span class="pl-k">var</span> toggleClass = <span class="pl-c1">require</span>(<span class="pl-s">&apos;dom101/toggle-class&apos;</span>);
 
-// toggles on or off:
-toggleClass(el, &#39;active&#39;);
+<span class="pl-c">// toggles on or off:</span>
+toggleClass(el, <span class="pl-s">&apos;active&apos;</span>);
 
-// with a value:
-var isSelected = true;
-toggleClass(el, &#39;selected&#39;, isSelected);
+<span class="pl-c">// with a value:</span>
+<span class="pl-k">var</span> isSelected = <span class="pl-c1">true</span>;
+toggleClass(el, <span class="pl-s">&apos;selected&apos;</span>, isSelected);
 </code></pre>
 <h3 id="trigger">trigger</h3>
 <blockquote>
 <p><code>trigger(el, event)</code></p>
 </blockquote>
 <p>Triggers an event <code>event</code>. Only works for native events.</p>
-<pre><code class="lang-js">var trigger = require(&#39;dom101/trigger&#39;);
+<pre><code class="lang-js"><span class="pl-k">var</span> trigger = <span class="pl-c1">require</span>(<span class="pl-s">&apos;dom101/trigger&apos;</span>);
 
-el = document.querySelector(&#39;#button&#39;);
-trigger(el, &#39;click&#39;);
+el = <span class="pl-c1">document</span>.querySelector(<span class="pl-s">&apos;#button&apos;</span>);
+trigger(el, <span class="pl-s">&apos;click&apos;</span>);
 </code></pre>
 <!-- end api -->
 <p><br></p>
 <h2 id="similar-projects">Similar projects</h2>
 <ul>
 <li><a href="http://jquery.com">jQuery</a> (of course)</li>
-<li><a href="http://youmightnotneedjquery.com/">youmightnotneedjquery.com</a> — actually takes a bunch of code from here</li>
+<li><a href="http://youmightnotneedjquery.com/">youmightnotneedjquery.com</a> &#x2014; actually takes a bunch of code from here</li>
 <li><a href="https://www.npmjs.org/package/101">101</a></li>
 <li><a href="https://github.com/ded/bonzo">bonzo</a></li>
 </ul>
 <p><br></p>
 <h2 id="thanks">Thanks</h2>
-<p><strong>dom101</strong> © 2014+, Rico Sta. Cruz. Released under the <a href="http://mit-license.org/">MIT</a> License.<br>
+<p><strong>dom101</strong> &#xA9; 2014+, Rico Sta. Cruz. Released under the <a href="http://mit-license.org/">MIT</a> License.<br>
 Authored and maintained by Rico Sta. Cruz with help from contributors (<a href="http://github.com/rstacruz/dom101/contributors">list</a>).</p>
 <blockquote>
-<p><a href="http://ricostacruz.com">ricostacruz.com</a> &nbsp;&middot;&nbsp;
-GitHub <a href="https://github.com/rstacruz">@rstacruz</a> &nbsp;&middot;&nbsp;
+<p><a href="http://ricostacruz.com">ricostacruz.com</a> &#xA0;&#xB7;&#xA0;
+GitHub <a href="https://github.com/rstacruz">@rstacruz</a> &#xA0;&#xB7;&#xA0;
 Twitter <a href="https://twitter.com/rstacruz">@rstacruz</a></p>
 </blockquote>
-</div></div><div class="menu toc-menu"><li class="menu-item -level-0 -parent"><ul class="submenu"><li class="menu-item -level-1"><a href="index.html" class="link title -active link-index">dom101</a></li><li class="menu-item -level-1"><a href="#why" class="link title link-why">Why?</a></li><li class="menu-item -level-1 -parent"><a href="#reference" class="link title link-reference">Reference</a><ul class="submenu"><li class="menu-item -level-2"><a href="#non-dom-utilities" class="link title link-non-dom-utilities">Non-DOM utilities</a></li><li class="menu-item -level-2"><a href="#aliases" class="link title link-aliases">Aliases</a></li><li class="menu-item -level-2"><a href="#not-implemented" class="link title link-not-implemented">Not implemented</a></li></ul></li><li class="menu-item -level-1"><a href="#install" class="link title link-install">Install</a></li><li class="menu-item -level-1 -parent"><a href="#api-reference" class="link title link-api-reference">API Reference</a><ul class="submenu"><li class="menu-item -level-2"><a href="#addclass" class="link title link-addclass">addClass</a></li><li class="menu-item -level-2"><a href="#closest" class="link title link-closest">closest</a></li><li class="menu-item -level-2"><a href="#deepextend" class="link title link-deepextend">deepExtend</a></li><li class="menu-item -level-2"><a href="#documentheight" class="link title link-documentheight">documentHeight</a></li><li class="menu-item -level-2"><a href="#documentwidth" class="link title link-documentwidth">documentWidth</a></li><li class="menu-item -level-2"><a href="#each" class="link title link-each">each</a></li><li class="menu-item -level-2"><a href="#extend" class="link title link-extend">extend</a></li><li class="menu-item -level-2"><a href="#hasclass" class="link title link-hasclass">hasClass</a></li><li class="menu-item -level-2"><a href="#isplainobject" class="link title link-isplainobject">isPlainObject</a></li><li class="menu-item -level-2"><a href="#map" class="link title link-map">map</a></li><li class="menu-item -level-2"><a href="#matches" class="link title link-matches">matches</a></li><li class="menu-item -level-2"><a href="#on" class="link title link-on">on</a></li><li class="menu-item -level-2"><a href="#prepend" class="link title link-prepend">prepend</a></li><li class="menu-item -level-2"><a href="#queryselectorall" class="link title link-queryselectorall">querySelectorAll</a></li><li class="menu-item -level-2"><a href="#queryselector" class="link title link-queryselector">querySelector</a></li><li class="menu-item -level-2"><a href="#ready" class="link title link-ready">ready</a></li><li class="menu-item -level-2"><a href="#removeclass" class="link title link-removeclass">removeClass</a></li><li class="menu-item -level-2"><a href="#remove" class="link title link-remove">remove</a></li><li class="menu-item -level-2"><a href="#scrolltop" class="link title link-scrolltop">scrollTop</a></li><li class="menu-item -level-2"><a href="#text" class="link title link-text">text</a></li><li class="menu-item -level-2"><a href="#toggleclass" class="link title link-toggleclass">toggleClass</a></li><li class="menu-item -level-2"><a href="#trigger" class="link title link-trigger">trigger</a></li></ul></li><li class="menu-item -level-1"><a href="#similar-projects" class="link title link-similar-projects">Similar projects</a></li><li class="menu-item -level-1"><a href="#thanks" class="link title link-thanks">Thanks</a></li></ul></li></div></div><script src="assets/script.js?t=2d8caca5"></script></body></html>
+</div></div><div class="menu toc-menu"><li class="menu-item -level-0 -parent"><ul class="submenu"><li class="menu-item -level-1"><a href="index.html" class="link title -active link-index">dom101</a></li><li class="menu-item -level-1"><a href="#why" class="link title link-why">Why?</a></li><li class="menu-item -level-1 -parent"><a href="#reference" class="link title link-reference">Reference</a><ul class="submenu"><li class="menu-item -level-2"><a href="#non-dom-utilities" class="link title link-non-dom-utilities">Non-DOM utilities</a></li><li class="menu-item -level-2"><a href="#aliases" class="link title link-aliases">Aliases</a></li><li class="menu-item -level-2"><a href="#not-implemented" class="link title link-not-implemented">Not implemented</a></li></ul></li><li class="menu-item -level-1"><a href="#install" class="link title link-install">Install</a></li><li class="menu-item -level-1 -parent"><a href="#api-reference" class="link title link-api-reference">API Reference</a><ul class="submenu"><li class="menu-item -level-2"><a href="#addclass" class="link title link-addclass">addClass</a></li><li class="menu-item -level-2"><a href="#closest" class="link title link-closest">closest</a></li><li class="menu-item -level-2"><a href="#deepextend" class="link title link-deepextend">deepExtend</a></li><li class="menu-item -level-2"><a href="#documentheight" class="link title link-documentheight">documentHeight</a></li><li class="menu-item -level-2"><a href="#documentwidth" class="link title link-documentwidth">documentWidth</a></li><li class="menu-item -level-2"><a href="#each" class="link title link-each">each</a></li><li class="menu-item -level-2"><a href="#extend" class="link title link-extend">extend</a></li><li class="menu-item -level-2"><a href="#hasclass" class="link title link-hasclass">hasClass</a></li><li class="menu-item -level-2"><a href="#isplainobject" class="link title link-isplainobject">isPlainObject</a></li><li class="menu-item -level-2"><a href="#map" class="link title link-map">map</a></li><li class="menu-item -level-2"><a href="#matches" class="link title link-matches">matches</a></li><li class="menu-item -level-2"><a href="#on" class="link title link-on">on</a></li><li class="menu-item -level-2"><a href="#prepend" class="link title link-prepend">prepend</a></li><li class="menu-item -level-2"><a href="#queryselectorall" class="link title link-queryselectorall">querySelectorAll</a></li><li class="menu-item -level-2"><a href="#queryselector" class="link title link-queryselector">querySelector</a></li><li class="menu-item -level-2"><a href="#ready" class="link title link-ready">ready</a></li><li class="menu-item -level-2"><a href="#removeclass" class="link title link-removeclass">removeClass</a></li><li class="menu-item -level-2"><a href="#remove" class="link title link-remove">remove</a></li><li class="menu-item -level-2"><a href="#scrolltop" class="link title link-scrolltop">scrollTop</a></li><li class="menu-item -level-2"><a href="#text" class="link title link-text">text</a></li><li class="menu-item -level-2"><a href="#toggleclass" class="link title link-toggleclass">toggleClass</a></li><li class="menu-item -level-2"><a href="#trigger" class="link title link-trigger">trigger</a></li></ul></li><li class="menu-item -level-1"><a href="#similar-projects" class="link title link-similar-projects">Similar projects</a></li><li class="menu-item -level-1"><a href="#thanks" class="link title link-thanks">Thanks</a></li></ul></li></div></div><script src="assets/script.js?t=3c14cb64"></script></body></html>

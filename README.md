@@ -12,8 +12,6 @@ addClass(el, 'active');
 
 [![Status](https://travis-ci.org/rstacruz/dom101.svg?branch=master)](https://travis-ci.org/rstacruz/dom101)  
 
-<br>
-
 ## Why?
 
 If you're writing a frontend library, it's best to avoid a dependency on
@@ -35,8 +33,6 @@ manipulation code into many single-use JS files.
 > working with even older IE versions.
 
 dom101 loosely follows the conventions of [101].
-
-<br>
 
 ## Reference
 
@@ -102,8 +98,6 @@ Some DOM helpers aren't implemented, because they're easy enough to do with plai
 | `$el.prop('disabled')`              | `el.disabled`                      |
 | `$el.prop('disabled', true)`        | `el.disabled = true`               |
 
-<br>
-
 ## Install
 
 dom101 is available via [npm]. Perfect for use with [browserify].
@@ -114,8 +108,6 @@ dom101 is available via [npm]. Perfect for use with [browserify].
 [browserify]: https://browserify.org
 
 [![npm version](http://img.shields.io/npm/v/dom101.svg?style=flat)](https://npmjs.org/package/dom101 "View this project on npm")
-
-<br>
 
 ## API Reference
 
@@ -404,16 +396,12 @@ trigger(el, 'click');
 
 <!-- end api -->
 
-<br>
-
 ## Similar projects
 
  * [jQuery] (of course)
  * [youmightnotneedjquery.com] — actually takes a bunch of code from here
  * [101]
  * [bonzo]
-
-<br>
 
 ## Thanks
 

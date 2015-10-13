@@ -420,5 +420,5 @@ Authored and maintained by Rico Sta. Cruz with help from contributors ([list][co
 [browserify]: http://browserify.org
 [101]: https://www.npmjs.org/package/101
 [youmightnotneedjquery.com]: http://youmightnotneedjquery.com/
-[example]: add-class.js
+[example]: https://github.com/rstacruz/dom101/blob/master/add-class.js
 [bonzo]: https://github.com/ded/bonzo

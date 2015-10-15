@@ -2,9 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="assets/style.css?t=f78118d4">
-    <script src="assets/script.js?t=de0b4e6d"></script>
+    <link rel="stylesheet" href="assets/style.css?t=a157e8bd">
+    <link rel="stylesheet" href="http://ricostacruz.com/docpress-rsc/style.css">
+    <script src="assets/script.js?t=6ab408ed"></script>
     <title>dom101</title>
+    <meta name="viewport" content="width=device-width">
   </head>
   <body class="-menu-visible">
     <div class="doc-layout">
@@ -15,7 +17,7 @@
               <!-- span.title Open in GitHub--><span class="icon -github"></span></a>
           </div>
         </div>
-        <div class="markdown-body"><h1 id="dom101">dom101</h1>
+        <div class="markdown-body"><h1 class="massive-heading" id="dom101">dom101</h1>
 <p>DOM manipulation utilities as single-files.<br>
 <em>aka: Stop using jQuery.</em></p>
 <pre><code class="lang-js"><span class="pl-k">var</span> addClass = <span class="pl-c1">require</span>(<span class="pl-s">&apos;dom101/add-class&apos;</span>);
@@ -25,9 +27,9 @@ addClass(el, <span class="pl-s">&apos;active&apos;</span>);
 </code></pre>
 <p><a href="https://travis-ci.org/rstacruz/dom101"><img src="https://travis-ci.org/rstacruz/dom101.svg?branch=master" alt="Status"></a></p>
 <h2 id="why">Why?</h2>
-<p>If you&apos;re writing a frontend library, it&apos;s best to avoid a dependency on
+<p>If you&#x2019;re writing a frontend library, it&#x2019;s best to avoid a dependency on
 <a href="http://jquery.com">jQuery</a>. This means having to write your own DOM manipulation code,
-though. To speed you along, I&apos;ve packaged all that typical DOM
+though. To speed you along, I&#x2019;ve packaged all that typical DOM
 manipulation code into many single-use JS files.</p>
 <blockquote>
 <h4 id="slim-builds">Slim builds</h4>
@@ -35,7 +37,7 @@ manipulation code into many single-use JS files.</p>
 will only bundle the functions it needs, instead of bundling a monolithic
 jQuery.</p>
 <h4 id="copy-pastable">Copy-pastable</h4>
-<p>If you don&apos;t want to include dom101 as a dependency, each
+<p>If you don&#x2019;t want to include dom101 as a dependency, each
 file (<a href="https://github.com/rstacruz/dom101/blob/master/add-class.js">example</a>) stand on their own and can be easily pasted into your project.</p>
 <h4 id="semi-legacy-support">Semi-legacy support</h4>
 <p>Minimum browser fully-supported is IE8, with most of the utilities
@@ -53,19 +55,19 @@ working with even older IE versions.</p>
 <tbody>
 <tr>
 <td><code>$(el).addClass(&apos;...&apos;)</code></td>
-<td><a href="#addclass">addClass</a>(el, &apos;...&apos;)</td>
+<td><a href="#addclass">addClass</a>(el, &#x2018;&#x2026;&#x2019;)</td>
 </tr>
 <tr>
 <td><code>$(el).hasClass(&apos;...&apos;)</code></td>
-<td><a href="#hasclass">hasClass</a>(el, &apos;...&apos;)</td>
+<td><a href="#hasclass">hasClass</a>(el, &#x2018;&#x2026;&#x2019;)</td>
 </tr>
 <tr>
 <td><code>$(el).removeClass(&apos;...&apos;)</code></td>
-<td><a href="#removeclass">removeClass</a>(el, &apos;...&apos;)</td>
+<td><a href="#removeclass">removeClass</a>(el, &#x2018;&#x2026;&#x2019;)</td>
 </tr>
 <tr>
 <td><code>$(el).toggleClass(&apos;...&apos;)</code></td>
-<td><a href="#toggleclass">toggleClass</a>(el, &apos;...&apos;)</td>
+<td><a href="#toggleclass">toggleClass</a>(el, &#x2018;&#x2026;&#x2019;)</td>
 </tr>
 <tr>
 <td><code>$(el).remove()</code></td>
@@ -77,11 +79,11 @@ working with even older IE versions.</p>
 </tr>
 <tr>
 <td><code>$(el).text(&apos;...&apos;)</code></td>
-<td><a href="#text">text</a>(el, &apos;...&apos;)</td>
+<td><a href="#text">text</a>(el, &#x2018;&#x2026;&#x2019;)</td>
 </tr>
 <tr>
 <td><code>$(el).on(&apos;click&apos;, fn)</code></td>
-<td><a href="#on">on</a>(el, &apos;click&apos;, fn)</td>
+<td><a href="#on">on</a>(el, &#x2018;click&#x2019;, fn)</td>
 </tr>
 <tr>
 <td><code>$(fn)</code></td>
@@ -105,15 +107,15 @@ working with even older IE versions.</p>
 </tr>
 <tr>
 <td><code>$(el).trigger(&apos;click&apos;)</code></td>
-<td><a href="#trigger">trigger</a>(el, &apos;click&apos;)</td>
+<td><a href="#trigger">trigger</a>(el, &#x2018;click&#x2019;)</td>
 </tr>
 <tr>
 <td><code>$(el).closest(&apos;selector&apos;)</code></td>
-<td><a href="#closest">closest</a>(el, &apos;selector&apos;)</td>
+<td><a href="#closest">closest</a>(el, &#x2018;selector&#x2019;)</td>
 </tr>
 <tr>
 <td><code>$(el).is(&apos;selector&apos;)</code></td>
-<td><a href="#matches">matches</a>(el, &apos;selector&apos;)</td>
+<td><a href="#matches">matches</a>(el, &#x2018;selector&#x2019;)</td>
 </tr>
 </tbody>
 </table>
@@ -136,11 +138,11 @@ working with even older IE versions.</p>
 </tr>
 <tr>
 <td><code>$.extend(...)</code></td>
-<td><a href="#extend">extend</a>(...)</td>
+<td><a href="#extend">extend</a>(&#x2026;)</td>
 </tr>
 <tr>
 <td><code>$.extend(true, ...)</code></td>
-<td><a href="#deepextend">deepExtend</a>(...)</td>
+<td><a href="#deepextend">deepExtend</a>(&#x2026;)</td>
 </tr>
 <tr>
 <td><code>$.isPlainObject(obj)</code></td>
@@ -160,16 +162,16 @@ working with even older IE versions.</p>
 <tbody>
 <tr>
 <td><code>document.querySelector(...)</code></td>
-<td><a href="#queryselector">querySelector</a>(...)</td>
+<td><a href="#queryselector">querySelector</a>(&#x2026;)</td>
 </tr>
 <tr>
 <td><code>document.querySelectorAll(...)</code></td>
-<td><a href="#queryselectorall">querySelectorAll</a>(...)</td>
+<td><a href="#queryselectorall">querySelectorAll</a>(&#x2026;)</td>
 </tr>
 </tbody>
 </table>
 <h3 id="not-implemented">Not implemented</h3>
-<p>Some DOM helpers aren&apos;t implemented, because they&apos;re easy enough to do with plain DOM API:</p>
+<p>Some DOM helpers aren&#x2019;t implemented, because they&#x2019;re easy enough to do with plain DOM API:</p>
 <table>
 <thead>
 <tr>
@@ -289,7 +291,7 @@ deepExtend({}, defaults, options);
 <p><code>documentHeight()</code></p>
 </blockquote>
 <p>Returns the height of the document.
-Compare with jQuery&apos;s <code>$(document).height()</code>.</p>
+Compare with jQuery&#x2019;s <code>$(document).height()</code>.</p>
 <pre><code class="lang-js"><span class="pl-k">var</span> documentHeight = <span class="pl-c1">require</span>(<span class="pl-s">&apos;dom101/document-height&apos;</span>);
 
 <span class="pl-k">var</span> height = documentHeight();
@@ -299,7 +301,7 @@ Compare with jQuery&apos;s <code>$(document).height()</code>.</p>
 <p><code>documentWidth()</code></p>
 </blockquote>
 <p>Returns the width of the document.
-Compare with jQuery&apos;s <code>$(document).width()</code>.</p>
+Compare with jQuery&#x2019;s <code>$(document).width()</code>.</p>
 <pre><code class="lang-js"><span class="pl-k">var</span> documentWidth = <span class="pl-c1">require</span>(<span class="pl-s">&apos;dom101/document-width&apos;</span>);
 
 <span class="pl-k">var</span> width = documentWidth();
@@ -468,7 +470,7 @@ text(el)
 <p><code>toggleClass(el, className, [value])</code></p>
 </blockquote>
 <p>Adds or removes a class name to an element. If <code>value</code> is provided,
-this will add the class if it&apos;s <code>true</code> or remove if it&apos;s <code>false</code>.
+this will add the class if it&#x2019;s <code>true</code> or remove if it&#x2019;s <code>false</code>.
 Compare with <code>$.fn.toggleClass</code>.</p>
 <pre><code class="lang-js"><span class="pl-k">var</span> toggleClass = <span class="pl-c1">require</span>(<span class="pl-s">&apos;dom101/toggle-class&apos;</span>);
 

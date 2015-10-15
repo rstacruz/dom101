@@ -341,7 +341,6 @@
   },
   "sources": {
     "README.md": "index.html",
-    "docs/docpress.json": "docpress.json",
-    "docs/assets/custom.scss": "assets/custom.scss"
+    "docs/docpress.json": "docpress.json"
   }
 }

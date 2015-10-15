@@ -1,4 +1,5 @@
 # dom101
+<!-- {.massive-heading} -->
 
 DOM manipulation utilities as single-files.<br>
 *aka: Stop using jQuery.*

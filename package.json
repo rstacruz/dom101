@@ -9,7 +9,7 @@
   "devDependencies": {
     "browserify": "11.2.0",
     "chai": "3.3.0",
-    "docpress": "0.6.0",
+    "docpress": "0.6.1",
     "git-update-ghpages": "1.1.1",
     "jsdom": "7.0.1",
     "mdextract": "1.0.0",

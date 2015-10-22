@@ -11,7 +11,7 @@
     "chai": "3.4.0",
     "docpress": "0.6.1",
     "git-update-ghpages": "1.1.1",
-    "jsdom": "7.0.1",
+    "jsdom": "7.0.2",
     "mdextract": "1.0.0",
     "mocha": "2.3.3",
     "mocha-jsdom": "1.0.0",

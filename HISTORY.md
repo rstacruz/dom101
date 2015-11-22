@@ -1,3 +1,11 @@
+## [v1.2.0]
+> Nov 22, 2015
+
+* Add `dom101/before`
+* Add `dom101/after`
+
+[v1.2.0]: https://github.com/rstacruz/dom101/compare/v1.1.0...v1.2.0
+
 ## [v1.1.0]
 > Oct 7, 2015
 

@@ -5,6 +5,8 @@
 
 module.exports = {
   addClass: require('./add-class'),
+  after: require('./after'),
+  before: require('./before'),
   closest: require('./closest'),
   deepExtend: require('./deep-extend'),
   documentHeight: require('./document-height'),

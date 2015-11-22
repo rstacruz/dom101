@@ -46,6 +46,8 @@ dom101 loosely follows the conventions of [101].
 | `$(el).remove()`            | [remove](#remove)(el)                  |
 | `$(el).text()`              | [text](#text)(el)                      |
 | `$(el).text('...')`         | [text](#text)(el, '...')               |
+| `$(el).before(newEl)`       | [before](#before)(el, newEl)           |
+| `$(el).after(newEl)`        | [after](#after)(el, newEl)             |
 | `$(el).on('click', fn)`     | [on](#on)(el, 'click', fn)             |
 | `$(fn)`                     | [ready](#ready)(fn)                    |
 | `$(document).ready(fn)`     | [ready](#ready)(fn)                    |
@@ -123,6 +125,32 @@ Adds a class name to an element. Compare with `$.fn.addClass`.
 var addClass = require('dom101/add-class');
 
 addClass(el, 'active');
+```
+
+### after
+> `after(el, newEl)`
+
+Inserts a new element `newEl` just after `el`.
+
+```js
+var after = require('dom101/after');
+var newNode = document.createElement('div');
+var button = document.querySelector('#submit');
+
+after(button, newNode);
+```
+
+### before
+> `before(el, newEl)`
+
+Inserts a new element `newEl` just before `el`.
+
+```js
+var before = require('dom101/before');
+var newNode = document.createElement('div');
+var button = document.querySelector('#submit');
+
+before(button, newNode);
 ```
 
 ### closest

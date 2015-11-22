@@ -439,3 +439,41 @@ describe('documentWidth', function () {
     expect(typeof documentWidth()).eq('number');
   });
 });
+
+describe('before/after', function () {
+  var _before = mdom.before;
+  var _after = mdom.after;
+  var parent, reference, newNode;
+
+  beforeEach(function () {
+    parent = document.createElement('div');
+    reference = document.createElement('em');
+    newNode = document.createElement('span');
+    parent.appendChild(reference);
+  });
+
+  it('before() works', function () {
+    _before(reference, newNode);
+    expect(parent.innerHTML.toLowerCase()).eq('<span></span><em></em>');
+  });
+
+  it.skip('before() works with strings', function () {
+    _before(reference, '<b></b>');
+    expect(parent.innerHTML.toLowerCase()).eq('<b></b><em></em>');
+  });
+
+  it('after() works at the end', function () {
+    _after(reference, newNode);
+    expect(parent.innerHTML.toLowerCase()).eq('<em></em><span></span>');
+  });
+
+  it('after() works in the middle', function () {
+    parent.appendChild(document.createElement('i'));
+    _after(reference, newNode);
+    expect(parent.innerHTML.toLowerCase()).eq('<em></em><span></span><i></i>');
+  });
+  it.skip('after() works with strings', function () {
+    _after(reference, '<b></b>');
+    expect(parent.innerHTML.toLowerCase()).eq('<em></em><b></b>');
+  });
+});

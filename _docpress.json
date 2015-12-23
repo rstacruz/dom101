@@ -51,6 +51,16 @@
                 "id": "addclass"
               },
               {
+                "title": "after",
+                "depth": 3,
+                "id": "after"
+              },
+              {
+                "title": "before",
+                "depth": 3,
+                "id": "before"
+              },
+              {
                 "title": "closest",
                 "depth": 3,
                 "id": "closest"
@@ -218,6 +228,16 @@
               "title": "addClass",
               "depth": 3,
               "id": "addclass"
+            },
+            {
+              "title": "after",
+              "depth": 3,
+              "id": "after"
+            },
+            {
+              "title": "before",
+              "depth": 3,
+              "id": "before"
             },
             {
               "title": "closest",

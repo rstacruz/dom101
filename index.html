@@ -7,6 +7,12 @@
     <script src="assets/script.js?t=2bcc4b59"></script>
     <title>dom101</title>
     <meta name="viewport" content="width=device-width">
+    <script>
+      if (false || window.location.hostname.indexOf("ricostacruz.com") === window.location.hostname.length - 15) {
+        (function(d,o,c,p,r,e,s){d['GoogleAnalyticsObject']=r;d[r]=d[r]||function(){(d[r].q=d[r].q||[]).push(arguments)},d[r].l=1*new Date();e=o.createElement(c),s=o.getElementsByTagName(c)[0];e.async=1;e.src=p;s.parentNode.insertBefore(e,s)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create',"UA-20473929-1",'auto')
+      }
+    </script>
   </head>
   <body class="-menu-visible">
     <div class="doc-layout">
@@ -17,8 +23,11 @@
               <!-- span.title Open in GitHub--><span class="icon -github"></span></a>
           </div>
         </div>
-        <div class="markdown-body"><h1 class="massive-heading" id="dom101">dom101</h1>
-<p>DOM manipulation utilities as single-files.<br>
+        <div class="markdown-body"><h1 class="massive-header -with-tagline" id="dom101">dom101</h1>
+<blockquote>
+<p>DOM manipulation utilities</p>
+</blockquote>
+<p>dom101 is a set of utilities for manipulating the DOM as single files.<br>
 <em>aka: Stop using jQuery.</em></p>
 <pre><code class="lang-js"><span class="pl-k">var</span> addClass = <span class="pl-c1">require</span>(<span class="pl-s">&apos;dom101/add-class&apos;</span>);
 
@@ -80,6 +89,14 @@ working with even older IE versions.</p>
 <tr>
 <td><code>$(el).text(&apos;...&apos;)</code></td>
 <td><a href="#text">text</a>(el, &#x2018;&#x2026;&#x2019;)</td>
+</tr>
+<tr>
+<td><code>$(el).before(newEl)</code></td>
+<td><a href="#before">before</a>(el, newEl)</td>
+</tr>
+<tr>
+<td><code>$(el).after(newEl)</code></td>
+<td><a href="#after">after</a>(el, newEl)</td>
 </tr>
 <tr>
 <td><code>$(el).on(&apos;click&apos;, fn)</code></td>
@@ -265,6 +282,28 @@ working with even older IE versions.</p>
 <pre><code class="lang-js"><span class="pl-k">var</span> addClass = <span class="pl-c1">require</span>(<span class="pl-s">&apos;dom101/add-class&apos;</span>);
 
 addClass(el, <span class="pl-s">&apos;active&apos;</span>);
+</code></pre>
+<h3 id="after">after</h3>
+<blockquote>
+<p><code>after(el, newEl)</code></p>
+</blockquote>
+<p>Inserts a new element <code>newEl</code> just after <code>el</code>.</p>
+<pre><code class="lang-js"><span class="pl-k">var</span> after = <span class="pl-c1">require</span>(<span class="pl-s">&apos;dom101/after&apos;</span>);
+<span class="pl-k">var</span> newNode = <span class="pl-c1">document</span>.createElement(<span class="pl-s">&apos;div&apos;</span>);
+<span class="pl-k">var</span> button = <span class="pl-c1">document</span>.querySelector(<span class="pl-s">&apos;#submit&apos;</span>);
+
+after(button, newNode);
+</code></pre>
+<h3 id="before">before</h3>
+<blockquote>
+<p><code>before(el, newEl)</code></p>
+</blockquote>
+<p>Inserts a new element <code>newEl</code> just before <code>el</code>.</p>
+<pre><code class="lang-js"><span class="pl-k">var</span> before = <span class="pl-c1">require</span>(<span class="pl-s">&apos;dom101/before&apos;</span>);
+<span class="pl-k">var</span> newNode = <span class="pl-c1">document</span>.createElement(<span class="pl-s">&apos;div&apos;</span>);
+<span class="pl-k">var</span> button = <span class="pl-c1">document</span>.querySelector(<span class="pl-s">&apos;#submit&apos;</span>);
+
+before(button, newNode);
 </code></pre>
 <h3 id="closest">closest</h3>
 <blockquote>
@@ -532,6 +571,10 @@ Twitter <a href="https://twitter.com/rstacruz">@rstacruz</a></p>
             <li class="menu-item -level-1 -parent"><a href="#api-reference" class="link title link-api-reference">API Reference</a>
               <ul class="submenu">
                 <li class="menu-item -level-2"><a href="#addclass" class="link title link-addclass">addClass</a>
+                </li>
+                <li class="menu-item -level-2"><a href="#after" class="link title link-after">after</a>
+                </li>
+                <li class="menu-item -level-2"><a href="#before" class="link title link-before">before</a>
                 </li>
                 <li class="menu-item -level-2"><a href="#closest" class="link title link-closest">closest</a>
                 </li>

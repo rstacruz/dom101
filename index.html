@@ -273,7 +273,7 @@ working with even older IE versions.</p>
 </code></pre>
 <p><a href="https://npmjs.org/package/dom101" title="View this project on npm"><img src="http://img.shields.io/npm/v/dom101.svg?style=flat" alt="npm version"></a></p>
 <h2 id="api-reference">API Reference</h2>
-<!-- begin api -->
+<!--api-->
 <h3 id="addclass">addClass</h3>
 <blockquote>
 <p><code>addClass(el, className)</code></p>
@@ -282,6 +282,7 @@ working with even older IE versions.</p>
 <pre><code class="lang-js"><span class="pl-k">var</span> addClass = <span class="pl-c1">require</span>(<span class="pl-s">&apos;dom101/add-class&apos;</span>);
 
 addClass(el, <span class="pl-s">&apos;active&apos;</span>);
+
 </code></pre>
 <h3 id="after">after</h3>
 <blockquote>
@@ -293,6 +294,7 @@ addClass(el, <span class="pl-s">&apos;active&apos;</span>);
 <span class="pl-k">var</span> button = <span class="pl-c1">document</span>.querySelector(<span class="pl-s">&apos;#submit&apos;</span>);
 
 after(button, newNode);
+
 </code></pre>
 <h3 id="before">before</h3>
 <blockquote>
@@ -304,6 +306,7 @@ after(button, newNode);
 <span class="pl-k">var</span> button = <span class="pl-c1">document</span>.querySelector(<span class="pl-s">&apos;#submit&apos;</span>);
 
 before(button, newNode);
+
 </code></pre>
 <h3 id="closest">closest</h3>
 <blockquote>
@@ -314,6 +317,7 @@ Compare with <a href="http://api.jquery.com/closest/">$.fn.closest</a>.</p>
 <pre><code class="lang-js"><span class="pl-k">var</span> closest = <span class="pl-c1">require</span>(<span class="pl-s">&apos;dom101/closest&apos;</span>);
 
 closest(input, <span class="pl-s">&apos;label&apos;</span>);
+
 </code></pre>
 <h3 id="deepextend">deepExtend</h3>
 <blockquote>
@@ -334,6 +338,7 @@ Compare with jQuery&#x2019;s <code>$(document).height()</code>.</p>
 <pre><code class="lang-js"><span class="pl-k">var</span> documentHeight = <span class="pl-c1">require</span>(<span class="pl-s">&apos;dom101/document-height&apos;</span>);
 
 <span class="pl-k">var</span> height = documentHeight();
+
 </code></pre>
 <h3 id="documentwidth">documentWidth</h3>
 <blockquote>
@@ -344,6 +349,7 @@ Compare with jQuery&#x2019;s <code>$(document).width()</code>.</p>
 <pre><code class="lang-js"><span class="pl-k">var</span> documentWidth = <span class="pl-c1">require</span>(<span class="pl-s">&apos;dom101/document-width&apos;</span>);
 
 <span class="pl-k">var</span> width = documentWidth();
+
 </code></pre>
 <h3 id="each">each</h3>
 <blockquote>
@@ -357,6 +363,7 @@ with NodeLists like <code>document.querySelectorAll</code>.</p>
 each(qa(<span class="pl-s">&apos;.button&apos;</span>), <span class="hljs-function"><span class="pl-k">function</span> (<span class="hljs-params">el</span>) </span>{
   addClass(<span class="pl-s">&apos;el&apos;</span>, <span class="pl-s">&apos;selected&apos;</span>);
 });
+
 </code></pre>
 <h3 id="extend">extend</h3>
 <blockquote>
@@ -377,7 +384,11 @@ extend({}, defaults, options);
 
 el.className = <span class="pl-s">&apos;selected active&apos;</span>;
 hasClass(el, <span class="pl-s">&apos;active&apos;</span>) <span class="pl-c">//=&gt; true</span>
+
 </code></pre>
+<h3 id="exports">exports</h3>
+<p>this file is only provided for convenience and for tests.
+it&#x2019;s not advised to use it.</p>
 <h3 id="isplainobject">isPlainObject</h3>
 <blockquote>
 <p><code>isPlainObject(obj)</code></p>
@@ -388,6 +399,7 @@ Compare with <a href="http://api.jquery.com/jquery.isplainobject/">$.isPlainObje
 
 isPlainObject({}) <span class="pl-c">//=&gt; true</span>
 isPlainObject([]) <span class="pl-c">//=&gt; false</span>
+
 </code></pre>
 <h3 id="map">map</h3>
 <blockquote>
@@ -400,6 +412,7 @@ isPlainObject([]) <span class="pl-c">//=&gt; false</span>
 map(qa(<span class="pl-s">&apos;.button&apos;</span>), <span class="hljs-function"><span class="pl-k">function</span> (<span class="hljs-params">el</span>) </span>{
   <span class="pl-k">return</span> text(el);
 });
+
 </code></pre>
 <h3 id="matches">matches</h3>
 <blockquote>
@@ -410,6 +423,7 @@ Compare with <a href="http://api.jquery.com/is/">$.fn.is</a>.</p>
 <pre><code class="lang-js"><span class="pl-k">var</span> matches = <span class="pl-c1">require</span>(<span class="pl-s">&apos;dom101/matches&apos;</span>);
 
 matches(button, <span class="pl-s">&apos;:focus&apos;</span>);
+
 </code></pre>
 <h3 id="on">on</h3>
 <blockquote>
@@ -421,6 +435,7 @@ matches(button, <span class="pl-s">&apos;:focus&apos;</span>);
 on(el, <span class="pl-s">&apos;click&apos;</span>, <span class="hljs-function"><span class="pl-k">function</span> (<span class="hljs-params"></span>) </span>{
   ...
 });
+
 </code></pre>
 <h3 id="prepend">prepend</h3>
 <blockquote>
@@ -430,6 +445,7 @@ on(el, <span class="pl-s">&apos;click&apos;</span>, <span class="hljs-function">
 <pre><code class="lang-js"><span class="pl-k">var</span> prepend = <span class="pl-c1">require</span>(<span class="pl-s">&apos;dom101/prepend&apos;</span>);
 
 prepend(el, child);
+
 </code></pre>
 <h3 id="queryselectorall">querySelectorAll</h3>
 <blockquote>
@@ -442,6 +458,7 @@ prepend(el, child);
 each(qa(<span class="pl-s">&apos;.button&apos;</span>), <span class="hljs-function"><span class="pl-k">function</span> (<span class="hljs-params">el</span>) </span>{
   addClass(<span class="pl-s">&apos;el&apos;</span>, <span class="pl-s">&apos;selected&apos;</span>);
 });
+
 </code></pre>
 <h3 id="queryselector">querySelector</h3>
 <blockquote>
@@ -462,6 +479,7 @@ callback will be called immediately.</p>
 ready(<span class="hljs-function"><span class="pl-k">function</span> (<span class="hljs-params"></span>) </span>{
   ...
 });
+
 </code></pre>
 <h3 id="removeclass">removeClass</h3>
 <blockquote>
@@ -475,6 +493,7 @@ removeClass(el, <span class="pl-s">&apos;active&apos;</span>);
 
 el.className
 =&gt; <span class="pl-s">&quot;selected&quot;</span>
+
 </code></pre>
 <h3 id="remove">remove</h3>
 <blockquote>
@@ -484,6 +503,7 @@ el.className
 <pre><code class="lang-js"><span class="pl-k">var</span> remove = <span class="pl-c1">require</span>(<span class="pl-s">&apos;dom101/remove&apos;</span>);
 
 remove(el);
+
 </code></pre>
 <h3 id="scrolltop">scrollTop</h3>
 <blockquote>
@@ -504,6 +524,7 @@ text(el, <span class="pl-s">&apos;Hello&apos;</span>);
 
 text(el)
 =&gt; <span class="pl-s">&quot;Hello&quot;</span>
+
 </code></pre>
 <h3 id="toggleclass">toggleClass</h3>
 <blockquote>
@@ -520,6 +541,7 @@ toggleClass(el, <span class="pl-s">&apos;active&apos;</span>);
 <span class="pl-c">// with a value:</span>
 <span class="pl-k">var</span> isSelected = <span class="pl-c1">true</span>;
 toggleClass(el, <span class="pl-s">&apos;selected&apos;</span>, isSelected);
+
 </code></pre>
 <h3 id="trigger">trigger</h3>
 <blockquote>
@@ -530,8 +552,9 @@ toggleClass(el, <span class="pl-s">&apos;selected&apos;</span>, isSelected);
 
 el = <span class="pl-c1">document</span>.querySelector(<span class="pl-s">&apos;#button&apos;</span>);
 trigger(el, <span class="pl-s">&apos;click&apos;</span>);
+
 </code></pre>
-<!-- end api -->
+<!--api:end-->
 <h2 id="similar-projects">Similar projects</h2>
 <ul>
 <li><a href="http://jquery.com">jQuery</a> (of course)</li>
@@ -590,6 +613,8 @@ Twitter <a href="https://twitter.com/rstacruz">@rstacruz</a></p>
                 <li class="menu-item -level-2"><a href="#extend" class="link title link-extend">extend</a>
                 </li>
                 <li class="menu-item -level-2"><a href="#hasclass" class="link title link-hasclass">hasClass</a>
+                </li>
+                <li class="menu-item -level-2"><a href="#exports" class="link title link-exports">exports</a>
                 </li>
                 <li class="menu-item -level-2"><a href="#isplainobject" class="link title link-isplainobject">isPlainObject</a>
                 </li>

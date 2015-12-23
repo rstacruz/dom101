@@ -96,6 +96,11 @@
                 "id": "hasclass"
               },
               {
+                "title": "exports",
+                "depth": 3,
+                "id": "exports"
+              },
+              {
                 "title": "isPlainObject",
                 "depth": 3,
                 "id": "isplainobject"
@@ -273,6 +278,11 @@
               "title": "hasClass",
               "depth": 3,
               "id": "hasclass"
+            },
+            {
+              "title": "exports",
+              "depth": 3,
+              "id": "exports"
             },
             {
               "title": "isPlainObject",

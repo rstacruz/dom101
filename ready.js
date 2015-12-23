@@ -1,6 +1,7 @@
 /**
  * ready : ready(fn)
- * Executes `fn` when the DOM is ready.
+ * Executes `fn` when the DOM is ready. If the DOM is already ready, the given
+ * callback will be called immediately.
  *
  *     var ready = require('dom101/ready');
  *
@@ -10,7 +11,9 @@
  */
 
 function ready (fn) {
-  if (document.addEventListener) {
+  if (document.readyState === 'complete') {
+    return fn();
+  } else if (document.addEventListener) {
     document.addEventListener('DOMContentLoaded', fn);
   } else {
     document.attachEvent('onreadystatechange', function () {

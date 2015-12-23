@@ -117,9 +117,10 @@ dom101 is available via [npm]. Perfect for use with [browserify].
 
 ## API Reference
 
-<!-- begin api -->
+<!--api-->
 
 ### addClass
+
 > `addClass(el, className)`
 
 Adds a class name to an element. Compare with `$.fn.addClass`.
@@ -128,9 +129,11 @@ Adds a class name to an element. Compare with `$.fn.addClass`.
 var addClass = require('dom101/add-class');
 
 addClass(el, 'active');
+
 ```
 
 ### after
+
 > `after(el, newEl)`
 
 Inserts a new element `newEl` just after `el`.
@@ -141,9 +144,11 @@ var newNode = document.createElement('div');
 var button = document.querySelector('#submit');
 
 after(button, newNode);
+
 ```
 
 ### before
+
 > `before(el, newEl)`
 
 Inserts a new element `newEl` just before `el`.
@@ -154,9 +159,11 @@ var newNode = document.createElement('div');
 var button = document.querySelector('#submit');
 
 before(button, newNode);
+
 ```
 
 ### closest
+
 > `closest(el, selector)`
 
 Looks for the closest ancestor of element `el` that matches `selector`.
@@ -166,9 +173,11 @@ Compare with [$.fn.closest](http://api.jquery.com/closest/).
 var closest = require('dom101/closest');
 
 closest(input, 'label');
+
 ```
 
 ### deepExtend
+
 > `deepExtend(dest, src1, [src2 ...])`
 
 Extends object `dest` with properties from sources `src`.
@@ -183,6 +192,7 @@ deepExtend({}, defaults, options);
 ```
 
 ### documentHeight
+
 > `documentHeight()`
 
 Returns the height of the document.
@@ -192,9 +202,11 @@ Compare with jQuery's `$(document).height()`.
 var documentHeight = require('dom101/document-height');
 
 var height = documentHeight();
+
 ```
 
 ### documentWidth
+
 > `documentWidth()`
 
 Returns the width of the document.
@@ -204,9 +216,11 @@ Compare with jQuery's `$(document).width()`.
 var documentWidth = require('dom101/document-width');
 
 var width = documentWidth();
+
 ```
 
 ### each
+
 > `each(list, fn)`
 
 Iterates through `list` (an array or an object). This is useful when dealing
@@ -219,9 +233,11 @@ var qa = require('dom101/query-selector-all');
 each(qa('.button'), function (el) {
   addClass('el', 'selected');
 });
+
 ```
 
 ### extend
+
 > `extend(dest, src1, [src2 ...])`
 
 Extends object `dest` with properties from sources `src`.
@@ -236,6 +252,7 @@ extend({}, defaults, options);
 ```
 
 ### hasClass
+
 > `hasClass(el, className)`
 
 Checks if an element has a given class name.
@@ -245,9 +262,16 @@ var hasClass = require('dom101/has-class');
 
 el.className = 'selected active';
 hasClass(el, 'active') //=> true
+
 ```
 
+### exports
+
+this file is only provided for convenience and for tests.
+it's not advised to use it.
+
 ### isPlainObject
+
 > `isPlainObject(obj)`
 
 Checks if `obj` is an object created with `{}` or `new Object`.
@@ -258,9 +282,11 @@ var isPlainObject = require('dom101/is-plain-object');
 
 isPlainObject({}) //=> true
 isPlainObject([]) //=> false
+
 ```
 
 ### map
+
 > `map(list, fn)`
 
 Iterates through `list` (an array or an object).
@@ -272,9 +298,11 @@ var text = require('dom101/text');
 map(qa('.button'), function (el) {
   return text(el);
 });
+
 ```
 
 ### matches
+
 > `matches(el, selector)`
 
 Checks if a given element `el` matches `selector`.
@@ -284,9 +312,11 @@ Compare with [$.fn.is](http://api.jquery.com/is/).
 var matches = require('dom101/matches');
 
 matches(button, ':focus');
+
 ```
 
 ### on
+
 > `on(el, event, fn)`
 
 Adds an event handler.
@@ -297,9 +327,11 @@ var on = require('dom101/on');
 on(el, 'click', function () {
   ...
 });
+
 ```
 
 ### prepend
+
 > `prepend(el, child)`
 
 Prepends a `child` into a parent `el`. Compare with `$.fn.prepend`.
@@ -308,9 +340,11 @@ Prepends a `child` into a parent `el`. Compare with `$.fn.prepend`.
 var prepend = require('dom101/prepend');
 
 prepend(el, child);
+
 ```
 
 ### querySelectorAll
+
 > `querySelectorAll(query)`
 
 Convenience function to access `document.querySelectorAll`.
@@ -322,9 +356,11 @@ var qa = require('dom101/query-selector-all');
 each(qa('.button'), function (el) {
   addClass('el', 'selected');
 });
+
 ```
 
 ### querySelector
+
 > `querySelector(query)`
 
 Convenience function to access `document.querySelector`.
@@ -335,6 +371,7 @@ addClass(q('#instructions'), 'hidden');
 ```
 
 ### ready
+
 > `ready(fn)`
 
 Executes `fn` when the DOM is ready. If the DOM is already ready, the given
@@ -346,9 +383,11 @@ var ready = require('dom101/ready');
 ready(function () {
   ...
 });
+
 ```
 
 ### removeClass
+
 > `removeClass(el, className)`
 
 Removes a classname.
@@ -361,9 +400,11 @@ removeClass(el, 'active');
 
 el.className
 => "selected"
+
 ```
 
 ### remove
+
 > `remove(el)`
 
 Removes an element from the DOM.
@@ -372,9 +413,11 @@ Removes an element from the DOM.
 var remove = require('dom101/remove');
 
 remove(el);
+
 ```
 
 ### scrollTop
+
 > `scrollTop()`
 
 Returns the scroll top value.
@@ -385,6 +428,7 @@ alert(scrollTop());
 ```
 
 ### text
+
 > `text(el, [value])`
 
 Sets or gets text. Compare with `$.fn.text`.
@@ -396,9 +440,11 @@ text(el, 'Hello');
 
 text(el)
 => "Hello"
+
 ```
 
 ### toggleClass
+
 > `toggleClass(el, className, [value])`
 
 Adds or removes a class name to an element. If `value` is provided,
@@ -414,9 +460,11 @@ toggleClass(el, 'active');
 // with a value:
 var isSelected = true;
 toggleClass(el, 'selected', isSelected);
+
 ```
 
 ### trigger
+
 > `trigger(el, event)`
 
 Triggers an event `event`. Only works for native events.
@@ -426,9 +474,9 @@ var trigger = require('dom101/trigger');
 
 el = document.querySelector('#button');
 trigger(el, 'click');
-```
 
-<!-- end api -->
+```
+<!--api:end-->
 
 ## Similar projects
 

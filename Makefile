@@ -1,11 +1,11 @@
-mdextract = ./node_modules/.bin/mdextract
+mdx = ./node_modules/.bin/mdx --markdown -x internal
 browserify = ./node_modules/.bin/browserify
 files = $(wildcard *.js)
 
 update: README.md
-	@echo 'updating $<'
-	@(sed '/begin api/q' $<; echo; cat *.js | ${mdextract}; echo; sed -n '/end api/,$$p' $<) > $<~
-	@mv $<~ $<
+README.md: $(files)
+	(sed '/<!--api-->/q' $@; echo; ${mdx} $^; sed -n '/<!--api:end-->/,$$p' $@) > $@~
+	mv $@~ $@
 
 test-browser: test/build.js
 	open test/index.html

@@ -1,7 +1,10 @@
 # dom101
-<!-- {.massive-heading} -->
 
-DOM manipulation utilities as single-files.<br>
+<!-- {.massive-header.-with-tagline} -->
+
+> DOM manipulation utilities
+
+dom101 is a set of utilities for manipulating the DOM as single files.<br>
 *aka: Stop using jQuery.*
 
 ```js

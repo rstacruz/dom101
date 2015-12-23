@@ -455,7 +455,8 @@ addClass(q(<span class="pl-s">&apos;#instructions&apos;</span>), <span class="pl
 <blockquote>
 <p><code>ready(fn)</code></p>
 </blockquote>
-<p>Executes <code>fn</code> when the DOM is ready.</p>
+<p>Executes <code>fn</code> when the DOM is ready. If the DOM is already ready, the given
+callback will be called immediately.</p>
 <pre><code class="lang-js"><span class="pl-k">var</span> ready = <span class="pl-c1">require</span>(<span class="pl-s">&apos;dom101/ready&apos;</span>);
 
 ready(<span class="hljs-function"><span class="pl-k">function</span> (<span class="hljs-params"></span>) </span>{

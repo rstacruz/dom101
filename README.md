@@ -129,7 +129,6 @@ Adds a class name to an element. Compare with `$.fn.addClass`.
 var addClass = require('dom101/add-class');
 
 addClass(el, 'active');
-
 ```
 
 ### after
@@ -144,7 +143,6 @@ var newNode = document.createElement('div');
 var button = document.querySelector('#submit');
 
 after(button, newNode);
-
 ```
 
 ### before
@@ -159,7 +157,6 @@ var newNode = document.createElement('div');
 var button = document.querySelector('#submit');
 
 before(button, newNode);
-
 ```
 
 ### closest
@@ -173,7 +170,6 @@ Compare with [$.fn.closest](http://api.jquery.com/closest/).
 var closest = require('dom101/closest');
 
 closest(input, 'label');
-
 ```
 
 ### deepExtend
@@ -202,7 +198,6 @@ Compare with jQuery's `$(document).height()`.
 var documentHeight = require('dom101/document-height');
 
 var height = documentHeight();
-
 ```
 
 ### documentWidth
@@ -216,7 +211,6 @@ Compare with jQuery's `$(document).width()`.
 var documentWidth = require('dom101/document-width');
 
 var width = documentWidth();
-
 ```
 
 ### each
@@ -233,7 +227,6 @@ var qa = require('dom101/query-selector-all');
 each(qa('.button'), function (el) {
   addClass('el', 'selected');
 });
-
 ```
 
 ### extend
@@ -262,7 +255,6 @@ var hasClass = require('dom101/has-class');
 
 el.className = 'selected active';
 hasClass(el, 'active') //=> true
-
 ```
 
 ### exports
@@ -282,7 +274,6 @@ var isPlainObject = require('dom101/is-plain-object');
 
 isPlainObject({}) //=> true
 isPlainObject([]) //=> false
-
 ```
 
 ### map
@@ -298,7 +289,6 @@ var text = require('dom101/text');
 map(qa('.button'), function (el) {
   return text(el);
 });
-
 ```
 
 ### matches
@@ -312,7 +302,6 @@ Compare with [$.fn.is](http://api.jquery.com/is/).
 var matches = require('dom101/matches');
 
 matches(button, ':focus');
-
 ```
 
 ### on
@@ -327,7 +316,6 @@ var on = require('dom101/on');
 on(el, 'click', function () {
   ...
 });
-
 ```
 
 ### prepend
@@ -340,7 +328,6 @@ Prepends a `child` into a parent `el`. Compare with `$.fn.prepend`.
 var prepend = require('dom101/prepend');
 
 prepend(el, child);
-
 ```
 
 ### querySelectorAll
@@ -356,7 +343,6 @@ var qa = require('dom101/query-selector-all');
 each(qa('.button'), function (el) {
   addClass('el', 'selected');
 });
-
 ```
 
 ### querySelector
@@ -383,7 +369,6 @@ var ready = require('dom101/ready');
 ready(function () {
   ...
 });
-
 ```
 
 ### removeClass
@@ -400,7 +385,6 @@ removeClass(el, 'active');
 
 el.className
 => "selected"
-
 ```
 
 ### remove
@@ -413,7 +397,6 @@ Removes an element from the DOM.
 var remove = require('dom101/remove');
 
 remove(el);
-
 ```
 
 ### scrollTop
@@ -440,7 +423,6 @@ text(el, 'Hello');
 
 text(el)
 => "Hello"
-
 ```
 
 ### toggleClass
@@ -460,7 +442,6 @@ toggleClass(el, 'active');
 // with a value:
 var isSelected = true;
 toggleClass(el, 'selected', isSelected);
-
 ```
 
 ### trigger
@@ -474,7 +455,6 @@ var trigger = require('dom101/trigger');
 
 el = document.querySelector('#button');
 trigger(el, 'click');
-
 ```
 <!--api:end-->
 

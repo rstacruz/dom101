@@ -4,6 +4,7 @@
  */
 
 module.exports = {
+  outerHeight: require('./outer-height'),
   addClass: require('./add-class'),
   after: require('./after'),
   before: require('./before'),

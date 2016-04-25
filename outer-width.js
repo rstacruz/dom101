@@ -8,9 +8,9 @@
  */
 
 function outerWidth (el, includeMargin) {
-  var style = typeof getComputedStyle !== "undefined" && getComputedStyle(el) || el.currentStyle;
+  var style = typeof getComputedStyle !== 'undefined' && getComputedStyle(el) || el.currentStyle;
 
-  return el.offsetWidth + (includeMargin && (parseInt(style["marginleft"], 10) + parseInt(style["marginRight"]), 10) || 0);
+  return el.offsetWidth + (includeMargin && (parseInt(style['marginleft'], 10) + parseInt(style['marginRight']), 10) || 0);
 }
 
 module.exports = outerWidth;

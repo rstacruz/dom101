@@ -1,6 +1,6 @@
 /**
  * outerHeight : outerHeight(el, includeMargin)
- * Returns the outer height (height + padding [+margin]) of an element as an integer (IE8+) 
+ * Returns the outer height (height + padding [+margin]) of an element as an integer (IE8+)
  *
  *     var outerHeight = require('dom101/outer-height');
  *
@@ -8,9 +8,9 @@
  */
 
 function outerHeight (el, includeMargin) {
-  var style = typeof getComputedStyle !== "undefined" && getComputedStyle(el) || el.currentStyle;
+  var style = typeof getComputedStyle !== 'undefined' && getComputedStyle(el) || el.currentStyle;
 
-  return  el.offsetHeight + (includeMargin && (parseInt(style["marginTop"]) + parseInt(style["marginBottom"])) || 0);
+  return el.offsetHeight + (includeMargin && (parseInt(style['marginTop'], 10) + parseInt(style['marginBottom'], 10)) || 0);
 }
 
 module.exports = outerHeight;

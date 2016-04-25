@@ -8,7 +8,7 @@
  */
 
 function outerHeight (el, includeMargin) {
-  var style = typeof window.getComputedStyle !== 'undefined' && getComputedStyle(el) || el.currentStyle;
+  var style = typeof window.getComputedStyle !== 'undefined' && window.getComputedStyle(el) || el.currentStyle;
 
   return el.offsetHeight + (includeMargin && (parseInt(style['marginTop'], 10) + parseInt(style['marginBottom'], 10)) || 0);
 }

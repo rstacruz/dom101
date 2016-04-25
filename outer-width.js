@@ -8,7 +8,7 @@
  */
 
 function outerWidth (el, includeMargin) {
-  var style = typeof getComputedStyle !== 'undefined' && getComputedStyle(el) || el.currentStyle;
+  var style = typeof getComputedStyle !== "undefined" && getComputedStyle(el) || el.currentStyle;
   
   return el.offsetWidth + (includeMargin && (parseInt(style["marginleft"]) + parseInt(style["marginRight"])) || 0);
 }

@@ -120,11 +120,11 @@ working with even older IE versions.</p>
 </tr>
 <tr>
 <td><code>$(el).outerHeight()</code></td>
-<td><a href="#outerheight">outerHeight</a>()</td>
+<td><a href="#outerheight">outerHeight</a>(el)</td>
 </tr>
 <tr>
 <td><code>$(el).outerWidth()</code></td>
-<td><a href="#outerwidth">outerWidth</a>()</td>
+<td><a href="#outerwidth">outerWidth</a>(el)</td>
 </tr>
 <tr>
 <td><code>$(el).prepend(child)</code></td>
@@ -439,8 +439,10 @@ on(el, <span class="pl-s">&apos;click&apos;</span>, <span class="hljs-function">
 </blockquote>
 <p>Returns the outer height (height + padding [+margin]) of an element as an
 integer. Supports IE8+.</p>
+<p>If <code>includeMargin</code> is true, then margins will be part of the computation.</p>
 <pre><code class="lang-js"><span class="pl-k">var</span> outerHeight = <span class="pl-c1">require</span>(<span class="pl-s">&apos;dom101/outer-height&apos;</span>);
 <span class="pl-k">var</span> height = outerHeight(el);
+<span class="pl-k">var</span> fullHeight = outerHeight(el, <span class="pl-c1">true</span>);  <span class="pl-c">// include margins</span>
 </code></pre>
 <h3 id="outerwidth">outerWidth</h3>
 <blockquote>
@@ -448,8 +450,10 @@ integer. Supports IE8+.</p>
 </blockquote>
 <p>Returns the outer width (width + padding [+margin]) of an element as an
 integer. Supports IE8+.</p>
+<p>If <code>includeMargin</code> is true, then margins will be part of the computation.</p>
 <pre><code class="lang-js"><span class="pl-k">var</span> outerWidth = <span class="pl-c1">require</span>(<span class="pl-s">&apos;dom101/outer-width&apos;</span>);
 <span class="pl-k">var</span> width = outerWidth(el);
+<span class="pl-k">var</span> fullWidth = outerWidth(el);  <span class="pl-c">// include margins</span>
 </code></pre>
 <h3 id="prepend">prepend</h3>
 <blockquote>

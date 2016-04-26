@@ -56,8 +56,8 @@ dom101 loosely follows the conventions of [101].
 | `$(document).ready(fn)`     | [ready](#ready)(fn)                    |
 | `$(document).height()`      | [documentHeight](#documentheight)()    |
 | `$(document).width()`       | [documentWidth](#documentwidth)()      |
-| `$(el).outerHeight()`       | [outerHeight](#outerheight)()          |
-| `$(el).outerWidth()`        | [outerWidth](#outerwidth)()            |
+| `$(el).outerHeight()`       | [outerHeight](#outerheight)(el)        |
+| `$(el).outerWidth()`        | [outerWidth](#outerwidth)(el)          |
 | `$(el).prepend(child)`      | [prepend](#prepend)(el, child)         |
 | `$(el).trigger('click')`    | [trigger](#trigger)(el, 'click')       |
 | `$(el).closest('selector')` | [closest](#closest)(el, 'selector')    |
@@ -327,9 +327,12 @@ on(el, 'click', function () {
 Returns the outer height (height + padding [+margin]) of an element as an
 integer. Supports IE8+.
 
+If `includeMargin` is true, then margins will be part of the computation.
+
 ```js
 var outerHeight = require('dom101/outer-height');
 var height = outerHeight(el);
+var fullHeight = outerHeight(el, true);  // include margins
 ```
 
 ### outerWidth
@@ -339,9 +342,12 @@ var height = outerHeight(el);
 Returns the outer width (width + padding [+margin]) of an element as an
 integer. Supports IE8+.
 
+If `includeMargin` is true, then margins will be part of the computation.
+
 ```js
 var outerWidth = require('dom101/outer-width');
 var width = outerWidth(el);
+var fullWidth = outerWidth(el);  // include margins
 ```
 
 ### prepend

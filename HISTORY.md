@@ -1,3 +1,11 @@
+## [v1.3.0]
+> Apr 26, 2016
+
+* Add `dom101/outer-width` ([@SilentCicero], [#57])
+* Add `dom101/outer-height` ([@SilentCicero], [#57])
+
+[v1.3.0]: https://github.com/rstacruz/dom101/compare/v1.2.1...v1.3.0
+
 ## [v1.2.1]
 > Nov 22, 2015
 
@@ -72,3 +80,6 @@
 > Jan 9, 2015
 
 Initial release.
+
+[#57]: https://github.com/rstacruz/dom101/issues/57
+[@SilentCicero]: https://github.com/SilentCicero

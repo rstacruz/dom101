@@ -121,6 +121,16 @@
                 "id": "on"
               },
               {
+                "title": "outerHeight",
+                "depth": 3,
+                "id": "outerheight"
+              },
+              {
+                "title": "outerWidth",
+                "depth": 3,
+                "id": "outerwidth"
+              },
+              {
                 "title": "prepend",
                 "depth": 3,
                 "id": "prepend"
@@ -303,6 +313,16 @@
               "title": "on",
               "depth": 3,
               "id": "on"
+            },
+            {
+              "title": "outerHeight",
+              "depth": 3,
+              "id": "outerheight"
+            },
+            {
+              "title": "outerWidth",
+              "depth": 3,
+              "id": "outerwidth"
             },
             {
               "title": "prepend",

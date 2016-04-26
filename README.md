@@ -318,6 +318,28 @@ on(el, 'click', function () {
 });
 ```
 
+### outerHeight
+
+> `outerHeight(el, includeMargin)`
+
+Returns the outer height (height + padding [+margin]) of an element as an integer (IE8+)
+
+```js
+var outerHeight = require('dom101/outer-height');
+var height = outerHeight(el);
+```
+
+### outerWidth
+
+> `outerWidth(el, includeMargin)`
+
+Returns the outer width (width + padding [+margin]) of an element as an integer (IE8+)
+
+```js
+var outerWidth = require('dom101/outer-width');
+var width = outerWidth(el);
+```
+
 ### prepend
 
 > `prepend(el, child)`

@@ -3,8 +3,7 @@
  * Returns the outer width (width + padding [+margin]) of an element as an integer (IE8+)
  *
  *     var outerWidth = require('dom101/outer-width');
- *
- *     outerWidth(el);
+ *     var width = outerWidth(el);
  */
 
 function outerWidth (el, includeMargin) {

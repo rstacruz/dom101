@@ -3,8 +3,7 @@
  * Returns the outer height (height + padding [+margin]) of an element as an integer (IE8+)
  *
  *     var outerHeight = require('dom101/outer-height');
- *
- *     outerHeight(el);
+ *     var height = outerHeight(el);
  */
 
 function outerHeight (el, includeMargin) {

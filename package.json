@@ -14,7 +14,7 @@
     "jsdom": "9.2.1",
     "mdx": "0.3.1",
     "mocha": "2.5.2",
-    "mocha-jsdom": "1.0.0",
+    "mocha-jsdom": "1.1.0",
     "mocha-standard": "1.0.0",
     "semistandard": "7.0.4"
   },

@@ -1,17 +1,23 @@
 /**
- * querySelectorAll : querySelectorAll(query)
- * Convenience function to access `document.querySelectorAll`.
+ * querySelectorAll : querySelectorAll(query, [element])
+ * Convenience function to access `document.querySelectorAll`. Unlike the
+ * default version, this always returns an array.
+ *
+ * If a 2nd parameter `element` is given, it only searches for descendants of
+ * that element.
  *
  *     var each = require('dom101/each');
- *     var qa = require('dom101/query-selector-all');
+ *     var qsa = require('dom101/query-selector-all');
  *
- *     each(qa('.button'), function (el) {
+ *     qsa('.button').each(el => {
  *       addClass('el', 'selected');
- *     });
+ *     };
  */
 
-function querySelectorAll (query) {
-  return document.querySelectorAll(query);
+function querySelectorAll (query, context) {
+  return Array.prorotype.slice.call(
+    (context || document).querySelectorAll(query)
+  );
 }
 
 module.exports = querySelectorAll;

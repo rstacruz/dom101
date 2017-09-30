@@ -364,17 +364,21 @@ prepend(el, child);
 
 ### querySelectorAll
 
-> `querySelectorAll(query)`
+> `querySelectorAll(query, [element])`
 
-Convenience function to access `document.querySelectorAll`.
+Convenience function to access `document.querySelectorAll`. Unlike the
+default version, this always returns an array.
+
+If a 2nd parameter `element` is given, it only searches for descendants of
+that element.
 
 ```js
 var each = require('dom101/each');
-var qa = require('dom101/query-selector-all');
+var qsa = require('dom101/query-selector-all');
 
-each(qa('.button'), function (el) {
+qsa('.button').each(el => {
   addClass('el', 'selected');
-});
+};
 ```
 
 ### querySelector

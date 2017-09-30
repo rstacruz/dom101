@@ -15,7 +15,7 @@
  */
 
 function querySelectorAll (query, context) {
-  return Array.prorotype.slice.call(
+  return Array.prototype.slice.call(
     (context || document).querySelectorAll(query)
   );
 }

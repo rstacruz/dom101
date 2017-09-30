@@ -1,3 +1,10 @@
+## [v2.0.0]
+> Oct  1, 2017
+
+* Update `dom101/query-selector-all` to always return arrays, so you may now do `querySelectorAll('···').each(···)`. (Previously, it returned DOM node lists)
+
+[v2.0.0]: https://github.com/rstacruz/dom101/compare/v1.3.0...v2.0.0
+
 ## [v1.3.0]
 > Apr 26, 2016
 

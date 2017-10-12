@@ -11,15 +11,19 @@
  */
 
 function ready (fn) {
-  if (document.readyState === 'complete') {
+  if (isReady()) {
     return fn();
   } else if (document.addEventListener) {
     document.addEventListener('DOMContentLoaded', fn);
   } else {
     document.attachEvent('onreadystatechange', function () {
-      if (document.readyState === 'interactive') fn();
+      if (isReady()) fn();
     });
   }
+}
+
+function isReady () {
+  return (document.readyState === 'complete' || document.readyState === 'interactive');
 }
 
 module.exports = ready;

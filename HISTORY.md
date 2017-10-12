@@ -1,3 +1,10 @@
+## [v2.1.0]
+> Oct 13, 2017
+
+- `dom101/ready`: fix not firing when the document is already interactive
+
+[v2.1.0]: https://github.com/rstacruz/dom101/compare/v2.0.1...v2.1.0
+
 ## [v2.0.1]
 > Oct  1, 2017
 

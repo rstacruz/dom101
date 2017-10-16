@@ -1,3 +1,5 @@
+var each = require('./each')
+
 /**
  * addClass : addClass(el, className)
  * Adds a class name to an element. Compare with `$.fn.addClass`.
@@ -8,6 +10,16 @@
  */
 
 function addClass (el, className) {
+  if (!className) return
+
+  if (Array.isArray(className)) {
+    each(className, function (className) {
+      addClass(el, className)
+    })
+
+    return
+  }
+
   if (el.classList) {
     el.classList.add(className)
   } else {

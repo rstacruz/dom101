@@ -21,6 +21,18 @@ describe('removeClass', function () {
     expect(n(div.className)).toEqual('world')
   })
 
+  it('handles nulls', function () {
+    div.className = 'hello world'
+    removeClass(div, null)
+    expect(n(div.className)).toEqual('hello world')
+  })
+
+  it('handles arrays', function () {
+    div.className = 'hello there world'
+    removeClass(div, ['hello', 'world'])
+    expect(n(div.className)).toEqual('there')
+  })
+
   it('works at the middle', function () {
     div.className = 'hello world'
     removeClass(div, 'there')

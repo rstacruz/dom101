@@ -14,6 +14,16 @@ describe('addClass', function () {
     expect(n(div.className)).toEqual('hello')
   })
 
+  it('handles null', function () {
+    addClass(div)
+    expect(n(div.className)).toEqual('')
+  })
+
+  it('handles arrays', function () {
+    addClass(div, ['a', 'b'])
+    expect(n(div.className)).toEqual('a b')
+  })
+
   it('compounds', function () {
     addClass(div, 'hello')
     addClass(div, 'world')

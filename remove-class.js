@@ -1,3 +1,5 @@
+var each = require('./each')
+
 /**
  * removeClass : removeClass(el, className)
  * Removes a classname.
@@ -12,6 +14,16 @@
  */
 
 function removeClass (el, className) {
+  if (!className) return
+
+  if (Array.isArray(className)) {
+    each(className, function (className) {
+      removeClass(el, className)
+    })
+
+    return
+  }
+
   if (el.classList) {
     el.classList.remove(className)
   } else {

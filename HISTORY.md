@@ -1,3 +1,12 @@
+## [v2.2.0]
+> Oct 16, 2017
+
+- `dom101/add-class`: Allow passing arrays for classnames
+- `dom101/remove-class`: Allow passing arrays for classnames
+- `dom101/next-until`: New function
+
+[v2.2.0]: https://github.com/rstacruz/dom101/compare/v2.1.0...v2.2.0
+
 ## [v2.1.0]
 > Oct 13, 2017
 

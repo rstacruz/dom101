@@ -37,6 +37,6 @@
   "scripts": {
     "test": "jest",
     "lint": "standard",
-    "prepublish": "make update"
+    "prepare": "make -B prepare"
   }
 }

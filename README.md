@@ -306,6 +306,17 @@ var matches = require('dom101/matches');
 matches(button, ':focus');
 ```
 
+### nextUntil
+
+> `nextUntil(el, selector)`
+
+Returns all elements next to element `el`, until it reaches `selector` or
+the end of the sibling list of `el`.
+
+```js
+nextUntil(li, 'li:last-child')
+```
+
 ### on
 
 > `on(el, event, fn)`

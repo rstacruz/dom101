@@ -14,18 +14,18 @@
  *     toggleClass(el, 'selected', isSelected);
  */
 
-var addClass = require('./add-class');
-var removeClass = require('./remove-class');
-var hasClass = require('./has-class');
+var addClass = require('./add-class')
+var removeClass = require('./remove-class')
+var hasClass = require('./has-class')
 
 function toggleClass (el, className, value) {
   if (typeof value === 'undefined') {
-    value = !hasClass(el, className);
+    value = !hasClass(el, className)
   }
 
   return value
     ? addClass(el, className)
-    : removeClass(el, className);
+    : removeClass(el, className)
 }
 
-module.exports = toggleClass;
+module.exports = toggleClass

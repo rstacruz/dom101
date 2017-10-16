@@ -11,12 +11,12 @@
 
 function on (el, event, handler) {
   if (el.addEventListener) {
-    el.addEventListener(event, handler);
+    el.addEventListener(event, handler)
   } else {
     el.attachEvent('on' + event, function () {
-      handler.call(el);
-    });
+      handler.call(el)
+    })
   }
 }
 
-module.exports = on;
+module.exports = on

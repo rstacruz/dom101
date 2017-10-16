@@ -11,10 +11,10 @@
 
 function before (el, newEl) {
   if (typeof newEl === 'string') {
-    return el.insertAdjacentHTML('beforebegin', newEl);
+    return el.insertAdjacentHTML('beforebegin', newEl)
   } else {
-    return el.parentNode.insertBefore(newEl, el);
+    return el.parentNode.insertBefore(newEl, el)
   }
 }
 
-module.exports = before;
+module.exports = before

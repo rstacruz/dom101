@@ -13,9 +13,9 @@
 function outerWidth (el, includeMargin) {
   var style = typeof window.getComputedStyle !== 'undefined'
     ? window.getComputedStyle(el)
-    : el.currentStyle;
+    : el.currentStyle
 
-  return el.offsetWidth + (includeMargin && (parseInt(style['marginLeft'], 10) + parseInt(style['marginRight'], 10)) || 0);
+  return el.offsetWidth + (includeMargin ? (parseInt(style['marginLeft'], 10) + parseInt(style['marginRight'], 10)) : 0)
 }
 
-module.exports = outerWidth;
+module.exports = outerWidth

@@ -9,10 +9,10 @@
 
 function addClass (el, className) {
   if (el.classList) {
-    el.classList.add(className);
+    el.classList.add(className)
   } else {
-    el.className += ' ' + className;
+    el.className += ' ' + className
   }
 }
 
-module.exports = addClass;
+module.exports = addClass

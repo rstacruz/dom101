@@ -14,7 +14,7 @@ function documentHeight () {
     document.body.scrollHeight || 0,
     document.documentElement.scrollHeight || 0,
     document.body.offsetHeight || 0,
-    document.documentElement.offsetHeight || 0);
+    document.documentElement.offsetHeight || 0)
 }
 
-module.exports = documentHeight;
+module.exports = documentHeight

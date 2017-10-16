@@ -30,4 +30,4 @@ module.exports = {
   text: require('./text'),
   toggleClass: require('./toggle-class'),
   trigger: require('./trigger')
-};
+}

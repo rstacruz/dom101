@@ -14,7 +14,7 @@ function documentWidth () {
     document.body.scrollWidth || 0,
     document.documentElement.scrollWidth || 0,
     document.body.offsetWidth || 0,
-    document.documentElement.offsetWidth || 0);
+    document.documentElement.offsetWidth || 0)
 }
 
-module.exports = documentWidth;
+module.exports = documentWidth

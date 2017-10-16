@@ -12,18 +12,18 @@
 
 function ready (fn) {
   if (isReady()) {
-    return fn();
+    return fn()
   } else if (document.addEventListener) {
-    document.addEventListener('DOMContentLoaded', fn);
+    document.addEventListener('DOMContentLoaded', fn)
   } else {
     document.attachEvent('onreadystatechange', function () {
-      if (isReady()) fn();
-    });
+      if (isReady()) fn()
+    })
   }
 }
 
 function isReady () {
-  return (document.readyState === 'complete' || document.readyState === 'interactive');
+  return (document.readyState === 'complete' || document.readyState === 'interactive')
 }
 
-module.exports = ready;
+module.exports = ready

@@ -12,24 +12,24 @@
  */
 
 function each (list, fn) {
-  var i;
-  var len = list.length;
-  var idx;
+  var i
+  var len = list.length
+  var idx
 
   if (typeof len === 'number') {
     for (i = 0; i < len; i++) {
-      fn(list[i], i);
+      fn(list[i], i)
     }
   } else {
-    idx = 0;
+    idx = 0
     for (i in list) {
       if (list.hasOwnProperty(i)) {
-        fn(list[i], i, idx++);
+        fn(list[i], i, idx++)
       }
     }
   }
 
-  return list;
+  return list
 }
 
-module.exports = each;
+module.exports = each

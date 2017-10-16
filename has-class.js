@@ -10,10 +10,10 @@
 
 function hasClass (el, className) {
   if (el.classList) {
-    return el.classList.contains(className);
+    return el.classList.contains(className)
   } else {
-    return new RegExp('(^| )' + className + '( |$)', 'gi').test(el.className);
+    return new RegExp('(^| )' + className + '( |$)', 'gi').test(el.className)
   }
 }
 
-module.exports = hasClass;
+module.exports = hasClass

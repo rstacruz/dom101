@@ -1,4 +1,4 @@
-var matches = require('./matches');
+var matches = require('./matches')
 
 /**
  * closest : closest(el, selector)
@@ -11,12 +11,12 @@ var matches = require('./matches');
  */
 
 function closest (el, sel) {
-  if (!el) return;
+  if (!el) return
   if (matches(el, sel)) {
-    return el;
+    return el
   } else {
-    return closest(el.parentNode, sel);
+    return closest(el.parentNode, sel)
   }
 }
 
-module.exports = closest;
+module.exports = closest

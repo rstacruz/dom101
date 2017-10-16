@@ -10,7 +10,7 @@
  */
 
 function isPlainObject (obj) {
-  var hasOwn = ({}).hasOwnProperty;
+  var hasOwn = ({}).hasOwnProperty
 
   return obj &&
     // is object
@@ -28,7 +28,7 @@ function isPlainObject (obj) {
 
     // not own constructor prototype must be object
     obj.constructor.prototype &&
-    hasOwn.call(obj.constructor.prototype, 'isPrototypeOf');
+    hasOwn.call(obj.constructor.prototype, 'isPrototypeOf')
 }
 
-module.exports = isPlainObject;
+module.exports = isPlainObject

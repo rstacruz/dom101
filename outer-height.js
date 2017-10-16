@@ -13,9 +13,9 @@
 function outerHeight (el, includeMargin) {
   var style = typeof window.getComputedStyle !== 'undefined'
     ? window.getComputedStyle(el)
-    : el.currentStyle;
+    : el.currentStyle
 
-  return el.offsetHeight + (includeMargin && (parseInt(style['marginTop'], 10) + parseInt(style['marginBottom'], 10)) || 0);
+  return el.offsetHeight + (includeMargin ? (parseInt(style['marginTop'], 10) + parseInt(style['marginBottom'], 10)) : 0)
 }
 
-module.exports = outerHeight;
+module.exports = outerHeight

@@ -27,3 +27,6 @@ Browser tests
  * Be sure to update README.md inline docs via `make`
  * Update the "Reference" table in README.md
 
+## Writing style
+
+All must files must be ES5-compatible. There's no transpilation involved here!

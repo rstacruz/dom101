@@ -17,7 +17,7 @@
 function querySelectorAll (query, context) {
   return Array.prototype.slice.call(
     (context || document).querySelectorAll(query)
-  );
+  )
 }
 
-module.exports = querySelectorAll;
+module.exports = querySelectorAll

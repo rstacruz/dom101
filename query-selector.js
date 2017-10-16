@@ -7,7 +7,7 @@
  */
 
 function querySelector (query) {
-  return document.querySelector(query);
+  return document.querySelector(query)
 }
 
-module.exports = querySelector;
+module.exports = querySelector

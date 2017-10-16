@@ -11,25 +11,25 @@
  */
 
 function map (list, fn) {
-  var i;
-  var len = list.length;
-  var result = [];
-  var idx;
+  var i
+  var len = list.length
+  var result = []
+  var idx
 
   if (typeof len === 'number') {
     for (i = 0; i < len; i++) {
-      result.push(fn(list[i], i));
+      result.push(fn(list[i], i))
     }
   } else {
-    idx = 0;
+    idx = 0
     for (i in list) {
       if (list.hasOwnProperty(i)) {
-        result.push(fn(list[i], i, idx++));
+        result.push(fn(list[i], i, idx++))
       }
     }
   }
 
-  return result;
+  return result
 }
 
-module.exports = map;
+module.exports = map

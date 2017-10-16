@@ -14,18 +14,18 @@ function matches (el, selector) {
     el.msMatchesSelector ||
     el.mozMatchesSelector ||
     el.webkitMatchesSelector ||
-    el.oMatchesSelector;
+    el.oMatchesSelector
 
   if (_matches) {
-    return _matches.call(el, selector);
+    return _matches.call(el, selector)
   } else if (el.parentNode) {
     // IE8 and below
-    var nodes = el.parentNode.querySelectorAll(selector);
+    var nodes = el.parentNode.querySelectorAll(selector)
     for (var i = nodes.length; i--; 0) {
-      if (nodes[i] === el) return true;
+      if (nodes[i] === el) return true
     }
-    return false;
+    return false
   }
 }
 
-module.exports = matches;
+module.exports = matches

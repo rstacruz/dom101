@@ -8,7 +8,7 @@
  */
 
 function remove (el) {
-  el && el.parentNode && el.parentNode.removeChild(el);
+  el && el.parentNode && el.parentNode.removeChild(el)
 }
 
-module.exports = remove;
+module.exports = remove

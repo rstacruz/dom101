@@ -11,22 +11,22 @@
  */
 
 function extend (out) {
-  out = out || {};
+  out = out || {}
 
   for (var i = 1; i < arguments.length; i++) {
-    if (!arguments[i]) continue;
+    if (!arguments[i]) continue
 
     for (var key in arguments[i]) {
       if (arguments[i].hasOwnProperty(key)) {
-        out[key] = arguments[i][key];
+        out[key] = arguments[i][key]
       }
     }
   }
 
-  return out;
+  return out
 }
 
 // Thanks:
 // https://github.com/HubSpot/youmightnotneedjquery/blob/ef987223c20e480fcbfb5924d96c11cd928e1226/comparisons/utils/extend/ie8.js
 
-module.exports = extend;
+module.exports = extend

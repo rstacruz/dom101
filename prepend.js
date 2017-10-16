@@ -9,10 +9,10 @@
 
 function prepend (el, child) {
   if (el.firstChild) {
-    el.insertBefore(child, el.firstChild);
+    el.insertBefore(child, el.firstChild)
   } else {
-    el.appendChild(child);
+    el.appendChild(child)
   }
 }
 
-module.exports = prepend;
+module.exports = prepend

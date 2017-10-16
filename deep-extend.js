@@ -1,4 +1,4 @@
-var isPlainObject = require('./is-plain-object');
+var isPlainObject = require('./is-plain-object')
 
 /**
  * deepExtend : deepExtend(dest, src1, [src2 ...])
@@ -13,29 +13,28 @@ var isPlainObject = require('./is-plain-object');
  */
 
 function deepExtend (out) {
-  out = out || {};
+  out = out || {}
 
   for (var i = 1; i < arguments.length; i++) {
-    var obj = arguments[i];
+    var obj = arguments[i]
 
-    if (!obj) continue;
+    if (!obj) continue
 
     for (var key in obj) {
       if (obj.hasOwnProperty(key)) {
         if (isPlainObject(obj[key])) {
-          out[key] = deepExtend(out[key], obj[key]);
+          out[key] = deepExtend(out[key], obj[key])
         } else {
-          out[key] = obj[key];
+          out[key] = obj[key]
         }
       }
     }
   }
 
-  return out;
+  return out
 }
 
 // Thanks:
 // https://github.com/HubSpot/youmightnotneedjquery/blob/ef987223c20e480fcbfb5924d96c11cd928e1226/comparisons/utils/deep_extend/ie8.js
 
-module.exports = deepExtend;
-
+module.exports = deepExtend

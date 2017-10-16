@@ -11,15 +11,15 @@
 
 function after (el, newEl) {
   if (typeof newEl === 'string') {
-    return el.insertAdjacentHTML('afterend', newEl);
+    return el.insertAdjacentHTML('afterend', newEl)
   } else {
-    var next = el.nextSibling;
+    var next = el.nextSibling
     if (next) {
-      return el.parentNode.insertBefore(newEl, next);
+      return el.parentNode.insertBefore(newEl, next)
     } else {
-      return el.parentNode.appendChild(newEl);
+      return el.parentNode.appendChild(newEl)
     }
   }
 }
 
-module.exports = after;
+module.exports = after

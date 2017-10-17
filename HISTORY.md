@@ -1,3 +1,11 @@
+## [v2.2.1]
+> Oct 17, 2017
+
+- `dom101/add-class`: fix problem when dealing with excessive spaces
+- `dom101/remove-class`: same as above
+
+[v2.2.1]: https://github.com/rstacruz/dom101/compare/v2.2.0...v2.2.1
+
 ## [v2.2.0]
 > Oct 16, 2017
 

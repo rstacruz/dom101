@@ -25,7 +25,10 @@ function removeClass (el, className) {
   }
 
   if (el.classList) {
-    el.classList.remove(className)
+    var classNames = className.split(' ').filter(Boolean)
+    each(classNames, function (className) {
+      el.classList.remove(className)
+    })
   } else {
     var expr =
       new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi')

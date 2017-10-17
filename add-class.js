@@ -21,7 +21,10 @@ function addClass (el, className) {
   }
 
   if (el.classList) {
-    el.classList.add(className)
+    var classNames = className.split(' ').filter(Boolean)
+    each(classNames, function (className) {
+      el.classList.add(className)
+    })
   } else {
     el.className += ' ' + className
   }
